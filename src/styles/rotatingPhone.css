@@ -1,0 +1,21 @@
+.rotating-phone{
+    animation: rotating;
+    animation-duration: 2.3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+@keyframes rotating{
+    0%{
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(0deg);
+    }
+    90%{
+        transform: rotate(90deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}
