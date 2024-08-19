@@ -13,7 +13,7 @@ function RotatingPhone(){
                 {/* home button */}
                 <div className="absolute bottom-0 bg-white w-0 h-0 p-1 top-[92%] rounded-xl"></div>
             </div>
-            <p className="text-white">Pls rotate your phone for better experience</p>
+            <p className="text-white">Pls rotate your phone for better view</p>
         </div>
         </>
     )
