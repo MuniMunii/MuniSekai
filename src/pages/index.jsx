@@ -1,6 +1,6 @@
 import React from "react";
-import Page from "../component/page";
+import UnitListIntroduction from "../component/UnitListIntroduction";
 function Index (){
-    return <Page/>
+    return <UnitListIntroduction />
 }
 export default Index

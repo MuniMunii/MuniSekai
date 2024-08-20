@@ -1,11 +1,12 @@
-const DATA_SEKAI = [
+export const DATA_SEKAI = [
   {
-    leoNid: {
+    LEO: {
       id: "LeoNid",
       groupName:'Leo/Need',
       Theme: "#4455DD",
       Logo: "leoLogo.png",
-      LogoText: "",
+      ThemeBg:"LeonidRooftop.jpg",
+      LogoText: "LeoneedlogoText.png",
       Char: [
         {
           ichika: [
@@ -14,6 +15,7 @@ const DATA_SEKAI = [
               fullName: "Hoshino Ichika",
               Color: "#33AAEE",
               image: "",
+              bgRoom:"Background_Ichika's_Room_.jpg",
               birthday: "August 11",
               hobbies: ["Listening to Miku songs", "Admiring her cacti"],
               specialty: ["Peeling apples"],
@@ -27,6 +29,7 @@ const DATA_SEKAI = [
               fullName: "Tenma Saki",
               Color: "#FFDD45",
               image: "",
+              bgRoom:"Background_Saki's_Room_.jpg",
               birthday: "May 9",
               hobbies: ["Fashion & make-up videos", "Beading"],
               specialty: ["Hairstyling", "Juggling"],
@@ -40,6 +43,7 @@ const DATA_SEKAI = [
               fullName: "Mochizuki Honami",
               Color: "#EE6666",
               image: "",
+              bgRoom:"Background_Honami's_Room_.jpg",
               birthday: "October 27",
               hobbies: ["Walking her dog", "Gardening"],
               specialty: ["Housekeeping", "Swimming"],
@@ -53,6 +57,7 @@ const DATA_SEKAI = [
               fullName: "Hinomori Shiho",
               Color: "#BBDE22",
               image: "",
+              bgRoom:"Background_Shiho's_SEKAI.jpg",
               birthday: "January 8",
               hobbies: ["Going to girl band gigs", "Playing bass guitar"],
               specialty: ["Calligraphy"],
@@ -68,7 +73,8 @@ const DATA_SEKAI = [
         groupName:'More More Jump',
         Theme: "#6CCB20",
         Logo: "mmjLogo.png",
-        LogoText: "",
+        LogoText: "mmjLogoText.png",
+        ThemeBg:"mmjpark.jpg",
         Char: [
           {
             minori: [
@@ -77,6 +83,7 @@ const DATA_SEKAI = [
                 fullName: "Hanasato Minori",
                 Color: "#FFCDAC",
                 image: "",
+                bgRoom:"Background_Minori's_Room_.jpg",
                 birthday: "April 14",
                 hobbies: ["Dance covers", "Writing in her diary","Looking after animals"],
                 specialty: ["Coming up with catchphrases"],
@@ -90,6 +97,7 @@ const DATA_SEKAI = [
                 fullName: "Kiritani Haruka",
                 Color: "#99CDFF",
                 image: "",
+                bgRoom:"Background_Haruka's_Room_.jpg",
                 birthday: "October 5",
                 hobbies: ["Collecting penguin-themed merch"],
                 specialty: ["Basketball"],
@@ -103,6 +111,7 @@ const DATA_SEKAI = [
                 fullName: "Momoi Airi",
                 Color: "#FFA9CC",
                 image: "",
+                bgRoom:"Background_Airi's_Room_.jpg",
                 birthday: "March 19",
                 hobbies: ["Researching idols", "Shopping"],
                 specialty: ["Cooking", "Looking after kids"],
@@ -116,6 +125,7 @@ const DATA_SEKAI = [
                 fullName: "Hinomori Shizuku",
                 Color: "#9AEEDE",
                 image: "",
+                bgRoom:"Background_Shizuku's_Room_.jpg",
                 birthday: "December 6",
                 hobbies: ["Reading", "Taking walks"],
                 specialty: ["Archery","Embroidery"],
@@ -131,7 +141,8 @@ const DATA_SEKAI = [
         groupName:'Vivid BAD SQUAD',
         Theme: "#EE1166",
         Logo: "vbsLogo.png",
-        LogoText: "",
+        LogoText: "vbsLogoText.png",
+        ThemeBg:"vbspark.jpg",
         Char: [
           {
             kohami: [
@@ -140,6 +151,7 @@ const DATA_SEKAI = [
                 fullName: "Azusawa Kohane",
                 Color: "#FF679A",
                 image: "",
+                bgRoom:"Background_Kohane's_Room_.jpg",
                 birthday: "March 2",
                 hobbies: ["Looking after her dad's pet snake"],
                 specialty: ["Photography"],
@@ -153,6 +165,7 @@ const DATA_SEKAI = [
                 fullName: "Shiraishi An",
                 Color: "#00BBDC",
                 image: "",
+                bgRoom:"Background_An's_SEKAI.jpg",
                 birthday: "July 26",
                 hobbies: ["Growing mint"],
                 specialty: ["Making coffee and tea"],
@@ -166,6 +179,7 @@ const DATA_SEKAI = [
                 fullName: "Shinonome Akito",
                 Color: "#FF7721",
                 image: "",
+                bgRoom:"Background_Akito's_SEKAI.jpg",
                 birthday: "November 12",
                 hobbies: ["Fashion Styling"],
                 specialty: ["Beatboxing"],
@@ -179,6 +193,7 @@ const DATA_SEKAI = [
                 fullName: "Aoyagi Toya",
                 Color: "#0077DD",
                 image: "",
+                bgRoom:"Background_Toya's_Room_.jpg",
                 birthday: "May 25",
                 hobbies: ["Reading"],
                 specialty: ["Piano","Violin"],
@@ -194,7 +209,8 @@ const DATA_SEKAI = [
         groupName:'Wonderlands×Showtime',
         Theme: "#FF9900",
         Logo: "wxsLogo.png",
-        LogoText: "",
+        LogoText: "wxsLogoText.png",
+        ThemeBg:"wxsPark.jpg",
         Char: [
           {
             emu: [
@@ -203,6 +219,7 @@ const DATA_SEKAI = [
                 fullName: "Ootori Emu",
                 Color: "#FF66BC",
                 image: "",
+                bgRoom:"Background_Emu's_Room_.jpg",
                 birthday: "September 9",
                 hobbies: ["Exploring the neighborhood"],
                 specialty: ["Acrobatics","Foodie"],
@@ -216,6 +233,7 @@ const DATA_SEKAI = [
                 fullName: "Tenma Tsukasa",
                 Color: "#FFBB00",
                 image: "",
+                bgRoom:"Background_Tsukasa's_Room_.jpg",
                 birthday: "May 17",
                 hobbies: ["Musicals","Making costumes"],
                 specialty: ["Striking cool poses","Piano"],
@@ -229,6 +247,7 @@ const DATA_SEKAI = [
                 fullName: "Kusanagi Nene",
                 Color: "#34DD9A",
                 image: "",
+                bgRoom:"Background_Nene's_Room_.jpg",
                 birthday: "July 20",
                 hobbies: ["Fighting games","Musicals","Movies"],
                 specialty: ["Singing","Technology"],
@@ -242,6 +261,7 @@ const DATA_SEKAI = [
                 fullName: "Kamishiro Rui",
                 Color: "#BB88ED",
                 image: "",
+                bgRoom:"Background_Rui's_Room_.jpg",
                 birthday: "June 24",
                 hobbies: ["Planning shows","Balloon art"],
                 specialty: ["Inventing"],
@@ -252,12 +272,13 @@ const DATA_SEKAI = [
           },
         ],
       },
-      niji: {
+      NIJI: {
         id: "25ji",
         groupName:' 25-ji, Nightcord de',
         Theme: "#884499",
         Logo: "25jiLogo.png",
-        LogoText: "",
+        LogoText: "25jiLogoText.png",
+        ThemeBg:"25jiPark.jpg",
         Char: [
           {
             kanade: [
@@ -266,6 +287,7 @@ const DATA_SEKAI = [
                 fullName: "Yoisaki Kanade",
                 Color: "#BB6588",
                 image: "",
+                bgRoom:"Background_Kanade's_Room_.jpg",
                 birthday: "February 10",
                 hobbies: ["Finding new music to listen to","Movies","Manga","Anime","Art"],
                 specialty: ["An innate ability to accurately track time"],
@@ -279,6 +301,7 @@ const DATA_SEKAI = [
                 fullName: "Asahina Mafuyu",
                 Color: "#8889CC",
                 image: "",
+                bgRoom:"Background_Mafuyu's_Room_.jpg",
                 birthday: "January 27",
                 hobbies: ["Aquarium"],
                 specialty: ["Speaking English"],
@@ -292,6 +315,7 @@ const DATA_SEKAI = [
                 fullName: "Shinonome Ena",
                 Color: "#CCAA87",
                 image: "",
+                bgRoom:"Background_Ena's_Room_.jpg",
                 birthday: "April 30",
                 hobbies: ["Drawing","Taking selfies","Social media","Egosurfing"],
                 specialty: ["Researching fashion accessories","Picking out the best cooking ingredients"],
@@ -305,6 +329,7 @@ const DATA_SEKAI = [
                 fullName: "Akiyama Mizuki",
                 Color: "#E4A8CA",
                 image: "",
+                bgRoom:"Background_Mizuki's_Room_.jpg",
                 birthday: "August 27",
                 hobbies: ["Making Videos","Collages"],
                 specialty: ["Redesigning clothes"],

@@ -1,3 +1,17 @@
+export function unitListAnimation(){
+    const observer=new IntersectionObserver((entries)=>{
+        console.log(entries);
+        entries.forEach((entry)=>{
+            if (entry.isIntersecting) {
+                console.log('Element is in view:', entry.target);
+                entry.target.classList.add('show-unit')
+            }
+        })
+        
+    })
+    const getUnitListClass=document.querySelectorAll('.unit-list')
+    getUnitListClass.forEach((el=>observer.observe(el)))
+}
 export function matchWindowLandscapes(setIsLandscapes){
     const WINDOW_LANDSCAPES=window.matchMedia('(min-width:500px)')
     function updateOrientationStatus(e){

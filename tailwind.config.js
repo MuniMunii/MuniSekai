@@ -10,6 +10,10 @@ module.exports = {
         VBSTheme:'#EE1166',
         WSTheme:'#FF9900',
         CordTheme:'#884499'
+      },
+      transitionProperty:{
+      },
+      transitionDuration:{
       }
     },
   },
