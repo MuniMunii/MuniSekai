@@ -21,6 +21,8 @@ export function matchWindowLandscapes(setIsLandscapes){
             setIsLandscapes(false)
         } else {
             console.log('Good');
+            // will firing again if the condition fullfiled
+            unitListAnimation()
             setIsLandscapes(true)
         }
     }
