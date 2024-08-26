@@ -14,6 +14,9 @@ module.exports = {
       transitionProperty:{
       },
       transitionDuration:{
+      },
+      backgroundSize:{
+        'fullMiddle':'100% auto'
       }
     },
   },

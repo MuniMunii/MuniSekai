@@ -14,7 +14,7 @@ export const DATA_SEKAI = [
               id: "ichi",
               fullName: "Hoshino Ichika",
               Color: "#33AAEE",
-              image: "",
+              image: "bnw_ichika.png",
               bgRoom:"Background_Ichika's_Room_.jpg",
               birthday: "August 11",
               hobbies: ["Listening to Miku songs", "Admiring her cacti"],

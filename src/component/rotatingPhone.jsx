@@ -3,7 +3,7 @@ import '../styles/rotatingPhone.css'
 function RotatingPhone(){
     return (
         <>
-        <div className="w-full h-full bg-slate-950 flex flex-col justify-center items-center z-50 absolute">
+        <div className="w-full h-full bg-slate-950 flex flex-col justify-center items-center z-50 absolute overflow-hidden">
             {/* luar hp/outer body */}
             <div className="rotating-phone bg-gray-800 w-20 h-32 flex flex-col justify-center items-center relative rounded-md">
                 {/* kamera/camera */}

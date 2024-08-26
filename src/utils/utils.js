@@ -1,4 +1,6 @@
-export function unitListAnimation(){
+// use class as parameter
+// menggunakan class untuk parameter nya
+export function entryAnimation(Target){
     const observer=new IntersectionObserver((entries)=>{
         console.log(entries);
         entries.forEach((entry)=>{
@@ -9,8 +11,8 @@ export function unitListAnimation(){
         })
         
     })
-    const getUnitListClass=document.querySelectorAll('.unit-list')
-    getUnitListClass.forEach((el=>observer.observe(el)))
+    const getTargetClass=document.querySelectorAll(Target)
+    getTargetClass.forEach((el=>observer.observe(el)))
 }
 export function matchWindowLandscapes(setIsLandscapes){
     const WINDOW_LANDSCAPES=window.matchMedia('(min-width:500px)')
@@ -22,7 +24,8 @@ export function matchWindowLandscapes(setIsLandscapes){
         } else {
             console.log('Good');
             // will firing again if the condition fullfiled
-            unitListAnimation()
+            // function bakal di aktifin lagi kalo kondisi nya terpenuhi
+            entryAnimation()
             setIsLandscapes(true)
         }
     }
