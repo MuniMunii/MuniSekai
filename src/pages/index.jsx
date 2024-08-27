@@ -6,8 +6,9 @@ import { matchWindowLandscapes } from "../utils/utils";
 import RotatingPhone from "../component/rotatingPhone";
 function Index() {
   useEffect(() => {
-    entryAnimation(".unit-list");
-  });
+    entryAnimation(".unit-list","show-unit");
+    entryAnimation(".unit-zoom","zoom-entry")
+  },);
   return (
     <>
     <div className="w-full h-screen overflow-auto">

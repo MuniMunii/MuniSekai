@@ -7,6 +7,7 @@ export const DATA_SEKAI = [
       Logo: "leoLogo.png",
       ThemeBg:"LeonidRooftop.jpg",
       LogoText: "LeoneedlogoText.png",
+      LeadIMG:"bnw_ichika.png",
       Char: [
         {
           ichika: [
@@ -75,6 +76,7 @@ export const DATA_SEKAI = [
         Logo: "mmjLogo.png",
         LogoText: "mmjLogoText.png",
         ThemeBg:"mmjpark.jpg",
+        LeadIMG:"bnw_minori.png",
         Char: [
           {
             minori: [
@@ -143,6 +145,7 @@ export const DATA_SEKAI = [
         Logo: "vbsLogo.png",
         LogoText: "vbsLogoText.png",
         ThemeBg:"vbspark.jpg",
+        LeadIMG:"bnw_kohami.png",
         Char: [
           {
             kohami: [
@@ -211,6 +214,7 @@ export const DATA_SEKAI = [
         Logo: "wxsLogo.png",
         LogoText: "wxsLogoText.png",
         ThemeBg:"wxsPark.jpg",
+        LeadIMG:"bnw_tsukasa.png",
         Char: [
           {
             emu: [
@@ -279,6 +283,7 @@ export const DATA_SEKAI = [
         Logo: "25jiLogo.png",
         LogoText: "25jiLogoText.png",
         ThemeBg:"25jiPark.jpg",
+        LeadIMG:"bnw_kanade.png",
         Char: [
           {
             kanade: [

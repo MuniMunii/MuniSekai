@@ -1,12 +1,11 @@
-// use class as parameter
-// menggunakan class untuk parameter nya
-export function entryAnimation(Target){
+// use targrt class as parameter and class animation for second parameter
+// menggunakan class untuk parameter target dan param class animation 
+export function entryAnimation(Target,animation){
     const observer=new IntersectionObserver((entries)=>{
         console.log(entries);
         entries.forEach((entry)=>{
             if (entry.isIntersecting) {
-                console.log('Element is in view:', entry.target);
-                entry.target.classList.add('show-unit')
+                entry.target.classList.add(animation)
             }
         })
         
