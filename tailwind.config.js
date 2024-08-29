@@ -20,15 +20,6 @@ module.exports = {
       }
     },
   },
-  plugins: [
-    // plugin(function ({ addUtilities }) {
-    //   addUtilities({
-    //     '.translate-x-transition': {
-    //       transform: 'translateX(100%)',
-    //       transition: 'transform 1000ms ease-in-out 250ms',
-    //     },
-    //   });
-    // }),
-  ],
+  plugins: [],
 }
 

@@ -22,14 +22,12 @@ function UnitListIntroduction() {
   }
   function UnitList(){
     const unitArray = Object.entries(...DATA_SEKAI).map(([key, value],index,array) => {
-      const Delay=['75','100','150','200',"0"]
-      const delayClass = index === array.length - 1 ? "250" :  Delay[index % Delay.length]
-      console.log(index === array.length - 1);
+      const bundleDelay = '[&:nth-child(1)]:delay-[75ms] [&:nth-child(2)]:delay-[100ms] [&:nth-child(3)]:delay-[150ms] [&:nth-child(4)]:delay-[200ms] [&:nth-child(5)]:delay-[250ms]';
         return (
         <li key={value.id} 
         onMouseEnter={unitListEffect}
         onMouseLeave={unitListEffect}
-        className={`unit-list ichika opacity-0 -translate-x-full transition-all delay-${delayClass} [&:nth-child(5)]:delay-[250ms] duration-1000 relative mt-7 mx-3 w-28 h-60 hover:mb-10 `}>
+        className={`unit-list ichika opacity-0 -translate-x-full transition-all ${bundleDelay} duration-1000 relative mt-7 mx-3 w-28 h-60 hover:mb-10 `}>
           <a>
               <div
                 className="w-full h-60 bg-slate-100 border-black border h rounded-t-xl flex flex-col justify-end items-end transition-transform duration-300 hover:-translate-y-3 bg-no-repeat bg-cover bg-center"
