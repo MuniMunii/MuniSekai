@@ -3,12 +3,14 @@ import UnitListIntroduction from "../component/UnitListIntroduction";
 import { useEffect,useState } from "react";
 import { entryAnimation } from "../utils/utils";
 import NewsComp from "../component/news";
+import "../styles/animation.css";
+import { mouseEnterAndLeaveEffect } from "../utils/utils";
 function Index() {
   useEffect(() => {
     entryAnimation(".unit-list","show-unit");
-    entryAnimation(".unit-zoom","zoom-entry");
-    entryAnimation(".image-border","zoom-entry");
-    entryAnimation(".news-list","zoom-entry");
+    entryAnimation(".unit-zoom","entry-animation");
+    entryAnimation(".image-border","entry-animation-x");
+    entryAnimation(".news-list","entry-animation-x");
   });
   return (
     <>

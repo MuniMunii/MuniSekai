@@ -3,34 +3,20 @@ import { useEffect } from "react";
 import "../styles/root.css";
 import { DATA_SEKAI } from "../utils/data";
 import { CiMusicNote1 } from "react-icons/ci";
-import "../styles/unitlist.css";
 import Index from "../pages";
+import { mouseEnterAndLeaveEffect } from "../utils/utils";
 function UnitListIntroduction() {
-  // function ini ngambil parameter dari event listener
-  function unitListEffect(event) {
-    // ngambil class dari target yang di pencet
-    const unitImage = event.currentTarget.querySelector(".unit-image");
-    if (event.type === "mouseenter") {
-      if (unitImage) {
-        unitImage.classList.add("unit-image-animation");
-      }
-    } else if (event.type === "mouseleave") {
-      if (unitImage) {
-        unitImage.classList.remove("unit-image-animation");
-      }
-    }
-  }
   function UnitList(){
-    const unitArray = Object.entries(...DATA_SEKAI).map(([key, value],index,array) => {
+    const unitArray = Object.entries(...DATA_SEKAI).map(([key, value]) => {
       const bundleDelay = '[&:nth-child(1)]:delay-[75ms] [&:nth-child(2)]:delay-[100ms] [&:nth-child(3)]:delay-[150ms] [&:nth-child(4)]:delay-[200ms] [&:nth-child(5)]:delay-[250ms]';
         return (
         <li key={value.id} 
-        onMouseEnter={unitListEffect}
-        onMouseLeave={unitListEffect}
-        className={`unit-list ichika opacity-0 -translate-x-full transition-all ${bundleDelay} duration-1000 relative mt-7 mx-3 w-28 h-60 hover:mb-10 `}>
+        onMouseEnter={(event) => mouseEnterAndLeaveEffect(event, '.unit-image', 'entry-animation')}
+        onMouseLeave={(event) => mouseEnterAndLeaveEffect(event, '.unit-image', 'entry-animation')}
+        className={`unit-list opacity-0 -translate-x-full transition-all ${bundleDelay} duration-1000 relative mt-7 mx-3 w-28 h-60  mb-12`}>
           <a>
               <div
-                className="w-full h-60 bg-slate-100 border-black border h rounded-t-xl flex flex-col justify-end items-end transition-transform duration-300 hover:-translate-y-3 bg-no-repeat bg-cover bg-center"
+                className="w-full h-60 bg-slate-100 border-black border h rounded-t-xl flex flex-col justify-end items-end transition-transform duration-300 bg-no-repeat bg-cover bg-center hover:-translate-y-3"
                 style={{
                   backgroundImage: `url(${require("../assets/char/" +
                     value.LeadIMG)})`,
@@ -59,7 +45,7 @@ function UnitListIntroduction() {
   return (
     <>
       <div
-        className={`w-full md:h-[600px] h-[900px] p-3 relative flex flex-col items-center justify-start bg-no-repeat bg-cover`}
+        className={`w-full h-min p-3 relative flex flex-col items-center justify-start bg-no-repeat bg-cover`}
         style={{
           backgroundImage: `url(${require("../assets/room/" + "bg.png")})`,
         }}

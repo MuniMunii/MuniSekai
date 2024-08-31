@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import { matchWindowLandscapes , isLandscapes, unitListAnimation} from './utils/utils';
 import RotatingPhone from './component/rotatingPhone';
 import { DATA_SEKAI } from './utils/data';
+import '../src/styles/root.css'
 function App() {
   const [isLandscapes,setIsLandscapes]=useState(null)
   useEffect(()=>{  

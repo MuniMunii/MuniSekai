@@ -31,3 +31,18 @@ export function matchWindowLandscapes(setIsLandscapes){
     updateOrientationStatus()
     WINDOW_LANDSCAPES.addEventListener('change',updateOrientationStatus)
 }
+// harus pake arrow function/callback untuk pass event target nya
+// need use arrow function/callback for passing event target prop
+export function mouseEnterAndLeaveEffect(event,targetClass,animation) {
+    // ngambil class dari target yang di pencet
+    const classTarget = event.currentTarget.querySelector(targetClass);
+    if (event.type === "mouseenter") {
+      if (classTarget) {
+        classTarget.classList.add(animation);
+      }
+    } else if (event.type === "mouseleave") {
+      if (classTarget) {
+        classTarget.classList.remove(animation);
+      }
+    }
+  }
