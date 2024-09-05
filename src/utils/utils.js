@@ -46,3 +46,21 @@ export function mouseEnterAndLeaveEffect(event,targetClass,animation) {
       }
     }
   }
+
+export function parallaxedHoverEffext(){
+  let getBoxParallax=document.querySelector(".box-parallax");
+  console.log(getBoxParallax);
+  
+getBoxParallax.addEventListener("mousemove", function(event) {
+  parallaxed(event);
+});
+function parallaxed(e) {
+      let amountMovedX = (e.clientX * -0.2 / 8);
+      let amountMovedY = (e.clientY * -0.2 / 8);
+      let x = document.getElementsByClassName("parallaxed");
+      let i;
+      for (i = 0; i < x.length; i++) {
+        x[i].style.transform='translate(' + amountMovedX + 'px,' + amountMovedY + 'px)'
+      }
+}
+}

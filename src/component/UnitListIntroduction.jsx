@@ -13,10 +13,10 @@ function UnitListIntroduction() {
         <li key={value.id} 
         onMouseEnter={(event) => mouseEnterAndLeaveEffect(event, '.unit-image', 'entry-animation')}
         onMouseLeave={(event) => mouseEnterAndLeaveEffect(event, '.unit-image', 'entry-animation')}
-        className={`unit-list opacity-0 -translate-x-full transition-all ${bundleDelay} duration-1000 relative mt-7 mx-3 w-28 h-60  mb-12`}>
+        className={`unit-list opacity-0 -translate-x-full transition-all ${bundleDelay} duration-1000 relative mt-7 mx-3 w-28 h-60  mb-14 group`}>
           <a>
               <div
-                className="w-full h-60 bg-slate-100 border-black border h rounded-t-xl flex flex-col justify-end items-end transition-transform duration-300 bg-no-repeat bg-cover bg-center hover:-translate-y-3"
+                className="w-full h-60 bg-slate-100 border-black border h rounded-t-xl flex flex-col justify-end items-end transition-transform duration-300 bg-no-repeat bg-cover bg-center group-hover:-translate-y-3"
                 style={{
                   backgroundImage: `url(${require("../assets/char/" +
                     value.LeadIMG)})`,

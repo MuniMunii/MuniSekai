@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const { Carousel } = require('flowbite-react');
 const flowbite = require("flowbite-react/tailwind");
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}",flowbite.content()],
@@ -21,6 +22,8 @@ module.exports = {
       }
     },
   },
-  plugins: [flowbite.plugin()],
+  plugins: [flowbite.plugin()({
+    Carousel:true
+  })],
 }
 
