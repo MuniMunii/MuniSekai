@@ -12,6 +12,8 @@ function Index() {
     entryAnimation(".unit-zoom","entry-animation");
     entryAnimation(".image-border","entry-animation-x");
     entryAnimation(".news-list","entry-animation-x");
+    
+    parallaxedHoverEffext('.kohami-para','parallaxed-x')
     parallaxedHoverEffext()
   });
   return (

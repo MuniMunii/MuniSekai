@@ -39,8 +39,8 @@ function GameplayInfo() {
 
   return (
     <>
-      <div className="box-parallax h-[90vh] w-full flex items-center border-blue-700 border relative">
-        <div className="parallaxed h-96 max-w-[800px] w-[80%] mx-auto border border-transparent">
+      <div className="box-parallax h-[800px] w-full flex p-6 items-center relative bg-slate-900">
+        <div className="parallaxed h-full max-w-[800px] w-[80%] mx-auto ">
           <Flowbite theme={{ theme: currentTheme }}>
             <Carousel
               slide={true}
@@ -48,19 +48,77 @@ function GameplayInfo() {
               rightControl=""
               slideInterval={5000}
             >
-              <div
-                className=" w-full h-full border bg-cover bg-no-repeat"
-                style={{
-                  backgroundImage: `url(${require("../assets/room/" +"bg_room_airi.jpg")})`,
-                }}
-              >
-                <img
-                  src={`${require("../assets/char/" + "bnw_kohami.png")}`}
-                  className="absolute bottom-0 left-6 size-40"
-                />
-                <h1 className="parallaxed absolute bottom-0 right-0 font-bold min-[648px]:text-6xl text-4xl text-themeGreen">
-                  Live Concert
-                </h1>
+              {/* slide 1 */}
+              <div className="relative h-full flex items-center justify-center">
+                <div
+                  className=" w-full h-96 max-h-full border max-[648px]:h-80 relative border-transparent overflow-visible"
+                >
+                  <img className="w-[95%] mx-auto h-full rounded-lg border border-black shadow-[4px_8px_14px_0px_rgba(247,250,252,0.5)]"
+                    src={`${require("../assets/room/" + "VirtualLive.png")}`}
+                  />
+                  <div className="absolute bottom-0 right-0 z-10 parallaxed">
+                    <h1 className="min-[648px]:text-6xl text-4xl parallaxed font-test text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                      Live Concert
+                    </h1>
+                    <p className="border rounded-xl border-transparent parallaxed bg-cyan-500 bg-opacity-45 font-testDesc font-medium">
+                      {" "}
+                      a digital live concert using 3D models.
+                    </p>
+                  </div>
+                  <img
+                    src={`${require("../assets/char/" +
+                      "mmj_miku.png")}`}
+                    className="kohami-para absolute -bottom-[20%] right-0 w-52 h-60 min-[648px]:w-72 min-[648px]:h-80 parallaxed"
+                  />
+                </div>
+              </div>
+                            {/* slide 2 */}
+                            <div className="relative h-full flex items-center justify-center">
+                <div
+                  className=" w-full h-96 max-h-full border max-[648px]:h-80 relative border-transparent overflow-visible"
+                >
+                  <img className="w-[95%] mx-auto h-full rounded-lg border border-black shadow-[4px_8px_14px_0px_rgba(247,250,252,0.5)]"
+                    src={`${require("../assets/room/" + "Outfits.png")}`}
+                  />
+                  <div className="absolute bottom-0 right-0 z-10 parallaxed">
+                    <h1 className="min-[648px]:text-6xl text-4xl parallaxed font-test text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-700">
+                      Costumes
+                    </h1>
+                    <p className="border rounded-xl border-transparent parallaxed bg-blue-500 bg-opacity-45 font-testDesc font-medium">
+                      {" "}
+                      Change costumes freely.
+                    </p>
+                  </div>
+                  <img
+                    src={`${require("../assets/char/" +
+                      "bnw_vbs_len.png")}`}
+                    className="kohami-para absolute -bottom-[20%] right-0 w-52 h-60 min-[648px]:w-72 min-[648px]:h-80 parallaxed"
+                  />
+                </div>
+              </div>
+                                          {/* slide 3 */}
+                                          <div className="relative h-full flex items-center justify-center">
+                <div
+                  className=" w-full h-96 max-h-full border max-[648px]:h-80 relative border-transparent overflow-visible"
+                >
+                  <img className="w-[95%] mx-auto h-full rounded-lg border border-black shadow-[4px_8px_14px_0px_rgba(247,250,252,0.5)]"
+                    src={`${require("../assets/room/" + "Gameplay.png")}`}
+                  />
+                  <div className="absolute bottom-0 right-0 z-10 parallaxed">
+                    <h1 className="min-[648px]:text-6xl text-4xl parallaxed font-test text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-yellow-200">
+                      Gameplay
+                    </h1>
+                    <p className="border rounded-xl border-transparent parallaxed bg-purple-500 bg-opacity-45 font-testDesc font-medium">
+                      {" "}
+                      Test your skill.
+                    </p>
+                  </div>
+                  <img
+                    src={`${require("../assets/char/" +
+                      "bnw_Mizuki.png")}`}
+                    className="kohami-para absolute -bottom-[20%] right-0 w-52 h-60 min-[648px]:w-72 min-[648px]:h-80 parallaxed"
+                  />
+                </div>
               </div>
             </Carousel>
           </Flowbite>

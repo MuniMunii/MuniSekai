@@ -5,8 +5,8 @@ import "../styles/news.css"
 function NewsComp() {
   return (
     <>
-      <div className="w-full ">
-        <div className="w-[90%] my-auto h-[90vh] mx-auto flex justify-center md:flex-row flex-col items-center">
+      <div className="w-full overflow-hidden py-44">
+        <div className="w-[90%] my-auto  mx-auto flex justify-center md:flex-row flex-col items-center">
           <div className="image-border mx-6 border-2 rounded-lg relative border-blue-400 w-full h-[275px] max-[760px]:h-[400px] opacity-0 -translate-x-full duration-500 transition-transform overflow-hidden">
             <Carousel
               slide={true}
@@ -24,7 +24,7 @@ function NewsComp() {
             </Carousel>
           </div>
           <div className="news-list flex flex-col justify-start h-fit w-full max-md:mr-auto opacity-0 translate-x-full duration-500 transition-transform">
-            <h1 className="pb-3 pl-3 mb-4 border border-b-blue-200 text-left text-6xl">
+            <h1 className="pb-3 pl-3 mb-4 border-b border-b-blue-200 text-left text-6xl">
               News
             </h1>
             <div
