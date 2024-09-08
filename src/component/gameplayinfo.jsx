@@ -46,7 +46,7 @@ function GameplayInfo() {
               slide={true}
               leftControl=""
               rightControl=""
-              slideInterval={5000}
+              slideInterval={3000}
             >
               {/* slide 1 */}
               <div className="relative h-full flex items-center justify-center">
@@ -68,7 +68,7 @@ function GameplayInfo() {
                   <img
                     src={`${require("../assets/char/" +
                       "mmj_miku.png")}`}
-                    className="kohami-para absolute -bottom-[20%] right-0 w-52 h-60 min-[648px]:w-72 min-[648px]:h-80 parallaxed"
+                    className="absolute -bottom-[20%] right-0 w-52 h-60 min-[648px]:w-72 min-[648px]:h-80 parallaxed"
                   />
                 </div>
               </div>
