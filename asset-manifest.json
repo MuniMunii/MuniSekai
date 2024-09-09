@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MuniSekai/static/css/main.78c4743d.css",
-    "main.js": "/MuniSekai/static/js/main.3aaa7326.js",
+    "main.js": "/MuniSekai/static/js/main.84d05c2a.js",
     "static/js/453.4bc8fe86.chunk.js": "/MuniSekai/static/js/453.4bc8fe86.chunk.js",
     "static/media/mmj_group.png": "/MuniSekai/static/media/mmj_group.c5e0aea3c8f916efff00.png",
     "static/media/mmj_miku.png": "/MuniSekai/static/media/mmj_miku.d1fc617d3172e64767ce.png",
@@ -37,11 +37,11 @@
     "static/media/vbsLogoText.png": "/MuniSekai/static/media/vbsLogoText.253a6c65ee153c0d48ce.png",
     "index.html": "/MuniSekai/index.html",
     "main.78c4743d.css.map": "/MuniSekai/static/css/main.78c4743d.css.map",
-    "main.3aaa7326.js.map": "/MuniSekai/static/js/main.3aaa7326.js.map",
+    "main.84d05c2a.js.map": "/MuniSekai/static/js/main.84d05c2a.js.map",
     "453.4bc8fe86.chunk.js.map": "/MuniSekai/static/js/453.4bc8fe86.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.78c4743d.css",
-    "static/js/main.3aaa7326.js"
+    "static/js/main.84d05c2a.js"
   ]
 }
