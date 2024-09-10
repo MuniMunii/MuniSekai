@@ -39,8 +39,8 @@ function GameplayInfo() {
 
   return (
     <>
-      <div className="box-parallax h-[800px] w-full flex p-6 items-center relative bg-slate-900">
-        <div className="parallaxed h-full max-w-[800px] w-[80%] mx-auto ">
+      <div className="box-parallax h-[800px] w-full flex p-6 items-center relative ">
+        <div className="parallaxed h-full  max-w-[1000px] w-[80%] mx-auto ">
           <Flowbite theme={{ theme: currentTheme }}>
             <Carousel
               slide={true}
@@ -51,7 +51,7 @@ function GameplayInfo() {
               {/* slide 1 */}
               <div className="relative h-full flex items-center justify-center">
                 <div
-                  className=" w-full h-96 max-h-full border max-[648px]:h-80 relative border-transparent overflow-visible"
+                  className=" w-full h-[28rem] max-h-full border max-[648px]:h-80 relative border-transparent overflow-visible"
                 >
                   <img className="w-[95%] mx-auto h-full rounded-lg border border-black shadow-[4px_8px_14px_0px_rgba(247,250,252,0.5)]"
                     src={`${require("../assets/room/" + "VirtualLive.png")}`}
@@ -75,7 +75,7 @@ function GameplayInfo() {
                             {/* slide 2 */}
                             <div className="relative h-full flex items-center justify-center">
                 <div
-                  className=" w-full h-96 max-h-full border max-[648px]:h-80 relative border-transparent overflow-visible"
+                  className=" w-full h-[28rem] max-h-full border max-[648px]:h-80 relative border-transparent overflow-visible"
                 >
                   <img className="w-[95%] mx-auto h-full rounded-lg border border-black shadow-[4px_8px_14px_0px_rgba(247,250,252,0.5)]"
                     src={`${require("../assets/room/" + "Outfits.png")}`}
@@ -99,7 +99,7 @@ function GameplayInfo() {
                                           {/* slide 3 */}
                                           <div className="relative h-full flex items-center justify-center">
                 <div
-                  className=" w-full h-96 max-h-full border max-[648px]:h-80 relative border-transparent overflow-visible"
+                  className=" w-full h-[28rem] max-h-full border max-[648px]:h-80 relative border-transparent overflow-visible"
                 >
                   <img className="w-[95%] mx-auto h-full rounded-lg border border-black shadow-[4px_8px_14px_0px_rgba(247,250,252,0.5)]"
                     src={`${require("../assets/room/" + "Gameplay.png")}`}

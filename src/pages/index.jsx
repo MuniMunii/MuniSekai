@@ -7,7 +7,7 @@ import "../styles/animation.css";
 import GameplayInfo from "../component/gameplayinfo";
 import { parallaxedHoverEffext } from "../utils/utils";
 import Navbar from "../component/navbar";
-function Index({isLandscape}) {
+function Index() {
   useEffect(() => {
     entryAnimation(".unit-list", "show-unit");
     entryAnimation(".unit-zoom", "entry-animation");
@@ -16,7 +16,7 @@ function Index({isLandscape}) {
     parallaxedHoverEffext();
   });
   return (
-      <div className={`w-full`}>
+      <div className={`w-full overflow-hidden`}>
         <Navbar />
         <div className="w-full h-screen bg-pink-300"></div>
         <UnitListIntroduction />

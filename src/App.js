@@ -18,15 +18,20 @@ function App() {
     matchWindowLandscapes(setIsLandscapes);
     console.log(DATA_SEKAI);
   }, []);
-
-  return (
+  const conditionalRender = isLandscapes ? (
     <>
-      <div className="App">
       <Navbar />
       <Routes>
-        <Route path={"/"} element={<Index isLandscape={isLandscapes} />} />
+        <Route path={"/"} element={<Index />} />
       </Routes>
-      {isLandscapes&&<RotatingPhone />}
+    </>
+  ) : (
+    <RotatingPhone />
+  );
+  return (
+    <>
+      <div className="App bg-slate-700">
+{conditionalRender}
       </div>
     </>
   );

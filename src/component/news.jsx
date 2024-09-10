@@ -44,7 +44,7 @@ function NewsComp() {
                 )
               }
             >
-              <div className="text-left mt-2 border border-green-500 py-2 px-6 w-full group-hover:translate-x-10 transition-transform duration-150">8/31: Happy Birthday, <span className="text-[#33CCBA] font-semibold">Miku!</span></div>
+              <div className="text-left mt-2 border bg-slate-50 border-green-500 py-2 px-6 w-full group-hover:translate-x-10 transition-transform duration-150">8/31: Happy Birthday, <span className="text-[#33CCBA] font-semibold">Miku!</span></div>
               <img
                 src={`${require("../assets/char/" + "chibi_miku.png")}`}
                 className="chibi-image translate-x-full transition-all duration-300 size-10 opacity-0 absolute left-0 blur-md mr-1"
@@ -67,7 +67,7 @@ function NewsComp() {
                 )
               }
             >
-              <div className="text-left mt-2 border border-green-500 py-2 px-6 w-full group-hover:translate-x-10 transition-transform duration-150">8/27: Happy Birthday, <span className="text-[#E4A8CA] font-semibold">Mizuki!</span></div>
+              <div className="text-left mt-2 border bg-slate-50 border-green-500 py-2 px-6 w-full group-hover:translate-x-10 transition-transform duration-150">8/27: Happy Birthday, <span className="text-[#E4A8CA] font-semibold">Mizuki!</span></div>
               <img
                 src={`${require("../assets/char/" + "chibi_mizuki.png")}`}
                 className="chibi-image translate-x-full transition-all duration-300 size-10 opacity-0 absolute left-0 blur-md mr-1"
@@ -90,7 +90,7 @@ function NewsComp() {
                 )
               }
             >
-              <div className="text-left mt-2 border border-green-500 py-2 px-6 w-full group-hover:translate-x-10 transition-transform duration-150">8/11: Happy Birthday, <span className="text-[#33AAEE] font-semibold">Ichika!</span></div>
+              <div className="text-left mt-2 border bg-slate-50 border-green-500 py-2 px-6 w-full group-hover:translate-x-10 transition-transform duration-150">8/11: Happy Birthday, <span className="text-[#33AAEE] font-semibold">Ichika!</span></div>
               <img
                 src={`${require("../assets/char/" + "chibi_ichika.png")}`}
                 className="chibi-image translate-x-full transition-all duration-300 size-10 opacity-0 absolute left-0 blur-md mr-1"
