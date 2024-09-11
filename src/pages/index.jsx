@@ -14,15 +14,14 @@ function Index() {
     entryAnimation(".image-border", "entry-animation-x");
     entryAnimation(".news-list", "entry-animation-x");
     parallaxedHoverEffext();
-  });
+  },[]);
   return (
-      <div className={`w-full overflow-hidden`}>
-        <Navbar />
+  <>
         <div className="w-full h-screen bg-pink-300"></div>
         <UnitListIntroduction />
         <NewsComp />
         <GameplayInfo />
-      </div>
+      </>
   );
 }
 export default Index;

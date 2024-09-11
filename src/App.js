@@ -5,13 +5,12 @@ import React, { useState, useRef } from "react";
 import { useEffect } from "react";
 import {
   matchWindowLandscapes,
-  isLandscapes,
-  unitListAnimation,
 } from "./utils/utils";
 import RotatingPhone from "./component/rotatingPhone";
 import { DATA_SEKAI } from "./utils/data";
 import "../src/styles/root.css";
 import Navbar from "./component/navbar";
+import { Turn as Hamburger } from "hamburger-react";
 function App() {
   const [isLandscapes, setIsLandscapes] = useState(null);
   useEffect(() => {
@@ -30,9 +29,9 @@ function App() {
   );
   return (
     <>
-      <div className="App bg-slate-700">
+<div className="App z-0">
 {conditionalRender}
-      </div>
+</div>
     </>
   );
 }

@@ -34,6 +34,7 @@ function UnitListIntroduction() {
                 <div className="w-full h-full absolute bg-black/50 inset-0 blur-lg"></div>
                 <img
                   src={require("../assets/Unit/" + value.Logo)}
+                  alt={value.Char}
                   className="filter-none relative z-10 my-4"
                 />
               </div>
@@ -55,7 +56,7 @@ function UnitListIntroduction() {
         className={`w-full h-min p-3 relative flex flex-col items-center justify-start bg-no-repeat bg-cover`}
         style={{}}
       >
-        <div className="bg-slate-800 rounded-lg text-violet-50 p-4">
+        <div className="bg-slate-800 rounded-lg text-violet-50 p-4 z-0">
           <div className="unit-zoom opacity-0 translate-y-full duration-500 transition-transform flex flex-col h-max">
             <p className="text-black text-3xl text-center">Sekai</p>
             {/* border bawah title / border under title */}

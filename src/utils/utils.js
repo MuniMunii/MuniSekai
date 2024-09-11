@@ -3,8 +3,9 @@
 export function entryAnimation(Target, animation) {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add(animation);
+      if (entry.isIntersecting&&!entry.target.classList.contains('animated')) {
+        entry.target.classList.add(animation,'animated');
+        observer.unobserve(entry.target);
       }
     });
   });
