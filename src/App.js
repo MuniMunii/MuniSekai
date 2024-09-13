@@ -19,7 +19,6 @@ function App() {
   }, []);
   const conditionalRender = isLandscapes ? (
     <>
-      <Navbar />
       <Routes>
         <Route path={"/"} element={<Index />} />
       </Routes>
@@ -29,7 +28,8 @@ function App() {
   );
   return (
     <>
-<div className="App z-0">
+    
+<div className="App z-0 overflow-hidden">
 {conditionalRender}
 </div>
     </>

@@ -1,26 +1,37 @@
 import React from "react";
 import UnitListIntroduction from "../component/UnitListIntroduction";
-import { useEffect, useState } from "react";
+import { useEffect, useState,useRef } from "react";
 import { entryAnimation } from "../utils/utils";
 import NewsComp from "../component/news";
 import "../styles/animation.css";
 import GameplayInfo from "../component/gameplayinfo";
 import { parallaxedHoverEffext } from "../utils/utils";
 import Navbar from "../component/navbar";
+import Footer from "../component/footer";
+import ImageDisplay from "../component/imageDisplay";
 function Index() {
+
   useEffect(() => {
     entryAnimation(".unit-list", "show-unit");
     entryAnimation(".unit-zoom", "entry-animation");
     entryAnimation(".image-border", "entry-animation-x");
     entryAnimation(".news-list", "entry-animation-x");
-    parallaxedHoverEffext();
+    // effect buat component GameplayInfo
+    // effect for GameplayInfo Component
+    // parallaxedHoverEffext();
   },[]);
+
   return (
   <>
-        <div className="w-full h-screen bg-pink-300"></div>
+      <Navbar/>
+      <div className="">
+        <ImageDisplay/>
         <UnitListIntroduction />
         <NewsComp />
-        <GameplayInfo />
+        {/* i remove this because ugly */}
+        {/* <GameplayInfo /> */}
+        <Footer/>
+      </div>
       </>
   );
 }
