@@ -58,7 +58,7 @@ function UnitListIntroduction() {
       >
         <div className="bg-slate-800 rounded-lg text-violet-50 p-4 z-0">
           <div className="unit-zoom opacity-0 translate-y-full duration-500 transition-transform flex flex-col h-max">
-            <p className="text-black text-3xl text-center">Sekai</p>
+            <p className="text-black text-3xl text-center" id="sekai-tag">Sekai</p>
             {/* border bawah title / border under title */}
             <div className="flex justify-center items-center w-48 my-6 mx-auto">
               <div className="border border-t-black w-full"></div>

@@ -3,9 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Index from "./pages";
 import React, { useState, useRef } from "react";
 import { useEffect } from "react";
-import {
-  matchWindowLandscapes,
-} from "./utils/utils";
+import { matchWindowLandscapes } from "./utils/utils";
 import RotatingPhone from "./component/rotatingPhone";
 import { DATA_SEKAI } from "./utils/data";
 import "../src/styles/root.css";
@@ -19,21 +17,17 @@ function App() {
   }, []);
   const conditionalRender = isLandscapes ? (
     <>
-      <Routes>
-        <Route path={"/"} element={<Index />} />
-      </Routes>
+      <Navbar />
+      <div className="App z-0 relative">
+        <Routes>
+          <Route path={"/"} element={<Index />} />
+        </Routes>
+      </div>
     </>
   ) : (
     <RotatingPhone />
   );
-  return (
-    <>
-    
-<div className="App z-0 overflow-hidden">
-{conditionalRender}
-</div>
-    </>
-  );
+  return <>{conditionalRender}</>;
 }
 
 export default App;

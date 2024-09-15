@@ -23,8 +23,7 @@ function Index() {
 
   return (
   <>
-      <Navbar/>
-      <div className="">
+      <div className="relative">
         <ImageDisplay/>
         <UnitListIntroduction />
         <NewsComp />
