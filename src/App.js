@@ -18,7 +18,7 @@ function App() {
   const conditionalRender = isLandscapes ? (
     <>
       <Navbar />
-      <div className="App z-0 relative">
+      <div className="App z-0 bg-gradient-to-tl from-white to-themeGreen">
         <Routes>
           <Route path={"/"} element={<Index />} />
         </Routes>

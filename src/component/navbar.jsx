@@ -87,7 +87,7 @@ function Navbar() {
           alt="logo-pjsk"
           className={`mr-1`}
         />{" "}
-        {data.groupName}
+        {data.groupName.split(",")}
       </li>
     );
   });
@@ -112,7 +112,7 @@ function Navbar() {
           <div
             className={`${
               animation ? "translate-x-0" : "translate-x-full"
-            } max-sm:w-[50%] w-[35%] h-full overflow-auto bg-white px-8 flex flex-col justify-between py-6 transition-all duration-300 z-30 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]`}
+            } max-sm:w-[50%] w-[35%] h-full overflow-auto bg-white text-wrap px-8 flex flex-col justify-between py-6 transition-all duration-300 z-30 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]`}
           >
             <div className="flex justify-start items-start flex-col mt-14 font-Poppins max-md:mx-auto z-50 w-fit mr-auto">
               <a href="#sekai-tag" onClick={()=>setIsOpen(false)} className="hover:text-pink-300 mb-4 text-[4.3vw] font-semibold cursor-pointer ">

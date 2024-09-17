@@ -48,6 +48,9 @@ body{
    1px -1px 0 #000,
    -1px 1px 0 #000;
 }
+.no-select{
+    user-select: none;
+}
 /* body,html{
     position: relative;
     margin: 0;
