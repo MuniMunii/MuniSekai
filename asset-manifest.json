@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/MuniSekai/static/css/main.2abbe8bb.css",
-    "main.js": "/MuniSekai/static/js/main.f64e76bd.js",
+    "main.css": "/MuniSekai/static/css/main.8e27af75.css",
+    "main.js": "/MuniSekai/static/js/main.2bb3aa19.js",
     "static/js/453.4bc8fe86.chunk.js": "/MuniSekai/static/js/453.4bc8fe86.chunk.js",
     "static/media/mmj_group.png": "/MuniSekai/static/media/mmj_group.c5e0aea3c8f916efff00.png",
     "static/media/mmj_miku.png": "/MuniSekai/static/media/mmj_miku.d1fc617d3172e64767ce.png",
@@ -34,16 +34,21 @@
     "static/media/playicon.png": "/MuniSekai/static/media/playicon.30b2de7629fee4e0b3ed.png",
     "static/media/25jiLogoText.png": "/MuniSekai/static/media/25jiLogoText.8546f4ca8327c954c296.png",
     "static/media/wxsLogoText.png": "/MuniSekai/static/media/wxsLogoText.8fb6166e35af0abe2820.png",
+    "static/media/Mysterious.png": "/MuniSekai/static/media/Mysterious.074b8fb973048cf0e4a1.png",
     "static/media/appicon.png": "/MuniSekai/static/media/appicon.9e669c040a6403d3547c.png",
+    "static/media/Pure.png": "/MuniSekai/static/media/Pure.8f6d67ad4da19d65184d.png",
+    "static/media/Cute.png": "/MuniSekai/static/media/Cute.6d27a0c1b129166a21bf.png",
+    "static/media/Cool.png": "/MuniSekai/static/media/Cool.e67f9c6b9b96b3f73c17.png",
+    "static/media/Happy.png": "/MuniSekai/static/media/Happy.6cd9a947f1c4e00b877b.png",
     "static/media/mmjLogoText.png": "/MuniSekai/static/media/mmjLogoText.a6d6208432f01e99a93d.png",
     "static/media/vbsLogoText.png": "/MuniSekai/static/media/vbsLogoText.253a6c65ee153c0d48ce.png",
     "index.html": "/MuniSekai/index.html",
-    "main.2abbe8bb.css.map": "/MuniSekai/static/css/main.2abbe8bb.css.map",
-    "main.f64e76bd.js.map": "/MuniSekai/static/js/main.f64e76bd.js.map",
+    "main.8e27af75.css.map": "/MuniSekai/static/css/main.8e27af75.css.map",
+    "main.2bb3aa19.js.map": "/MuniSekai/static/js/main.2bb3aa19.js.map",
     "453.4bc8fe86.chunk.js.map": "/MuniSekai/static/js/453.4bc8fe86.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2abbe8bb.css",
-    "static/js/main.f64e76bd.js"
+    "static/css/main.8e27af75.css",
+    "static/js/main.2bb3aa19.js"
   ]
 }
