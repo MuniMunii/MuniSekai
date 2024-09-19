@@ -1,9 +1,7 @@
 import React from "react";
-import { useEffect } from "react";
 import "../styles/root.css";
 import { DATA_SEKAI } from "../utils/data";
 import { CiMusicNote1 } from "react-icons/ci";
-import Index from "../pages";
 import { mouseEnterAndLeaveEffect } from "../utils/utils";
 function UnitListIntroduction() {
   function UnitList() {
@@ -19,7 +17,7 @@ function UnitListIntroduction() {
           onMouseLeave={(event) =>
             mouseEnterAndLeaveEffect(event, ".unit-image", "entry-animation")
           }
-          className={`unit-list opacity-0 -translate-x-full transition-all ${bundleDelay} duration-1000 relative mt-7 mx-3 w-28 h-60  mb-14 group`}
+          className={`unit-list opacity-0 -translate-x-full transition-all ${bundleDelay} duration-1000 relative mt-7 mx-3 w-28 h-60  mb-14 group cursor-pointer`}
         >
           <a>
             <div
@@ -84,7 +82,6 @@ function UnitListIntroduction() {
           songs have no melody or lyrics and are created when a SEKAI is born.{" "}
         </p>
         </div>
-        
       </div>
     </>
   );

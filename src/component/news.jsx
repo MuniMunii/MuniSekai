@@ -1,9 +1,23 @@
 import React from "react";
 import { Carousel } from "flowbite-react";
 import { mouseEnterAndLeaveEffect } from "../utils/utils";
-import { useRef } from "react";
+import { useState,useEffect } from "react";
 import '../styles/root.css'
 function NewsComp() {
+  const [isOpen,setIsOpen]=useState(false)
+  // const [delayOpen,setDelayOpen]=useState(false)
+  // const [render,setRender]=useState(false)
+  // useEffect(()=>{
+  //   let timer;
+  //   if(isOpen){
+  //     timer=setTimeout(()=>{setDelayOpen(true)},300)
+  //     setRender(true)
+  //   }
+  //   return clearTimeout(timer)
+  // },[isOpen])
+  // console.log(isOpen);
+  // console.log(delayOpen);
+  
   let isDragging = false;
   let startX = 0;
   let scrollLeft = 0;
@@ -49,23 +63,26 @@ function NewsComp() {
               slideInterval={2000}
             >
               <img
+                loading="lazy"
                 src={`${require("../assets/char/" + "hb_miku.png")}`}
                 alt="hb-miku"
                 className="w-full h-full object-cover hover:scale-125 transition-all duration-100"
               />
               <img
+                loading="lazy"
                 src={`${require("../assets/char/" + "hb_mizuki.png")}`}
                 alt="hb-mizuki"
                 className="w-full h-full object-cover hover:scale-125 transition-all duration-100"
               />
               <img
+                loading="lazy"
                 src={`${require("../assets/char/" + "hb_ichika.png")}`}
                 alt="hb-ichika"
                 className="w-full h-full object-cover hover:scale-125 transition-all duration-100"
               />
             </Carousel>
           </div>
-          <div className="news-list flex flex-col justify-start h-fit w-full max-md:mr-auto opacity-0 translate-x-full duration-500 transition-transform">
+          <div className="news-list flex flex-col bg-white justify-start h-full p-4 w-full rounded-md max-[760px]:mt-3 max-md:mr-auto opacity-0 translate-x-full duration-500 transition-transform">
             <h1 className="pb-3 pl-3 mb-4 border-b border-b-blue-200 text-left text-6xl">
               News
             </h1>
@@ -86,7 +103,7 @@ function NewsComp() {
                 )
               }
             >
-              <div className="text-left mt-2 border bg-slate-50 border-green-500 py-2 px-6 w-full group-hover:translate-x-10 transition-transform duration-150">
+              <div className="text-left mt-2 border bg-slate-50 border-green-500 py-2 px-6 w-full group-hover:translate-x-[7%] transition-transform duration-150">
                 8/31: Happy Birthday,{" "}
                 <span className="text-[#33CCBA] font-semibold">Miku!</span>
               </div>
@@ -113,7 +130,7 @@ function NewsComp() {
                 )
               }
             >
-              <div className="text-left mt-2 border bg-slate-50 border-green-500 py-2 px-6 w-full group-hover:translate-x-10 transition-transform duration-150">
+              <div className="text-left mt-2 border bg-slate-50 border-green-500 py-2 px-6 w-full group-hover:translate-x-[7%] transition-transform duration-150">
                 8/27: Happy Birthday,{" "}
                 <span className="text-[#E4A8CA] font-semibold">Mizuki!</span>
               </div>
@@ -140,7 +157,7 @@ function NewsComp() {
                 )
               }
             >
-              <div className="text-left mt-2 border bg-slate-50 border-green-500 py-2 px-6 w-full group-hover:translate-x-10 transition-transform duration-150">
+              <div className="text-left mt-2 border bg-slate-50 border-green-500 py-2 px-6 w-full group-hover:translate-x-[7%] transition-transform duration-150">
                 8/11: Happy Birthday,{" "}
                 <span className="text-[#33AAEE] font-semibold">Ichika!</span>
               </div>
@@ -165,11 +182,11 @@ function NewsComp() {
             <div className=" bg-cyan-900 rounded-md px-3 py-1 w-full h-full relative font-Poppins">
               <p className="text-white font-semibold tracking-wide">Patch Notes 1.0</p>
               <ul className="list-inside list-disc text-left">
-                <li>17+ New Songs</li>
+                <li>17 New Songs</li>
                 <li>New event</li>
                 <li>Optimization shop</li>
               </ul>
-              <button className="py-2 px-4 bg-blue-600 hover:bg-blue-500 hover:text-yellow-100 text-white transition-colors absolute bottom-2 left-3  text-center rounded cursor-pointer">Read More</button>
+              <button onClick={()=>setIsOpen(true)} className="py-2 px-4 bg-blue-600 hover:bg-blue-500 hover:text-yellow-100 text-white transition-colors absolute bottom-2 left-3  text-center rounded cursor-pointer">Read More</button>
             </div>
             </div>
           </div>
@@ -179,7 +196,7 @@ function NewsComp() {
             <div className=" bg-cyan-900 rounded-md px-3 py-1 w-full h-full relative font-Poppins">
               <p className="text-white font-semibold tracking-wide">Patch Notes 1.1</p>
               <ul className="list-inside list-disc text-left">
-                <li>10+ New Songs</li>
+                <li>10 New Songs</li>
                 <li>New items in Shop</li>
                 <li>Fixing minor bug</li>
               </ul>
@@ -193,9 +210,9 @@ function NewsComp() {
             <div className=" bg-cyan-900 rounded-md px-3 py-1 w-full h-full relative font-Poppins">
               <p className="text-white font-semibold tracking-wide">Patch Notes 1.2</p>
               <ul className="list-inside list-disc text-left">
-                <li>17+ New Songs</li>
                 <li>New Event</li>
-                <li>Optimization Shop</li>
+                <li>New Ranked Mode</li>
+                <li>Optimization Map</li>
               </ul>
               <button className="py-2 px-4 bg-blue-600 hover:bg-blue-500 hover:text-yellow-100 text-white transition-colors absolute bottom-2 left-3 text-center rounded cursor-pointer">Read More</button>
             </div>
@@ -207,9 +224,9 @@ function NewsComp() {
             <div className=" bg-cyan-900 rounded-md px-3 py-1 w-full h-full relative font-Poppins">
               <p className="text-white font-semibold tracking-wide">Patch Notes 1.3</p>
               <ul className="list-inside list-disc text-left">
-                <li>17+ New Songs</li>
-                <li>New Event</li>
-                <li>Optimization Shop</li>
+                <li>3 New Songs</li>
+                <li>New Costumes</li>
+                <li>New Unit</li>
               </ul>
               <button className="py-2 px-4 bg-blue-600 hover:bg-blue-500 hover:text-yellow-100 text-white transition-colors absolute bottom-2 left-3  text-center rounded cursor-pointer">Read More</button>
             </div>
@@ -221,11 +238,11 @@ function NewsComp() {
             <div className=" bg-cyan-900 rounded-md px-3 py-1 w-full h-full relative font-Poppins">
               <p className="text-white font-semibold tracking-wide">Patch Notes 1.4</p>
               <ul className="list-inside list-disc text-left">
-                <li>17+ New Songs</li>
+                <li>7 New Songs</li>
                 <li>New Event</li>
-                <li>Optimization Shop</li>
+                <li>Adding Append</li>
               </ul>
-              <button className="py-2 px-4 bg-blue-600 hover:bg-blue-500 hover:text-yellow-100 text-white transition-colors absolute bottom-2 left-3  text-center rounded cursor-pointer">Read More</button>
+              <button className="py-2 px-4 bg-blue-600 hover:bg-blue-500 hover:text-yellow-100 text-white transition-colors absolute bottom-2 left-3 text-center rounded cursor-pointer">Read More</button>
             </div>
             </div>
           </div>
@@ -233,5 +250,8 @@ function NewsComp() {
       </div>
     </>
   );
+  
+  
 }
+
 export default NewsComp;

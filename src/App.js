@@ -1,28 +1,30 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import Index from "./pages";
-import React, { useState, useRef } from "react";
+// import Index from "./pages";
+import React, { useState, useRef,lazy,Suspense } from "react";
 import { useEffect } from "react";
 import { matchWindowLandscapes } from "./utils/utils";
 import RotatingPhone from "./component/rotatingPhone";
-import { DATA_SEKAI } from "./utils/data";
 import "../src/styles/root.css";
 import Navbar from "./component/navbar";
-import { Turn as Hamburger } from "hamburger-react";
+import Loading from "./component/loading";
+const IndexComp=React.lazy(()=>import('./pages/index'))
 function App() {
   const [isLandscapes, setIsLandscapes] = useState(null);
+  const [isVideoLoading,setIsVideoLoading]=useState(false);
   useEffect(() => {
     matchWindowLandscapes(setIsLandscapes);
-    console.log(DATA_SEKAI);
   }, []);
   const conditionalRender = isLandscapes ? (
     <>
-      <Navbar />
+      <Suspense fallback={<Loading/>}>
       <div className="App z-0 bg-gradient-to-tl from-white to-themeGreen">
+      <Navbar />
         <Routes>
-          <Route path={"/"} element={<Index />} />
+          <Route path={"/"} element={<IndexComp isVideoLoading={isVideoLoading} setIsVideoLoading={setIsVideoLoading}/>} />
         </Routes>
       </div>
+      </Suspense>
     </>
   ) : (
     <RotatingPhone />

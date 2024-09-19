@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState, useRef } from "react";
-function ImageDisplay() {
+function ImageDisplay({setIsVideoLoading}) {
   const [videoEnded, setVideoEnded] = useState(false);
   const [delayedImage, setDelayedImage] = useState(false);
   let videoRef = useRef(null);
+  useEffect(()=>{
+    // event jika video masi blom loaded index ga bakal muncul
+    // this event for if video not loaded yet index.jsx will not show up
+    const handleVideoAsync=async()=>{
+      let video=videoRef.current
+      if(video){
+        await new Promise((res)=>{
+          video.onloadeddata=()=>{
+            res()
+          }
+        });
+        setIsVideoLoading(false)
+        video.play()
+    }
+    handleVideoAsync()
+    }
+  },[setIsVideoLoading])
   const handleVideo = () => {
     let video = videoRef.current;
     if (video) {
@@ -25,13 +42,15 @@ function ImageDisplay() {
         "mv_pc.jpg")})`,
     }}>
       <img
+            loading="lazy"
             src={`${require("../assets/other/" + "Logo.png")}`}
             alt="logo-pjsk"
             className={`mx-auto mb-11 w-[30%]`}
           />
-        <div className="w-full h-24 border -bottom-14 bg-slate-50 bg-opacity-35 blur-lg border-red-700 absolute -z-10"></div>
+        <div className="w-full h-24 border -bottom-14 bg-slate-50 bg-opacity-35 blur-lg  absolute -z-10"></div>
     </div>
   ) : (
+    <div className="w-full h-screen relative">
 <video
   ref={videoRef}
   onPause={handleVideo}
@@ -42,6 +61,8 @@ function ImageDisplay() {
   className="w-screen h-screen object-cover"
   
 />
+<div className="w-full h-24 border -bottom-14 bg-slate-50 bg-opacity-35 blur-lg absolute -z-10"></div>
+</div>
   );
   return imageChanging;
 }
