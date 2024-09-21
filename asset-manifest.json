@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/MuniSekai/static/css/main.58d614fe.css",
-    "main.js": "/MuniSekai/static/js/main.fe02b7b2.js",
+    "main.css": "/MuniSekai/static/css/main.a811a203.css",
+    "main.js": "/MuniSekai/static/js/main.ca28719d.js",
     "static/css/175.b06ad827.chunk.css": "/MuniSekai/static/css/175.b06ad827.chunk.css",
-    "static/js/175.423abd75.chunk.js": "/MuniSekai/static/js/175.423abd75.chunk.js",
+    "static/js/175.075f458d.chunk.js": "/MuniSekai/static/js/175.075f458d.chunk.js",
     "static/js/453.4bc8fe86.chunk.js": "/MuniSekai/static/js/453.4bc8fe86.chunk.js",
     "static/js/777.45af38b7.chunk.js": "/MuniSekai/static/js/777.45af38b7.chunk.js",
     "static/media/mmj_group.png": "/MuniSekai/static/media/mmj_group.c5e0aea3c8f916efff00.png",
@@ -33,7 +33,9 @@
     "static/media/chibi_miku.png": "/MuniSekai/static/media/chibi_miku.1d3b7b0a8a3b77eb5f73.png",
     "static/media/LeoneedlogoText.png": "/MuniSekai/static/media/LeoneedlogoText.a5efbba153439c0437e0.png",
     "static/media/chibi_mizuki.png": "/MuniSekai/static/media/chibi_mizuki.e5c8b3a8310ccd2c558b.png",
+    "static/media/crypton_logo.png": "/MuniSekai/static/media/crypton_logo.e34e46d219cb7471b85c.png",
     "static/media/chibi_ichika.png": "/MuniSekai/static/media/chibi_ichika.521a29bd9fc19d25020f.png",
+    "static/media/sega_logo.png": "/MuniSekai/static/media/sega_logo.1a17928ffdd752ea3d37.png",
     "static/media/playicon.png": "/MuniSekai/static/media/playicon.30b2de7629fee4e0b3ed.png",
     "static/media/25jiLogoText.png": "/MuniSekai/static/media/25jiLogoText.8546f4ca8327c954c296.png",
     "static/media/wxsLogoText.png": "/MuniSekai/static/media/wxsLogoText.8fb6166e35af0abe2820.png",
@@ -46,15 +48,15 @@
     "static/media/mmjLogoText.png": "/MuniSekai/static/media/mmjLogoText.a6d6208432f01e99a93d.png",
     "static/media/vbsLogoText.png": "/MuniSekai/static/media/vbsLogoText.253a6c65ee153c0d48ce.png",
     "index.html": "/MuniSekai/index.html",
-    "main.58d614fe.css.map": "/MuniSekai/static/css/main.58d614fe.css.map",
-    "main.fe02b7b2.js.map": "/MuniSekai/static/js/main.fe02b7b2.js.map",
+    "main.a811a203.css.map": "/MuniSekai/static/css/main.a811a203.css.map",
+    "main.ca28719d.js.map": "/MuniSekai/static/js/main.ca28719d.js.map",
     "175.b06ad827.chunk.css.map": "/MuniSekai/static/css/175.b06ad827.chunk.css.map",
-    "175.423abd75.chunk.js.map": "/MuniSekai/static/js/175.423abd75.chunk.js.map",
+    "175.075f458d.chunk.js.map": "/MuniSekai/static/js/175.075f458d.chunk.js.map",
     "453.4bc8fe86.chunk.js.map": "/MuniSekai/static/js/453.4bc8fe86.chunk.js.map",
     "777.45af38b7.chunk.js.map": "/MuniSekai/static/js/777.45af38b7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.58d614fe.css",
-    "static/js/main.fe02b7b2.js"
+    "static/css/main.a811a203.css",
+    "static/js/main.ca28719d.js"
   ]
 }
