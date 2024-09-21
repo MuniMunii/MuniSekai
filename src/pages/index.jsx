@@ -7,29 +7,28 @@ import "../styles/animation.css";
 import Footer from "../component/footer";
 import ImageDisplay from "../component/imageDisplay";
 import Loading from "../component/loading";
-function Index({ isVideoLoading, setIsVideoLoading }) {
-  useEffect(() => {
-    entryAnimation(".unit-list", "show-unit");
-    entryAnimation(".unit-zoom", "entry-animation");
-    entryAnimation(".image-border", "entry-animation-x");
-    entryAnimation(".news-list", "entry-animation-x");
-    // effect buat component GameplayInfo
-    // effect for GameplayInfo Component
-    // parallaxedHoverEffext();
-  }, []);
+function Index() {
+  const [isVideoLoading, setIsVideoLoading] = useState(false);
+  const [isError, setIsError] = useState(null);
   return (
     <>
-      <ImageDisplay setIsVideoLoading={setIsVideoLoading} />
+      <ImageDisplay
+        setIsVideoLoading={setIsVideoLoading}
+        setIsError={setIsError}
+      />
       {isVideoLoading ? (
-        <Loading isVideoLoading={isVideoLoading} />
+        <Loading isVideoLoading={isVideoLoading} isError={isError} />
       ) : (
-        <div className="relative">
-          <UnitListIntroduction />
-          <NewsComp />
-          {/* i remove this because ugly */}
-          {/* <GameplayInfo /> */}
-          <Footer />
-        </div>
+        <>
+        {/* unitlist */}
+            <UnitListIntroduction />
+            {/* news */}
+            <NewsComp />
+            {/* i remove this because ugly */}
+            {/* <GameplayInfo /> */}
+            {/* footer */}
+            <Footer />
+        </>
       )}
     </>
   );

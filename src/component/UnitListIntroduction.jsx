@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/root.css";
 import { DATA_SEKAI } from "../utils/data";
 import { CiMusicNote1 } from "react-icons/ci";
-import { mouseEnterAndLeaveEffect } from "../utils/utils";
+import { mouseEnterAndLeaveEffect,entryAnimation } from "../utils/utils";
 function UnitListIntroduction() {
+  useEffect(()=>{
+    entryAnimation(".unit-list", "show-unit");
+    entryAnimation(".unit-zoom", "entry-animation");
+  },[])
   function UnitList() {
     const unitArray = Object.entries(...DATA_SEKAI).map(([key, value]) => {
       const bundleDelay =

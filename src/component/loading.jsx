@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
-function Loading ({isVideoLoading}){
+function Loading ({isVideoLoading,isError}){
     useEffect(()=>{
         if(isVideoLoading){
             document.body.style.overflow="hidden"
@@ -20,6 +20,7 @@ function Loading ({isVideoLoading}){
                 <img loading="lazy" className="animate-bounceLoadAnimation animation-delay-200 mx-1 size-9" src={`${require('../assets/other/'+'Happy.png')}`}/>
                 <img loading="lazy" className="animate-bounceLoadAnimation animation-delay-250 size-9" src={`${require('../assets/other/'+'Mysterious.png')}`}/>
             </div>
+            {isError&&<h2>{isError}... Pls reload</h2>}
         </div>
         </>
     )

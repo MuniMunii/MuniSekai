@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useState, useRef } from "react";
-function ImageDisplay({setIsVideoLoading}) {
+function ImageDisplay({setIsVideoLoading,setIsError}) {
   const [videoEnded, setVideoEnded] = useState(false);
   const [delayedImage, setDelayedImage] = useState(false);
   let videoRef = useRef(null);
@@ -10,13 +10,31 @@ function ImageDisplay({setIsVideoLoading}) {
     const handleVideoAsync=async()=>{
       let video=videoRef.current
       if(video){
-        await new Promise((res)=>{
+        setIsVideoLoading(true)
+        await new Promise((resolve)=>{
           video.onloadeddata=()=>{
-            res()
+            resolve()
           }
-        });
-        setIsVideoLoading(false)
-        video.play()
+        })
+        setIsVideoLoading(false).then(()=>{
+          video.play()
+        }).catch((error)=>{
+          setIsError(String(error))
+          console.log(error);
+        })
+        // fetch(video)
+        // .then(
+        //   video.onloadeddata()
+        // ).then(video.play())
+        // .finally(setIsVideoLoading(false))
+      //   await new Promise((res)=>{
+      //     video.onloadeddata=()=>{
+      //       res()
+      //     }
+      //   }
+      // );
+        // setIsVideoLoading(false)
+        // video.play()
     }
     handleVideoAsync()
     }
@@ -47,7 +65,7 @@ function ImageDisplay({setIsVideoLoading}) {
             alt="logo-pjsk"
             className={`mx-auto mb-11 w-[30%]`}
           />
-        <div className="w-full h-24 border -bottom-14 bg-slate-50 bg-opacity-35 blur-lg  absolute -z-10"></div>
+        <div className="w-full h-24 border -bottom-14 bg-slate-50/35 blur-lg  absolute -z-10"></div>
     </div>
   ) : (
     <div className="w-full h-screen relative">
@@ -61,7 +79,7 @@ function ImageDisplay({setIsVideoLoading}) {
   className="w-screen h-screen object-cover"
   
 />
-<div className="w-full h-24 border -bottom-14 bg-slate-50 bg-opacity-35 blur-lg absolute -z-10"></div>
+<div className="w-full h-24 border -bottom-14 bg-slate-50/35 blur-lg absolute -z-10"></div>
 </div>
   );
   return imageChanging;

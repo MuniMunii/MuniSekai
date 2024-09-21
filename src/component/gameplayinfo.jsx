@@ -60,7 +60,7 @@ function GameplayInfo() {
                     <h1 className="min-[648px]:text-6xl text-4xl parallaxed font-test text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
                       Live Concert
                     </h1>
-                    <p className="border rounded-xl border-transparent parallaxed bg-cyan-500 bg-opacity-45 font-testDesc font-medium">
+                    <p className="border rounded-xl border-transparent parallaxed bg-cyan-500/45 font-testDesc font-medium">
                       {" "}
                       a digital live concert using 3D models.
                     </p>
@@ -84,7 +84,7 @@ function GameplayInfo() {
                     <h1 className="min-[648px]:text-6xl text-4xl parallaxed font-test text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-700">
                       Costumes
                     </h1>
-                    <p className="border rounded-xl border-transparent parallaxed bg-blue-500 bg-opacity-45 font-testDesc font-medium">
+                    <p className="border rounded-xl border-transparent parallaxed bg-blue-500/45 font-testDesc font-medium">
                       {" "}
                       Change costumes freely.
                     </p>
@@ -108,7 +108,7 @@ function GameplayInfo() {
                     <h1 className="min-[648px]:text-6xl text-4xl parallaxed font-test text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-yellow-200">
                       Gameplay
                     </h1>
-                    <p className="border rounded-xl border-transparent parallaxed bg-purple-500 bg-opacity-45 font-testDesc font-medium">
+                    <p className="border rounded-xl border-transparent parallaxed bg-purple-500/45 font-testDesc font-medium">
                       {" "}
                       Test your skill.
                     </p>

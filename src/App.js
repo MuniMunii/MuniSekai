@@ -11,7 +11,7 @@ import Loading from "./component/loading";
 const IndexComp=React.lazy(()=>import('./pages/index'))
 function App() {
   const [isLandscapes, setIsLandscapes] = useState(null);
-  const [isVideoLoading,setIsVideoLoading]=useState(false);
+
   useEffect(() => {
     matchWindowLandscapes(setIsLandscapes);
   }, []);
@@ -21,7 +21,7 @@ function App() {
       <div className="App z-0 bg-gradient-to-tl from-white to-themeGreen">
       <Navbar />
         <Routes>
-          <Route path={"/"} element={<IndexComp isVideoLoading={isVideoLoading} setIsVideoLoading={setIsVideoLoading}/>} />
+          <Route path={"/"} element={<IndexComp/>} />
         </Routes>
       </div>
       </Suspense>
