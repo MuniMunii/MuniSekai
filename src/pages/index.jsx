@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import { entryAnimation } from "../utils/utils";
 import NewsComp from "../component/news";
 import "../styles/animation.css";
-import Footer from "../component/footer";
+import FooterComp from "../component/footer";
 import ImageDisplay from "../component/imageDisplay";
 import Loading from "../component/loading";
 function Index() {
@@ -27,7 +27,7 @@ function Index() {
             {/* i remove this because ugly */}
             {/* <GameplayInfo /> */}
             {/* footer */}
-            <Footer />
+            <FooterComp />
         </>
       )}
     </>

@@ -35,7 +35,6 @@ function GameplayInfo() {
       },
     },
   };
-  console.log(<Carousel />);
 
   return (
     <>

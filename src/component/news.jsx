@@ -62,7 +62,7 @@ function NewsComp() {
   };
   return (
     <>
-      <div className="w-full h-fit flex flex-col py-1 justify-around items-center overflow-auto relative ">
+      <div className="w-full h-fit desktop:h-screen flex flex-col py-2 justify-around items-center overflow-auto relative ">
         <div className="w-[90%] flex p-4 justify-center md:flex-row flex-col items-center ">
           <div className="image-border mx-6 border-2 rounded-lg relative border-blue-400 w-full h-[275px] max-[760px]:h-[400px] opacity-0 -translate-x-full duration-500 transition-transform overflow-auto">
             <Carousel
@@ -75,24 +75,24 @@ function NewsComp() {
                 loading="lazy"
                 src={`${require("../assets/char/" + "hb_miku.png")}`}
                 alt="hb-miku"
-                className="w-full h-full object-cover hover:scale-125 transition-all duration-100"
+                className="w-full h-full object-cover hover:scale-125 transition-all duration-300"
               />
               <img
                 loading="lazy"
                 src={`${require("../assets/char/" + "hb_mizuki.png")}`}
                 alt="hb-mizuki"
-                className="w-full h-full object-cover hover:scale-125 transition-all duration-100"
+                className="w-full h-full object-cover hover:scale-125 transition-all duration-300"
               />
               <img
                 loading="lazy"
                 src={`${require("../assets/char/" + "hb_ichika.png")}`}
                 alt="hb-ichika"
-                className="w-full h-full object-cover hover:scale-125 transition-all duration-100"
+                className="w-full h-full object-cover hover:scale-125 transition-all duration-300"
               />
             </Carousel>
           </div>
-          <div className="news-list flex flex-col bg-white justify-start h-full p-4 w-full rounded-md max-[760px]:mt-3 max-md:mr-auto opacity-0 translate-x-full duration-500 transition-transform">
-            <h1 className="pb-3 pl-3 mb-4 border-b border-b-blue-200 text-left text-6xl">
+          <div className="news-list flex flex-col bg-sky-300 justify-start h-full p-4 w-full rounded-md max-[760px]:mt-3 max-md:mr-auto opacity-0 translate-x-full duration-500 transition-transform">
+            <h1 className="pb-3 pl-3 mb-4 border-b border-b-blue-200 text-left font-semibold text-6xl">
               News
             </h1>
             <div
@@ -255,23 +255,6 @@ function NewsComp() {
             </div>
             </div>
           </div>
-        </div>
-        <div className="flex justify-center items-center w-fit mx-auto pointer-events-none select-none">
-        <img
-                src={`${require("../assets/other/" + "sega_logo.png")}`}
-                alt="sega-logo"
-                className="h-10 w-20"
-              />
-              <img
-                src={`${require("../assets/other/" + "crypton_logo.png")}`}
-                alt="crypton-logo"
-                className="h-14 mx-3 w-24"
-              />
-              <img
-                src={`${require("../assets/other/" + "piapro_logo.png")}`}
-                alt="piapro-logo"
-                className="h-9 w-24"
-              />
         </div>
       </div>
       {isNewsOpen && (

@@ -5,6 +5,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}", flowbite.content()],
   theme: {
     extend: {
+      screens:{
+        desktop: {'raw': '(min-height: 640px) and (min-width: 1240px)'},
+      },
       keyframes:{
         bounceLoad:{
           '0%, 20%, 50%, 80%, 100%': {transform:'translateY(0)'},

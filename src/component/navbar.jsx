@@ -79,7 +79,6 @@ function Navbar() {
     );
   }
   const unitList = Object.entries(...DATA_SEKAI).map(([key, data]) => {
-    console.log(data);
     return (
       <li key={data.id} className={`font-semibold cursor-pointer mb-7 hover:underline flex items-center text-wrap `} style={{color:data.Theme}}>
         <img
@@ -91,7 +90,6 @@ function Navbar() {
       </li>
     );
   });
-  console.log(unitList);
 
   return (
     <>
@@ -102,33 +100,33 @@ function Navbar() {
             animation
               ? "opacity-100 bg-black/50 inset-0 visible"
               : "invisible opacity-0"
-          } w-full flex justify-between h-full fixed bg-black/50 backdrop-blur-lg inset-0 transition-all duration-500 z-10`}
+          } w-full flex justify-between h-full fixed bg-black/50 backdrop-blur-lg inset-0 transition-all duration-500 z-10 pointer-events-none`}
         >
           <img
             src={`${require("../assets/other/" + "text_logo.webp")}`}
             alt="logo-pjsk"
-            className="w-[25vh] m-2  relative filter-none pointer-events-none"
+            className="w-[25vh] m-2 srelative filter-none select-none"
           />
           <div
             className={`${
               animation ? "translate-x-0" : "translate-x-full"
-            } max-sm:w-[50%] w-[37%] h-full overflow-auto bg-white text-wrap px-8 flex flex-col justify-between py-6 transition-all duration-300 z-30 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]`}
+            } md:w-[35%] w-[60%] h-full overflow-auto bg-white text-wrap px-8 flex flex-col justify-between py-6 transition-all duration-300 z-30 font-Poppins pointer-events-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]`}
           >
-            <div className="flex justify-start items-start flex-col mt-14 font-Poppins max-md:mx-auto z-50 w-fit mr-auto">
-              <a href="#sekai-tag" onClick={()=>setIsOpen(false)} className="hover:text-pink-300 mb-4 text-[4.3vw] font-semibold cursor-pointer ">
+            <div className="flex justify-start items-start flex-col mt-14 max-md:mx-auto z-50 w-fit mr-auto">
+              <a href="#sekai-tag" onClick={()=>setIsOpen(false)} className=" hover:text-themeGreen duration-200 mb-4 text-[4.3vw] font-semibold cursor-pointer ">
                 Sekai
               </a>
               <Accordion className="!border-none !bg-transparent !shadow-none focus:!outline-none focus:!ring-0 focus:!border-none active:!border-none hover:!border-none">
                 <Accordion.Panel className="!p-0 !border-none !bg-transparent !shadow-none focus:!outline-none focus:!ring-0 focus:!border-none active:!border-none ">
-                  <Accordion.Title className="!p-0 !border-none !bg-transparent !shadow-none focus:!outline-none focus:!ring-0 focus:!border-none active:!border-none hover:!border-none !text-black hover:!text-pink-300 mb-4 text-[4.3vw] font-semibold cursor-pointer">
+                  <Accordion.Title className="!p-0 !border-none !bg-transparent !shadow-none focus:!outline-none focus:!ring-0 focus:!border-none active:!border-none hover:!border-none !text-black hover:!text-themeGreen duration-200 mb-4 text-[4.3vw] font-semibold cursor-pointer">
                     Unit
                   </Accordion.Title>
-                  <Accordion.Content className="list-none max-md:justify-center px-0 transition duration-300 ">
+                  <Accordion.Content className="list-none max-md:justify-center px-0 transition ">
                     {unitList}
                   </Accordion.Content>
                 </Accordion.Panel>
               </Accordion>
-              <a className="hover:text-pink-300 mb-4 text-[4.3vw] font-semibold cursor-pointer ">
+              <a className="hover:text-themeGreen duration-200 mb-4 text-[4.3vw] font-semibold cursor-pointer ">
                 News
               </a>
             </div>
