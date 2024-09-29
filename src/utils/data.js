@@ -1,7 +1,7 @@
 export const DATA_SEKAI = [
   {
     LEO: {
-      id: "LeoNid",
+      id: "leonid",
       groupName:'Leo/Need',
       Theme: "#4455DD",
       Logo: "leoLogo.png",
@@ -70,7 +70,7 @@ export const DATA_SEKAI = [
       ],
     },
     MMJ: {
-        id: "MomoJan",
+        id: "momojan",
         groupName:'More More Jump',
         Theme: "#6CCB20",
         Logo: "mmjLogo.png",
@@ -208,7 +208,7 @@ export const DATA_SEKAI = [
         ],
       },
       WXS: {
-        id: "Wandasho",
+        id: "wandasho",
         groupName:'Wonderlands×Showtime',
         Theme: "#FF9900",
         Logo: "wxsLogo.png",

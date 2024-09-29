@@ -8,6 +8,7 @@ import RotatingPhone from "./component/rotatingPhone";
 import "../src/styles/root.css";
 import Navbar from "./component/navbar";
 import Loading from "./component/loading";
+import Vivibus from "./pages/vivibus";
 const IndexComp=React.lazy(()=>import('./pages/index'))
 function App() {
   const [isLandscapes, setIsLandscapes] = useState(null);
@@ -22,6 +23,7 @@ function App() {
       <Navbar />
         <Routes>
           <Route path={"/"} element={<IndexComp/>} />
+          <Route path={"/vivibus"} element={<Vivibus/>} />
         </Routes>
       </div>
       </Suspense>

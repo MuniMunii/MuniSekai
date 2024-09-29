@@ -3,6 +3,7 @@ import "../styles/root.css";
 import { DATA_SEKAI } from "../utils/data";
 import { CiMusicNote1 } from "react-icons/ci";
 import { mouseEnterAndLeaveEffect,entryAnimation } from "../utils/utils";
+import { NavLink, useNavigate } from "react-router-dom";
 function UnitListIntroduction() {
   useEffect(()=>{
     entryAnimation(".unit-list", "show-unit");
@@ -13,8 +14,8 @@ function UnitListIntroduction() {
       const bundleDelay =
         "[&:nth-child(1)]:delay-[75ms] [&:nth-child(2)]:delay-[100ms] [&:nth-child(3)]:delay-[150ms] [&:nth-child(4)]:delay-[200ms] [&:nth-child(5)]:delay-[250ms]";
       return (
+        <NavLink to={`/${value.id}`} key={value.id}>
         <li
-          key={value.id}
           onMouseEnter={(event) =>
             mouseEnterAndLeaveEffect(event, ".unit-image", "entry-animation")
           }
@@ -23,7 +24,7 @@ function UnitListIntroduction() {
           }
           className={`unit-list opacity-0 -translate-x-full transition-all ${bundleDelay} duration-1000 relative mt-7 mx-3 w-28 h-60  mb-14 group cursor-pointer select-none`}
         >
-          <a>
+          
             <div
               className="w-full h-60 bg-slate-100 border-black border h rounded-t-xl flex flex-col justify-end items-end transition-transform duration-300 bg-no-repeat bg-cover bg-center group-hover:-translate-y-3"
               style={{
@@ -41,26 +42,28 @@ function UnitListIntroduction() {
                 />
               </div>
             </div>
-          </a>
+          
           <img
             src={`${require("../assets/Unit/" + value.LogoText)}`}
             loading="lazy"
             className="unit-image absolute opacity-0 -translate-y-full transition-all delay-100"
           ></img>
         </li>
+        </NavLink>
       );
     });
-    return unitArray;
+    return (<ul className="flex justify-center flex-wrap self-center">{unitArray}</ul>);
   }
   return (
     <>
       <div
+      id="sekai-tag"
         className={`w-full h-min desktop:h-screen xl border-t-white border-t relative flex flex-col items-center justify-start bg-no-repeat bg-cover`}
         style={{}}
       >
-        <div className="bg-gradient-to-br from-blue-400 to-blue-200 h-full rounded-lg text-black p-4 z-0">
+        <div className="bg-gradient-to-br from-blue-400 to-blue-200 h-full text-black p-4 z-0">
           <div className="unit-zoom opacity-0 translate-y-full duration-500 transition-transform flex flex-col h-max">
-            <p className="text-black text-7xl text-center tracking-wider font-serif " id="sekai-tag">Sekai</p>
+            <p className="text-black text-7xl text-center tracking-wider font-serif ">Sekai</p>
             {/* border bawah title / border under title */}
             <div className="flex justify-center items-center w-48 my-6 mx-auto">
               <div className="border border-t-black w-full"></div>
@@ -79,9 +82,7 @@ function UnitListIntroduction() {
               helping people discover their true feelings.
             </p>
           </div>
-          <ul className="flex justify-center flex-wrap self-center ">
             <UnitList />
-          </ul>
           <p className="w-[95%] text-center mx-auto mb-1 unit-zoom opacity-0 translate-y-full duration-500 transition-transform">
           People can travel to their SEKAI by playing "Untitled" songs. These
           songs have no melody or lyrics and are created when a SEKAI is born.{" "}

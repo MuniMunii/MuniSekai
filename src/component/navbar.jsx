@@ -3,13 +3,22 @@ import { useState, useEffect } from "react";
 import { Turn as Hamburger } from "hamburger-react";
 import { AccordionContent, Accordion, AccordionTitle } from "flowbite-react";
 import { DATA_SEKAI } from "../utils/data";
+import { NavLink, useLocation } from "react-router-dom";
+import { Link } from "react-scroll";
 function Navbar() {
-  // const [isDekstopScreen, setDekstopScreen] = useState(
-  //   window.innerWidth >= 1024
-  // );
   const [isOpen, setIsOpen] = useState(false);
   const [animation, setIsAnimation] = useState(false);
   const [render, setRender] = useState(false);
+  const location=useLocation()
+  useEffect(()=>{
+    if(location.hash){
+      const elementID=location.hash.substring(1);
+      const element=document.getElementById(elementID)
+      if(element){
+        element.scrollIntoView({behavior:'smooth'})
+      }
+    }
+  },[location])
   // ini useEffect buat animasi curtainNavbar
   // this useEffect for curtainNavbar Animation
   useEffect(() => {
@@ -61,7 +70,7 @@ function Navbar() {
     return (
       <>
         <div
-          className="flex items-center justify-between z-30 w-full fixed p-3 top-0 opacity-100 translate-y-0 transition-all duration-300"
+          className={`flex items-center justify-between z-30 w-full fixed p-3 top-0 opacity-100 translate-y-0 transition-all duration-300`}
           ref={NavbarRef}
         >
           <img
@@ -80,6 +89,7 @@ function Navbar() {
   }
   const unitList = Object.entries(...DATA_SEKAI).map(([key, data]) => {
     return (
+      <NavLink to={data.id}>
       <li key={data.id} className={`font-semibold cursor-pointer mb-7 hover:underline flex items-center text-wrap `} style={{color:data.Theme}}>
         <img
           src={`${require("../assets/Unit/" + data.Logo)}`}
@@ -88,6 +98,7 @@ function Navbar() {
         />{" "}
         {data.groupName.split(",")}
       </li>
+      </NavLink>
     );
   });
 
@@ -113,9 +124,9 @@ function Navbar() {
             } md:w-[35%] w-[60%] h-full overflow-auto bg-white text-wrap px-8 flex flex-col justify-between py-6 transition-all duration-300 z-30 font-Poppins pointer-events-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]`}
           >
             <div className="flex justify-start items-start flex-col mt-14 max-md:mx-auto z-50 w-fit mr-auto">
-              <a href="#sekai-tag" onClick={()=>setIsOpen(false)} className=" hover:text-themeGreen duration-200 mb-4 text-[4.3vw] font-semibold cursor-pointer ">
+              <NavLink to={'/#sekai-tag'}  onClick={()=>setIsOpen(false)} className=" hover:text-themeGreen duration-200 mb-4 text-[4.3vw] font-semibold cursor-pointer ">
                 Sekai
-              </a>
+              </NavLink>
               <Accordion className="!border-none !bg-transparent !shadow-none focus:!outline-none focus:!ring-0 focus:!border-none active:!border-none hover:!border-none">
                 <Accordion.Panel className="!p-0 !border-none !bg-transparent !shadow-none focus:!outline-none focus:!ring-0 focus:!border-none active:!border-none ">
                   <Accordion.Title className="!p-0 !border-none !bg-transparent !shadow-none focus:!outline-none focus:!ring-0 focus:!border-none active:!border-none hover:!border-none !text-black hover:!text-themeGreen duration-200 mb-4 text-[4.3vw] font-semibold cursor-pointer">
@@ -126,9 +137,9 @@ function Navbar() {
                   </Accordion.Content>
                 </Accordion.Panel>
               </Accordion>
-              <a className="hover:text-themeGreen duration-200 mb-4 text-[4.3vw] font-semibold cursor-pointer ">
+              <NavLink to={'/#news'} onClick={()=>setIsOpen(false)} className="hover:text-themeGreen duration-200 mb-4 text-[4.3vw] font-semibold cursor-pointer ">
                 News
-              </a>
+              </NavLink>
             </div>
             <div className="mx-auto flex flex-wrap justify-center max-w-fit">
               <img

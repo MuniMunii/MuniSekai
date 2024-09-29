@@ -4,17 +4,19 @@ import { mouseEnterAndLeaveEffect } from "../utils/utils";
 import { useState,useEffect } from "react";
 import '../styles/root.css'
 import { entryAnimation } from "../utils/utils";
+import { isCompositeComponentWithType } from "react-dom/test-utils";
 function NewsComp() {
   const [isNewsOpen, setIsNewsOpen] = useState(false);
   const [animationDelay, setAnimationDelay] = useState(false);
   // use Effect news card transition
+  console.log(isNewsOpen)
   useEffect(() => {
     let timer;
     if (isNewsOpen) {
       timer = setTimeout(() => {
         setAnimationDelay(true);
       }, 100);
-      document.body.style.overflow='hidden'
+      document.body.style.overflow='auto'
     } else if (!isNewsOpen) {
       setAnimationDelay(false);
       document.body.style.overflow='auto'
@@ -62,7 +64,7 @@ function NewsComp() {
   };
   return (
     <>
-      <div className="w-full h-fit desktop:h-screen flex flex-col py-2 justify-around items-center overflow-auto relative ">
+      <div  className="w-full h-fit desktop:h-screen flex flex-col py-2 justify-around items-center overflow-auto relative ">
         <div className="w-[90%] flex p-4 justify-center md:flex-row flex-col items-center ">
           <div className="image-border mx-6 border-2 rounded-lg relative border-blue-400 w-full h-[275px] max-[760px]:h-[400px] opacity-0 -translate-x-full duration-500 transition-transform overflow-auto">
             <Carousel
@@ -209,7 +211,7 @@ function NewsComp() {
                 <li><span className="text-white">New items in Shop</span></li>
                 <li><span className="text-white">Fixing minor bug</span></li>
               </ul>
-              <button onClick={()=>setIsNewsOpen(true)} className="py-2 px-4 bg-blue-600 hover:bg-blue-500 hover:text-yellow-100 text-white transition-colors absolute bottom-2 left-3  text-center rounded cursor-pointer">Read More</button>
+              <button onClick={()=>setIsNewsOpen(false)} className="py-2 px-4 bg-blue-600 hover:bg-blue-500 hover:text-yellow-100 text-white transition-colors absolute bottom-2 left-3  text-center rounded cursor-pointer">Read More</button>
             </div>
             </div>
           </div>
@@ -259,7 +261,7 @@ function NewsComp() {
       </div>
       {isNewsOpen && (
             <>
-            <div className="fixed flex justify-center items-center w-full h-full z-50">
+            <div className="fixed bg-black/40 flex justify-center items-center w-full h-full z-50">
               <div
                 onClick={() => {
                   setIsNewsOpen(false);
