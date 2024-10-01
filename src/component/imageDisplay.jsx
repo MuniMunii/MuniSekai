@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useState, useRef } from "react";
-function ImageDisplay({ setIsVideoLoading, setIsError }) {
-  const [videoEnded, setVideoEnded] = useState(false);
+function ImageDisplay({ setIsVideoLoading, setIsError,videoEnded,setVideoEnded }) {
   const [delayedImage, setDelayedImage] = useState(false);
   let videoRef = useRef(null);
   useEffect(() => {
@@ -48,9 +47,10 @@ function ImageDisplay({ setIsVideoLoading, setIsError }) {
       video.pause();
       if (video.currentTime === video.duration) {
         setVideoEnded(true);
+        localStorage.setItem('watched','true')
         setTimeout(() => {
           setDelayedImage(true);
-        }, 300);
+        }, 100);
       }
     }
   };
@@ -82,7 +82,6 @@ function ImageDisplay({ setIsVideoLoading, setIsError }) {
         alt="Video-intro"
         className="w-screen h-screen object-cover bg-white/40"
       />
-      <div className="w-full h-24 border -bottom-14 bg-slate-50/35 blur-lg absolute -z-10"></div>
     </div>
   );
   return imageChanging;

@@ -13,6 +13,17 @@
         font-family: "Noto Sans", sans-serif
     }
 }
+@layer utilities {
+    /* Chrome, Safari and Opera */
+    .scrollbar-hidden::-webkit-scrollbar {
+      display: none;
+    }
+  
+    .scrollbar-hidden {
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE and Edge */
+    }
+  }
 *{
     margin: 0;
     padding: 0;
@@ -35,12 +46,6 @@ body{
     justify-content: flex-start;
     flex-direction: column;
 }
-/* body > #root > div {
-    height: 100vh;
-  } */
-/* #root{
-  height: 100%;
-} */
 .text-outline{
     text-shadow:
     1px 1px 0 #000,
@@ -51,6 +56,13 @@ body{
 .no-select{
     user-select: none;
 }
+/* .no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+} */
 /* body,html{
     position: relative;
     margin: 0;

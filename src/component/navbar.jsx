@@ -15,7 +15,7 @@ function Navbar() {
       const elementID=location.hash.substring(1);
       const element=document.getElementById(elementID)
       if(element){
-        element.scrollIntoView({behavior:'smooth'})
+        element.scrollIntoView({behavior:'instant'})
       }
     }
   },[location])
@@ -37,7 +37,7 @@ function Navbar() {
       renderTimer = setTimeout(() => {
         setRender(true);
       }, 300);
-      document.body.style.overflow = "auto";
+      document.body.style.overflow='auto'
     }
     return () => clearTimeout(Timer), clearTimeout(renderTimer);
   }, [isOpen]);
@@ -89,7 +89,7 @@ function Navbar() {
   }
   const unitList = Object.entries(...DATA_SEKAI).map(([key, data]) => {
     return (
-      <NavLink to={data.id}>
+      <NavLink to={data.id} onClick={()=>setIsOpen(false)}>
       <li key={data.id} className={`font-semibold cursor-pointer mb-7 hover:underline flex items-center text-wrap `} style={{color:data.Theme}}>
         <img
           src={`${require("../assets/Unit/" + data.Logo)}`}
@@ -121,7 +121,7 @@ function Navbar() {
           <div
             className={`${
               animation ? "translate-x-0" : "translate-x-full"
-            } md:w-[35%] w-[60%] h-full overflow-auto bg-white text-wrap px-8 flex flex-col justify-between py-6 transition-all duration-300 z-30 font-Poppins pointer-events-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]`}
+            } md:w-[35%] w-[60%] h-full overflow-auto bg-white text-wrap px-8 flex flex-col justify-between py-6 transition-all duration-300 z-30 font-Poppins pointer-events-auto scrollbar-hidden`}
           >
             <div className="flex justify-start items-start flex-col mt-14 max-md:mx-auto z-50 w-fit mr-auto">
               <NavLink to={'/#sekai-tag'}  onClick={()=>setIsOpen(false)} className=" hover:text-themeGreen duration-200 mb-4 text-[4.3vw] font-semibold cursor-pointer ">

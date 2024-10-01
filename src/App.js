@@ -12,8 +12,9 @@ import Vivibus from "./pages/vivibus";
 const IndexComp=React.lazy(()=>import('./pages/index'))
 function App() {
   const [isLandscapes, setIsLandscapes] = useState(null);
-
   useEffect(() => {
+    document.body.classList.add('scrollbar-hidden')
+    document.body.style.overflowY='auto'
     matchWindowLandscapes(setIsLandscapes);
   }, []);
   const conditionalRender = isLandscapes ? (
