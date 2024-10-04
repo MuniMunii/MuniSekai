@@ -7,19 +7,14 @@ import FooterComp from "../component/footer";
 import ImageDisplay from "../component/imageDisplay";
 import Loading from "../component/loading";
 import { useLocation } from "react-router-dom";
+import { get } from "react-scroll/modules/mixins/scroller";
 function Index() {
   const [isVideoLoading, setIsVideoLoading] = useState(false);
-  const [videoEnded, setVideoEnded] = useState(false);
-  const [isWatched, setIsWatched] = useState(false);
+  const [videoEnded, setVideoEnded] = useState(false)
   const [isError, setIsError] = useState(null);
   const Location = useLocation();
   const Sections = ["index", "sekai-tag", "news"];
-  // useEffect ini buat video index di tonton dulu jika first time visit
-  useEffect(() => {
-    if (localStorage.getItem("watched") === "true") {
-      setIsWatched(true);
-    }
-  }, []);
+  let isWatched=localStorage.getItem("watched")
   // useEffect ini buat scroll effect nge handle scroll dan id hash setiap id
   useEffect(() => {
     // sedang mencari cara menggunakan overflow hidden tetapi tidak bisa karna body overflow nyangkut
@@ -38,10 +33,20 @@ function Index() {
         window.addEventListener("scroll", freezeScroll);
         setTimeout(() => {
           window.removeEventListener("scroll", freezeScroll);
-        }, 300);
+        }, 200);
       } else {
         window.removeEventListener("scroll", freezeScroll);
       }
+      // the effect that i really want. need to find solutions for removing scrollbar in body
+      // if(hash){
+      //   document.body.style.overflow='hidden'
+      //   setTimeout(() => {
+      //     document.body.style.overflow='auto';
+      //   }, 300);
+      // }
+      // else{
+      //   document.body.style.overflow='auto';
+      // }
     };
     const handleScroll = () => {
       const offset = window.innerHeight / 3;
@@ -107,7 +112,7 @@ function Index() {
         <Loading isVideoLoading={isVideoLoading} isError={isError} />
       ) : (
         <>
-          {(videoEnded || isWatched) && (
+          {(videoEnded||isWatched==="true") && (
             <>
               {/* unitlist */}
               <UnitListIntroduction />

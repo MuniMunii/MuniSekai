@@ -11,13 +11,17 @@ function Navbar() {
   const [render, setRender] = useState(false);
   const location=useLocation()
   useEffect(()=>{
+    let Timer;
     if(location.hash){
       const elementID=location.hash.substring(1);
       const element=document.getElementById(elementID)
+      // delay untuk debug nanti di remove jika sudah selesai
+      // this setTimeout for debugging delay if i done i will removed it
       if(element){
-        element.scrollIntoView({behavior:'instant'})
+        Timer=setTimeout(()=>{element.scrollIntoView({behavior:'instant'})},300)
       }
     }
+    return ()=>{clearTimeout(Timer)}
   },[location])
   // ini useEffect buat animasi curtainNavbar
   // this useEffect for curtainNavbar Animation
