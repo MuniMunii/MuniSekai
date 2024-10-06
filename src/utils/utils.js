@@ -87,3 +87,14 @@ export function parallaxedHoverEffext(targetClass,parallaxDirection) {
     // }
   }
 }
+export function scrollStopEffect(condition){
+  let getAppClass=document.querySelector('.App')
+  if(condition){
+    getAppClass.classList.add('overflow-hidden')
+    getAppClass.classList.remove('overflow-auto')
+  }
+  else if(!condition){
+    getAppClass.classList.add('overflow-auto')
+    getAppClass.classList.remove('overflow-hidden')
+  }
+}

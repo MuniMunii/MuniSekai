@@ -12,7 +12,7 @@ import { useEffect } from "react";
       const bundleDelay =
         "[&:nth-child(1)]:delay-[75ms] [&:nth-child(2)]:delay-[100ms] [&:nth-child(3)]:delay-[150ms] [&:nth-child(4)]:delay-[200ms] [&:nth-child(5)]:delay-[250ms]";
       return (
-        <NavLink to={`/${value.id}`} key={value.id}>
+        <NavLink to={`unit/${value.id}`} state={{dataUnit:value}} key={value.id} >
         <li
           onMouseEnter={(event) =>
             mouseEnterAndLeaveEffect(event, ".unit-image", "entry-animation")

@@ -8,6 +8,7 @@ import ImageDisplay from "../component/imageDisplay";
 import Loading from "../component/loading";
 import { useLocation } from "react-router-dom";
 import { get } from "react-scroll/modules/mixins/scroller";
+import { scrollStopEffect } from "../utils/utils";
 function Index() {
   const [isVideoLoading, setIsVideoLoading] = useState(false);
   const [videoEnded, setVideoEnded] = useState(false)
@@ -31,6 +32,7 @@ function Index() {
       const hash = window.location.hash;
       if (hash) {
         window.addEventListener("scroll", freezeScroll);
+        // scrollStopEffect(true)
         setTimeout(() => {
           window.removeEventListener("scroll", freezeScroll);
         }, 200);
