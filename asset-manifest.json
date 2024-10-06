@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/MuniSekai/static/css/main.1917331a.css",
-    "main.js": "/MuniSekai/static/js/main.d27a4256.js",
+    "main.css": "/MuniSekai/static/css/main.c8cdd849.css",
+    "main.js": "/MuniSekai/static/js/main.409cc451.js",
     "static/css/916.28c3cc18.chunk.css": "/MuniSekai/static/css/916.28c3cc18.chunk.css",
-    "static/js/916.f72a4cb4.chunk.js": "/MuniSekai/static/js/916.f72a4cb4.chunk.js",
+    "static/js/916.7f59b7b1.chunk.js": "/MuniSekai/static/js/916.7f59b7b1.chunk.js",
     "static/js/453.4bc8fe86.chunk.js": "/MuniSekai/static/js/453.4bc8fe86.chunk.js",
-    "static/js/440.bdc8dd74.chunk.js": "/MuniSekai/static/js/440.bdc8dd74.chunk.js",
+    "static/js/427.96477e87.chunk.js": "/MuniSekai/static/js/427.96477e87.chunk.js",
     "static/media/mmj_group.png": "/MuniSekai/static/media/mmj_group.c5e0aea3c8f916efff00.png",
     "static/media/mmj_miku.png": "/MuniSekai/static/media/mmj_miku.d1fc617d3172e64767ce.png",
     "static/media/test1.png": "/MuniSekai/static/media/test1.268215406dcdb0f05df5.png",
@@ -46,15 +46,15 @@
     "static/media/mmjLogoText.png": "/MuniSekai/static/media/mmjLogoText.a6d6208432f01e99a93d.png",
     "static/media/vbsLogoText.png": "/MuniSekai/static/media/vbsLogoText.253a6c65ee153c0d48ce.png",
     "index.html": "/MuniSekai/index.html",
-    "main.1917331a.css.map": "/MuniSekai/static/css/main.1917331a.css.map",
-    "main.d27a4256.js.map": "/MuniSekai/static/js/main.d27a4256.js.map",
+    "main.c8cdd849.css.map": "/MuniSekai/static/css/main.c8cdd849.css.map",
+    "main.409cc451.js.map": "/MuniSekai/static/js/main.409cc451.js.map",
     "916.28c3cc18.chunk.css.map": "/MuniSekai/static/css/916.28c3cc18.chunk.css.map",
-    "916.f72a4cb4.chunk.js.map": "/MuniSekai/static/js/916.f72a4cb4.chunk.js.map",
+    "916.7f59b7b1.chunk.js.map": "/MuniSekai/static/js/916.7f59b7b1.chunk.js.map",
     "453.4bc8fe86.chunk.js.map": "/MuniSekai/static/js/453.4bc8fe86.chunk.js.map",
-    "440.bdc8dd74.chunk.js.map": "/MuniSekai/static/js/440.bdc8dd74.chunk.js.map"
+    "427.96477e87.chunk.js.map": "/MuniSekai/static/js/427.96477e87.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1917331a.css",
-    "static/js/main.d27a4256.js"
+    "static/css/main.c8cdd849.css",
+    "static/js/main.409cc451.js"
   ]
 }
