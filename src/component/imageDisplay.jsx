@@ -6,6 +6,7 @@ function ImageDisplay({
   videoEnded,
   setVideoEnded,
 }) {
+  
   const [delayedImage, setDelayedImage] = useState(false);
   const [isWatched, setIsWatched] = useState(false);
   console.log(isWatched);

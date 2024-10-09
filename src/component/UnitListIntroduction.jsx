@@ -7,7 +7,7 @@ function UnitListIntroduction() {
     <>
       <div
       id="sekai-tag"
-        className={`w-full h-min desktop:h-screen xl relative flex flex-col items-center justify-start bg-no-repeat bg-cover`}
+        className={`w-full h-min desktop:h-screen  relative flex flex-col items-center justify-start bg-no-repeat bg-cover`}
       >
         <div className="bg-gradient-to-br from-blue-400 to-blue-200 h-full text-black p-4 z-0">
           <div className="unit-zoom opacity-0 translate-y-full duration-500 transition-transform flex flex-col h-max">

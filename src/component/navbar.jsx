@@ -10,22 +10,29 @@ function Navbar() {
   const [render, setRender] = useState(false);
   const Location = useLocation();
   useEffect(() => {
-    let Timer;
     if (Location.hash) {
       const elementID = Location.hash.substring(1);
       const element = document.getElementById(elementID);
       // delay untuk debug nanti di remove jika sudah selesai
       // this setTimeout for debugging delay if i done i will removed it
       if (element) {
-        Timer = setTimeout(() => {
-          element.scrollIntoView({ behavior: "instant" });
-        }, 300);
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
-    return () => {
-      clearTimeout(Timer);
-    };
   }, [Location]);
+  function handleLinkClick(event) {
+    if (window.location.pathname === "/") { // Only run this if you're already on index
+      // Get the target ID from the link
+      const targetId = event.currentTarget.getAttribute("href").substring(1);
+      // Use history to change location
+      window.history.pushState(null, "", `#${targetId}`);
+      // Scroll into view for the target element
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "auto" });
+      }
+    }
+  }
   // ini useEffect buat animasi curtainNavbar
   // this useEffect for curtainNavbar Animation
   useEffect(() => {
@@ -44,61 +51,62 @@ function Navbar() {
       renderTimer = setTimeout(() => {
         setRender(true);
       }, 300);
-      document.body.style.overflow = "scroll";
+      document.body.style.overflow = "auto";
     }
     return () => clearTimeout(Timer), clearTimeout(renderTimer);
   }, [isOpen]);
 
   // scroll effect that will dissapear when scroll down and will appear when scroll up
   // scroll effect yang akan hilang kalo scroll kebawah dan tampil jika scroll ke atas
-  const logoRef = useRef(null);
-  const hamburgerRef = useRef(null);
-  let prevScrollPost = useRef(window.pageYOffset);
-  function navbarScrollEffect() {
-    const currentScrollPost = window.pageYOffset;
-    if (!isOpen) {
-      if (prevScrollPost.current > currentScrollPost) {
-        //effect scroll ke atas
-        // scroll up effect
-        if (logoRef.current) {
-          logoRef.current.classList.add("opacity-100", "translate-y-0");
-          logoRef.current.classList.remove("opacity-0", "-translate-y-full");
-        }
-        if (hamburgerRef.current) {
-          hamburgerRef.current.classList.add("opacity-100", "translate-y-0");
-          hamburgerRef.current.classList.remove(
-            "opacity-0",
-            "-translate-y-full"
-          );
-        }
-      } else {
-        //effect scroll ke bawah
-        //scroll down effect
-        if (logoRef.current) {
-          logoRef.current.classList.add("opacity-0", "-translate-y-full");
-          logoRef.current.classList.remove("opacity-100", "translate-y-0");
-        }
-        if (hamburgerRef.current) {
-          hamburgerRef.current.classList.add("opacity-0", "-translate-y-full");
-          hamburgerRef.current.classList.remove("opacity-100", "translate-y-0");
-        }
-      }
-      prevScrollPost.current = currentScrollPost;
-    }
-  }
+  // const logoRef = useRef(null);
+  // const hamburgerRef = useRef(null);
+  // let prevScrollPost = useRef(window.pageYOffset);
+  // function navbarScrollEffect() {
+  //   const currentScrollPost = window.pageYOffset;
+  //   if (!isOpen) {
+  //     if (prevScrollPost.current > currentScrollPost) {
+  //       //effect scroll ke atas
+  //       // scroll up effect
+  //       if (logoRef.current) {
+  //         logoRef.current.classList.add("opacity-100", "translate-y-0");
+  //         logoRef.current.classList.remove("opacity-0", "-translate-y-full");
+  //       }
+  //       if (hamburgerRef.current) {
+  //         hamburgerRef.current.classList.add("opacity-100", "translate-y-0");
+  //         hamburgerRef.current.classList.remove(
+  //           "opacity-0",
+  //           "-translate-y-full"
+  //         );
+  //       }
+  //     } else {
+  //       //effect scroll ke bawah
+  //       //scroll down effect
+  //       if (logoRef.current) {
+  //         logoRef.current.classList.add("opacity-0", "-translate-y-full");
+  //         logoRef.current.classList.remove("opacity-100", "translate-y-0");
+  //       }
+  //       if (hamburgerRef.current) {
+  //         hamburgerRef.current.classList.add("opacity-0", "-translate-y-full");
+  //         hamburgerRef.current.classList.remove("opacity-100", "translate-y-0");
+  //       }
+  //     }
+  //     prevScrollPost.current = currentScrollPost;
+  //   }
+  // }
   // ini useEffect buat handel scroll navbar
   // this useEffect for handling scroll effect on navbar
-  useEffect(() => {
-    window.addEventListener("scroll", navbarScrollEffect);
-    return () => {
-      window.removeEventListener("scroll", navbarScrollEffect);
-    };
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", navbarScrollEffect);
+  //   return () => {
+  //     window.removeEventListener("scroll", navbarScrollEffect);
+  //   };
+  // }, []);
+
   function NavbarSide() {
     return (
       <>
         <div
-          ref={logoRef}
+          // ref={logoRef}
           className={`w-40 z-10 left-2 top-2 fixed right-2 cursor-pointer select-none translate-y-0 duration-300 pointer-events-auto ${
             isOpen ? "opacity-0" : "opacity-100"
           } transition-all`}
@@ -110,7 +118,7 @@ function Navbar() {
           />
         </div>
         <div
-          ref={hamburgerRef}
+          // ref={hamburgerRef}
           className="p-2 bg-slate-100 rounded-full z-[999] fixed top-2 right-2 opacity-100 translate-y-0 transition-all duration-300 pointer-events-auto"
         >
           <Hamburger toggle={setIsOpen} toggled={isOpen} />
@@ -151,8 +159,8 @@ function Navbar() {
         >
           <div
             className={`${
-              animation ? "opacity-100" : "opacity-0"
-            }w-full h-full pointer-events-auto select-none`}
+              animation ? "translate-x-0" : "-translate-x-full"
+            } w-full h-full pointer-events-auto select-none`}
           >
             <img
               src={`${require("../assets/other/" + "text_logo.webp")}`}
@@ -167,8 +175,11 @@ function Navbar() {
           >
             <div className="flex justify-start items-start flex-col mt-14 max-md:mx-auto z-50 w-fit mr-auto">
               <NavLink
-                to={"/#sekai-tag"}
-                onClick={() => setIsOpen(false)}
+                to={"/#Sekai"}
+                onClick={(e) => { 
+                  setIsOpen(false); 
+                  handleLinkClick(e); 
+                }}
                 className=" hover:text-themeGreen duration-200 mb-4 text-[4.3vw] font-semibold cursor-pointer "
               >
                 Sekai
@@ -184,8 +195,8 @@ function Navbar() {
                 </Accordion.Panel>
               </Accordion>
               <NavLink
-                to={"/#news"}
-                onClick={() => setIsOpen(false)}
+                to={"/#News"}
+                onClick={(e) => {setIsOpen(false);handleLinkClick(e);}}
                 className="hover:text-themeGreen duration-200 mb-4 text-[4.3vw] font-semibold cursor-pointer "
               >
                 News
