@@ -5,7 +5,7 @@ function FooterComp(){
         <>
         <Footer container className="bg-sky-300 font-Poppins">
             <div className="w-full">
-                <div className="w-full justify-between sm:flex  md:flex ">
+                <div className="w-full justify-between sm:flex md:flex ">
                     <div className="max-sm:w-full max-sm:flex max-sm:justify-center mb-3">
                         {/* <FooterBrand href="#" src={require(`../assets/other/`+'Logo.png')}/> */}
                         <a href="#">

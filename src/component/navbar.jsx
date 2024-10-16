@@ -2,8 +2,9 @@ import React, { useRef } from "react";
 import { useState, useEffect } from "react";
 import { Turn as Hamburger } from "hamburger-react";
 import { AccordionContent, Accordion, AccordionTitle } from "flowbite-react";
+import { HashLink } from "react-router-hash-link";
 import { DATA_SEKAI } from "../utils/data";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation,useNavigate,Link } from "react-router-dom";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [animation, setIsAnimation] = useState(false);
@@ -20,19 +21,6 @@ function Navbar() {
       }
     }
   }, [Location]);
-  function handleLinkClick(event) {
-    if (window.location.pathname === "/") { // Only run this if you're already on index
-      // Get the target ID from the link
-      const targetId = event.currentTarget.getAttribute("href").substring(1);
-      // Use history to change location
-      window.history.pushState(null, "", `#${targetId}`);
-      // Scroll into view for the target element
-      const targetElement = document.getElementById(targetId);
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: "auto" });
-      }
-    }
-  }
   // ini useEffect buat animasi curtainNavbar
   // this useEffect for curtainNavbar Animation
   useEffect(() => {
@@ -128,7 +116,7 @@ function Navbar() {
   }
   const unitList = Object.entries(...DATA_SEKAI).map(([key, value]) => {
     return (
-      <NavLink
+      <Link
         to={`unit/${value.id}`}
         state={{ dataUnit: value }}
         onClick={() => setIsOpen(false)}
@@ -145,7 +133,7 @@ function Navbar() {
           />{" "}
           {value.groupName.split(",")}
         </li>
-      </NavLink>
+      </Link>
     );
   });
   return (
@@ -160,7 +148,7 @@ function Navbar() {
           <div
             className={`${
               animation ? "translate-x-0" : "-translate-x-full"
-            } w-full h-full pointer-events-auto select-none`}
+            }  md:w-[65%] w-[50%] h-full pointer-events-auto select-none`}
           >
             <img
               src={`${require("../assets/other/" + "text_logo.webp")}`}
@@ -171,19 +159,19 @@ function Navbar() {
           <div
             className={`${
               animation ? "translate-x-0" : "translate-x-full"
-            } md:w-[40%] w-[60%] h-full z-[999] overflow-auto bg-white text-wrap px-8 flex flex-col justify-between py-6 transition-all duration-300 font-Poppins pointer-events-auto scrollbar-hidden`}
+            } md:w-[35%] w-fit h-full z-[999] overflow-auto bg-white text-wrap px-8 flex flex-col justify-between py-6 transition-all duration-300 font-Poppins pointer-events-auto scrollbar-hidden`}
           >
             <div className="flex justify-start items-start flex-col mt-14 max-md:mx-auto z-50 w-fit mr-auto">
-              <NavLink
+              <HashLink
+              smooth
                 to={"/#Sekai"}
-                onClick={(e) => { 
-                  setIsOpen(false); 
-                  handleLinkClick(e); 
+                onClick={() => { 
+                  setIsOpen(false);  
                 }}
                 className=" hover:text-themeGreen duration-200 mb-4 text-[4.3vw] font-semibold cursor-pointer "
               >
                 Sekai
-              </NavLink>
+              </HashLink>
               <Accordion className="!border-none !bg-transparent !shadow-none focus:!outline-none focus:!ring-0 focus:!border-none active:!border-none hover:!border-none">
                 <Accordion.Panel className="!p-0 !border-none !bg-transparent !shadow-none focus:!outline-none focus:!ring-0 focus:!border-none active:!border-none ">
                   <Accordion.Title className="!p-0 !border-none !bg-transparent !shadow-none focus:!outline-none focus:!ring-0 focus:!border-none active:!border-none hover:!border-none !text-black hover:!text-themeGreen duration-200 mb-4 text-[4.3vw] font-semibold cursor-pointer">
@@ -194,13 +182,14 @@ function Navbar() {
                   </Accordion.Content>
                 </Accordion.Panel>
               </Accordion>
-              <NavLink
+              <HashLink
+              smooth
                 to={"/#News"}
-                onClick={(e) => {setIsOpen(false);handleLinkClick(e);}}
+                onClick={() => {setIsOpen(false)}}
                 className="hover:text-themeGreen duration-200 mb-4 text-[4.3vw] font-semibold cursor-pointer "
               >
                 News
-              </NavLink>
+              </HashLink>
             </div>
             <div className="mx-auto flex flex-wrap justify-center max-w-fit">
               <img

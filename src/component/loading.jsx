@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
-function Loading ({isVideoLoading,isError}){
+function LoadingComp ({isVideoLoading,isError}){
     useEffect(()=>{
         if(isVideoLoading){
             document.body.style.overflow="hidden"
@@ -25,4 +25,4 @@ function Loading ({isVideoLoading,isError}){
         </>
     )
 }
-export default Loading
+export default LoadingComp

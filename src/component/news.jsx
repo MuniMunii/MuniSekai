@@ -5,6 +5,11 @@ import { useState,useEffect } from "react";
 import '../styles/root.css'
 import { entryAnimation } from "../utils/utils";
 import { isCompositeComponentWithType } from "react-dom/test-utils";
+import { Swiper,SwiperSlide } from "swiper/react";
+import { FreeMode, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
 function NewsComp() {
   const [isNewsOpen, setIsNewsOpen] = useState(false);
   const [animationDelay, setAnimationDelay] = useState(false);
@@ -29,39 +34,39 @@ function NewsComp() {
     entryAnimation(".news-list", "entry-animation-x");
   },[])
   
-  let isDragging = false;
-  let startX = 0;
-  let scrollLeft = 0;
+  // let isDragging = false;
+  // let startX = 0;
+  // let scrollLeft = 0;
 
-  const handleMouseDown = (e) => {
-    const slider = e.currentTarget;
-    isDragging = true;
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
-    slider.style.cursor = "grabbing";
-  };
+  // const handleMouseDown = (e) => {
+  //   const slider = e.currentTarget;
+  //   isDragging = true;
+  //   startX = e.pageX - slider.offsetLeft;
+  //   scrollLeft = slider.scrollLeft;
+  //   slider.style.cursor = "grabbing";
+  // };
 
-  const handleMouseUp = (e) => {
-    isDragging = false;
-    const slider = e.currentTarget;
-    slider.style.cursor = "grab"; 
-  };
+  // const handleMouseUp = (e) => {
+  //   isDragging = false;
+  //   const slider = e.currentTarget;
+  //   slider.style.cursor = "grab"; 
+  // };
 
-  const handleMouseLeave = (e) => {
-    if (isDragging) {
-      isDragging = false;
-      const slider = e.currentTarget;
-      slider.style.cursor = "grab";
-    }
-  };
+  // const handleMouseLeave = (e) => {
+  //   if (isDragging) {
+  //     isDragging = false;
+  //     const slider = e.currentTarget;
+  //     slider.style.cursor = "grab";
+  //   }
+  // };
 
-  const handleMouseMove = (e) => {
-    if (!isDragging) return;
-    const slider = e.currentTarget;
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 2;
-    slider.scrollLeft = scrollLeft - walk;
-  };
+  // const handleMouseMove = (e) => {
+  //   if (!isDragging) return;
+  //   const slider = e.currentTarget;
+  //   const x = e.pageX - slider.offsetLeft;
+  //   const walk = (x - startX) * 2;
+  //   slider.scrollLeft = scrollLeft - walk;
+  // };
   return (
     <>
       <div  className="w-full h-fit desktop:h-screen flex flex-col py-2 justify-around items-center overflow-auto relative ">
@@ -180,14 +185,43 @@ function NewsComp() {
             </div>
           </div>
         </div>
-        <div
-          onMouseDown={handleMouseDown}
-          onMouseMove={handleMouseMove}
-          onMouseUp={handleMouseUp}
-          onMouseLeave={handleMouseLeave}
-          className="scroll-smooth w-[97vw] px-0 h-fit mx-0 overflow-x-scroll whitespace-nowrap touch-auto no-scrollbar select-none touch-scroll p-4  [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+        {/* carousel swiper */}
+        <div className="w-[97vw] overflow-x-hidden">
+        <Swiper modules={[Pagination,FreeMode]}
+          freeMode={true}
+          slidesPerView={2}
+          spaceBetween={200}
+          className="mySwiper"
+          >
+          <SwiperSlide><div className="bg-slate-400">TEst1</div></SwiperSlide>
+          <SwiperSlide><div className="bg-slate-400">TEst1</div></SwiperSlide>
+          <SwiperSlide><div className="bg-slate-400">TEst1</div></SwiperSlide>
+          <SwiperSlide><div className="bg-slate-400">TEst1</div></SwiperSlide>
+          <SwiperSlide><div className="bg-slate-400">TEst1</div></SwiperSlide>
+          </Swiper>
+          </div>
+        {/* <div
+          // onMouseDown={handleMouseDown}
+          // onMouseMove={handleMouseMove}
+          // onMouseUp={handleMouseUp}
+          // onMouseLeave={handleMouseLeave}
+          className="scroll-smooth w-screen px-0 h-fit mx-0 overflow-x-scroll  touch-auto no-scrollbar p-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
         >
-          <div className="ml-0 bg-themeGreen p-4 mx-3 rounded-lg w-[25em] h-48 inline-block  text-wrap">
+          <Swiper modules={[Pagination,FreeMode]}
+          freeMode={true}
+          breakpoints={{
+            700:{
+              slidesPerView:3,
+              spaceBetween:30
+            },
+            1000:{
+              slidesPerView:4,
+              spaceBetween:30
+            }
+          }}
+          >
+            <SwiperSlide> 
+          <div className="ml-0 bg-themeGreen p-4 mx-3 rounded-lg w-[25em] h-48 ">
             <div className="flex items-center justify-evenly w-full h-full">
             <p className="font-semibold border-r-2 pr-1 mr-1 border-slate-100 flex items-center h-full text-black text-xl">9/17</p>
             <div className=" bg-cyan-900 rounded-md px-3 py-1 w-full h-full relative font-Poppins">
@@ -201,7 +235,9 @@ function NewsComp() {
             </div>
             </div>
           </div>
-          <div className="ml-0 bg-gradient-to-br from-LeonidTheme to-themeGreen p-4 mx-3 rounded-lg w-[25em] h-48 inline-block  text-wrap">
+          </SwiperSlide>
+          <SwiperSlide>
+          <div className="ml-0 bg-gradient-to-br from-LeonidTheme to-themeGreen p-4 mx-3 rounded-lg w-[25em] h-48 ">
             <div className="flex items-center justify-evenly w-full h-full">
             <p className="font-semibold border-r-2 pr-1 mr-1 border-slate-100 flex items-center h-full text-black text-xl">10/11</p>
             <div className=" bg-cyan-900 rounded-md px-3 py-1 w-full h-full relative font-Poppins">
@@ -215,7 +251,9 @@ function NewsComp() {
             </div>
             </div>
           </div>
-          <div className="ml-0 bg-gradient-to-br from-MMJTheme to-themeGreen p-4 mx-3 rounded-lg w-[25em] h-48 inline-block  text-wrap">
+          </SwiperSlide>
+          <SwiperSlide>
+          <div className="ml-0 bg-gradient-to-br from-MMJTheme to-themeGreen p-4 mx-3 rounded-lg w-[25em] h-48 ">
             <div className="flex items-center justify-evenly w-full h-full">
             <p className="font-semibold border-r-2 pr-1 mr-1 border-slate-100 flex items-center h-full text-black text-xl">11/26</p>
             <div className=" bg-cyan-900 rounded-md px-3 py-1 w-full h-full relative font-Poppins">
@@ -229,7 +267,9 @@ function NewsComp() {
             </div>
             </div>
           </div>
-          <div className="ml-0 bg-gradient-to-br from-WSTheme to-themeGreen p-4 mx-3 rounded-lg w-[25em] h-48 inline-block  text-wrap">
+          </SwiperSlide>
+          <SwiperSlide>
+          <div className="ml-0 bg-gradient-to-br from-WSTheme to-themeGreen p-4 mx-3 rounded-lg w-[25em] h-48 ">
             <div className="flex items-center justify-evenly w-full h-full">
             <p className="font-semibold border-r-2 pr-1 mr-1 border-slate-100 flex items-center h-full text-black text-xl">12/20</p>
             <div className=" bg-cyan-900 rounded-md px-3 py-1 w-full h-full relative font-Poppins">
@@ -243,7 +283,9 @@ function NewsComp() {
             </div>
             </div>
           </div>
-          <div className="ml-0 bg-gradient-to-br from-CordTheme to-themeGreen p-4 mx-3 rounded-lg w-[25em] h-48 inline-block  text-wrap">
+          </SwiperSlide>
+          <SwiperSlide>
+          <div className="ml-0 bg-gradient-to-br from-CordTheme to-themeGreen p-4 mx-3 rounded-lg w-[25em] h-48 ">
             <div className="flex items-center justify-evenly w-full h-full">
             <p className="font-semibold border-r-2 pr-1 mr-1 border-slate-100 flex items-center h-full text-black text-xl">1/5</p>
             <div className=" bg-cyan-900 rounded-md px-3 py-1 w-full h-full relative font-Poppins">
@@ -257,7 +299,9 @@ function NewsComp() {
             </div>
             </div>
           </div>
-        </div>
+          </SwiperSlide>
+          </Swiper>
+        </div> */}
       </div>
       {isNewsOpen && (
             <>

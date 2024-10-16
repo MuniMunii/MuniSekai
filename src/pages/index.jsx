@@ -5,35 +5,53 @@ import NewsComp from "../component/news";
 import "../styles/animation.css";
 import FooterComp from "../component/footer";
 import ImageDisplay from "../component/imageDisplay";
-import Loading from "../component/loading";
+import LoadingComp from "../component/loading";
+import UnitListTest from "../component/unitListTest";
 import { useLocation } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Mousewheel, Pagination, HashNavigation } from "swiper/modules";
+import { Mousewheel, Pagination, HashNavigation,Scrollbar } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 function Index() {
   const [isVideoLoading, setIsVideoLoading] = useState(false);
   const [videoEnded, setVideoEnded] = useState(false);
   const [isError, setIsError] = useState(null);
-  const Location = useLocation();
-  const Sections = ["index", "sekai-tag", "news"];
   let isWatched = localStorage.getItem("watched");
+  const location = useLocation();
+  const [oldID, setOldID] = useState(null); 
+    // i dont use hashNavigate from SwiperJS because i tried it before and dont come as my expected result
+    // so i use new Function
+  const handleSlideChange = (swiper) => {
+    const currentSlide = swiper.slides[swiper.activeIndex]; 
+    const newID = currentSlide.getAttribute("id"); 
+    // kalo ganti slide hash nya ganti
+    if (newID && newID !== oldID) {
+      setOldID(newID); // simpan id 
+      window.history.pushState(null, null, `#${newID}`); 
+    } else if (!newID && oldID !== null ) {
+      setOldID(null);
+      window.history.pushState(null, null, "#");
+    }
+  };
+  const handleReachEnd=()=>{
+      setOldID(null);
+      window.history.pushState(null, null, "#");
+    }
+  
   useEffect(() => {
-    if (window.location.hash) {
-      const elementID = window.location.hash.substring(1);
-      const element = document.getElementById(elementID);
-      
-      if (element) {
-        // Scroll to the element when the page loads or hash changes
-        setTimeout(() => {
-          element.scrollIntoView({ behavior: "smooth" });
-        }, 100); // Add delay for debugging, can be adjusted or removed
+    const hash = location.hash.substring(1);
+    if (hash) {
+      const targetSlide = document.getElementById(hash);
+      if (targetSlide) {
+        const swiper = document.querySelector('.swiper').swiper;
+        const slideIndex = Array.from(swiper.slides).indexOf(targetSlide);
+        swiper.slideTo(slideIndex);
       }
     }
-  }, [window.location.hash]);
+  }, [location.hash]);
   useEffect(() => {
-    const isDesktop=window.matchMedia("(min-height: 640px) and (min-width: 1240px)")
-    if(!isDesktop.matches){
+    const isDesktop = window.matchMedia('(min-width: 1240px) and (min-height: 640px)');
+    if(!isDesktop.matches){ 
     const swiperSlides = document.querySelectorAll(".swiper-slide");
     swiperSlides.forEach((slide) => {
       slide.addEventListener("wheel", (e) => {
@@ -54,20 +72,22 @@ function Index() {
       });
     });
   }
-  }, []);
+  });
   return (
     <Swiper
       className="mySwiper"
       modules={[Mousewheel, Pagination, HashNavigation]}
       autoHeight={true}
-      hashNavigation={{ watchState: true }}
+      onSlideChange={handleSlideChange}
+      onReachEnd={handleReachEnd}
+      // hashNavigation={{ watchState: true }}
       navigation={true}
       direction={"vertical"}
       freeMode={true}
       slidesPerView='auto'
       mousewheel={{ forceToAxis: true}}
     >
-      <SwiperSlide data-hash="Index" key={'Index'}>
+      <SwiperSlide key={'Index'} className="slide-content">
         <ImageDisplay
           setIsVideoLoading={setIsVideoLoading}
           setIsError={setIsError}
@@ -76,28 +96,28 @@ function Index() {
         />
       </SwiperSlide>
       {isVideoLoading ? (
-        <Loading isVideoLoading={isVideoLoading} isError={isError} />
+        <LoadingComp isVideoLoading={isVideoLoading} isError={isError} />
       ) : (
         <>
           {(videoEnded || isWatched === "true") && (
             <>
               {/* unitlist */}
-              <SwiperSlide data-hash="Sekai" key={'Unit-intro'}>
-                <div className="slide-content overflow-y-auto scrollbar-hidden">
-                  <UnitListIntroduction />
+              <SwiperSlide id="Sekai" key={'Unit-intro'} className="slide-content">
+                <div className=" overflow-y-auto scrollbar-hidden touch-auto">
+                  <UnitListTest />
                 </div>
               </SwiperSlide>
               {/* news */}
-              <SwiperSlide data-hash="News" key={'News'}>
-                <div className="slide-content overflow-y-auto scrollbar-hidden">
+              <SwiperSlide id="News"  key={'News'} className="slide-content">
+                <div className=" overflow-y-auto scrollbar-hidden">
                   <NewsComp />
                 </div>
               </SwiperSlide>
               {/* i remove this because ugly */}
               {/* <GameplayInfo /> */}
               {/* footer */}
-              <SwiperSlide data-hash="Footer" className="h-auto" key={'Footer'}>
-                <div className="slide-content overflow-y-auto scrollbar-hidden">
+              <SwiperSlide className="slide-content h-auto" key={'Footer'}>
+                <div className=" overflow-y-auto scrollbar-hidden">
                   <FooterComp />
                 </div>
               </SwiperSlide>

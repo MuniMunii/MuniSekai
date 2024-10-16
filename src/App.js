@@ -22,7 +22,7 @@ function App() {
     <>
       <Suspense fallback={<Loading/>}>
       <Navbar />
-      <div className="App z-0 bg-gradient-to-tl from-white to-themeGreen min-h-screen">
+      <div className="App z-0 bg-gradient-to-tl from-white to-themeGreen overflow-auto min-h-fit ">
         <Routes>
           <Route path={"/"} element={<Index/>} />
           <Route path={"/unit/:unitId"} element={<UnitComp/>}/>

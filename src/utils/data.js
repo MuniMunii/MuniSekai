@@ -209,7 +209,7 @@ export const DATA_SEKAI = [
       },
       WXS: {
         id: "wandasho",
-        groupName:'Wonderlands×Showtime',
+        groupName:'Wonderlands x Showtime',
         Theme: "#FF9900",
         Logo: "wxsLogo.png",
         LogoText: "wxsLogoText.png",

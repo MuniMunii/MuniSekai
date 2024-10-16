@@ -6,11 +6,9 @@ function ImageDisplay({
   videoEnded,
   setVideoEnded,
 }) {
-  
   const [delayedImage, setDelayedImage] = useState(false);
   const [isWatched, setIsWatched] = useState(false);
   console.log(isWatched);
-  
   let videoRef = useRef(null);
   // useEffect ini buat video index di tonton dulu jika first time visit
   useEffect(() => {
@@ -72,11 +70,13 @@ function ImageDisplay({
   const ImageIndex = () => {
     return (
       <div
-        className={`w-full h-screen bg-cover relative bg-center flex items-end pointer-events-none select-none bg-white ${
+        className={`w-screen h-screen bg-cover relative bg-center flex items-end pointer-events-none select-none bg-white ${
           delayedImage ? "opacity-100 filter-none" : "opacity-0 blur-md"
         } transition-all duration-500`}
         style={{
           backgroundImage: `url(${require("../assets/other/" + "mv_pc.jpg")})`,
+          backgroundSize: "cover", // Ensures the image covers the whole area
+          backgroundPosition: "center",
         }}
       >
         <img
