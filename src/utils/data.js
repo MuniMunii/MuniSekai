@@ -8,6 +8,9 @@ export const DATA_SEKAI = [
       ThemeBg:"LeonidRooftop.jpg",
       LogoText: "LeoneedlogoText.png",
       LeadIMG:"bnw_ichika.png",
+      Profile:"A band formed by a group of childhood friends who have learned to overcome their differences.",
+      Desc:"A unit of four childhood friends, who became estranged after various circumstances. The distance shifts between the four.",
+      GroupIMG:"ln_group.png",
       Char: [
         {
           ichika: [
@@ -77,6 +80,9 @@ export const DATA_SEKAI = [
         LogoText: "mmjLogoText.png",
         ThemeBg:"mmjpark.jpg",
         LeadIMG:"bnw_minori.png",
+        Profile:"A unique idol group formed by one girl with a dream, and three other girls who had given up on theirs.",
+        Desc:"A girl who wants to become an idol and three girls who faced the harsh reality of being an idol. Will the optimism overcome the obstacles? Will they reach this dream together?",
+        GroupIMG:"mmj_group.png",
         Char: [
           {
             minori: [
@@ -146,6 +152,9 @@ export const DATA_SEKAI = [
         LogoText: "vbsLogoText.png",
         ThemeBg:"vbspark.jpg",
         LeadIMG:"bnw_kohami.png",
+        Profile:"A talented group of street artists who teamed up to surpass a legend.",
+        Desc:"Three young talented musicians from different backgrounds and a meek girl. Their ultimate goal is to surpass the “Legend”. Watch them as they rise to the top of the concrete jungle!",
+        GroupIMG:"vbs_group.png",
         Char: [
           {
             kohami: [
@@ -215,6 +224,9 @@ export const DATA_SEKAI = [
         LogoText: "wxsLogoText.png",
         ThemeBg:"wxsPark.jpg",
         LeadIMG:"bnw_tsukasa.png",
+        Profile:"An eccentric musical show unit, proclaiming each day wonderful and rushing out to meet it head on.",
+        Desc:"At a popular theme park, a stage stands deserted. These members come together as one for the revival of the stage. Can they bring back the cheer and laughter to the stage?",
+        GroupIMG:"wxs_group.png",
         Char: [
           {
             emu: [
@@ -284,6 +296,9 @@ export const DATA_SEKAI = [
         LogoText: "25jiLogoText.png",
         ThemeBg:"25jiPark.jpg",
         LeadIMG:"bnw_kanade.png",
+        Profile:"A mysterious music circle that operates at 1:00 AM (25:00), and whose identities are shrouded in mystery.",
+        Desc:'Unaware of what each other looks like or their own names, a circle of friends meet online using the chat tool "Nightcord" to make songs together.',
+        GroupIMG:"nigo_group.png",
         Char: [
           {
             kanade: [

@@ -116,11 +116,11 @@ function Index() {
               {/* i remove this because ugly */}
               {/* <GameplayInfo /> */}
               {/* footer */}
-              <SwiperSlide className="slide-content h-auto" key={'Footer'}>
+              {/* <SwiperSlide className="slide-content h-auto" key={'Footer'}>
                 <div className=" overflow-y-auto scrollbar-hidden">
                   <FooterComp />
                 </div>
-              </SwiperSlide>
+              </SwiperSlide> */}
             </>
           )}
         </>
