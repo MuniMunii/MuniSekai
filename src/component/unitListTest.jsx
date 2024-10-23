@@ -20,12 +20,12 @@ function UnitListTest() {
             }}
           >
             <img
-          src={require("../assets/char/" + value.GroupIMG)}
-          alt={value.Char}
-          className="absolute top-[23%] w-[74%] h-[68%] pointer-events-none"
-        />
+              src={require("../assets/char/" + value.GroupIMG)}
+              alt={value.Char}
+              className="absolute top-[23%] w-[74%] h-[68%] pointer-events-none"
+            />
             <div
-              className="z-20 rounded-md w-[80%] h-[55%] sm:h-[40%] overflow-clip text-xs md:text-sm xl:text-base xl:p-2 p-1 font-Poppins "
+              className="z-20 rounded-md w-[80%] h-[40%] group-hover:h-fit overflow-clip text-xs md:text-sm xl:text-base p-2 font-Poppins "
               style={{ backgroundColor: hexToRGBA(value.Theme, 0.7) }}
             >
               <h1 className="text-white/80 font-bold tracking-wide">
@@ -39,7 +39,7 @@ function UnitListTest() {
         <img
           src={require("../assets/Unit/" + value.LogoText)}
           alt={value.Char}
-          className="filter-none relative w-auto  h-[15%]  pointer-events-none"
+          className="filter-none relative w-auto h-[15%] pointer-events-none translate-y-[250%] transition-transform group-hover:translate-y-0"
         />
         <img
           src={require("../assets/Unit/" + value.Logo)}

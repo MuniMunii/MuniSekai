@@ -7,15 +7,7 @@ function ImageDisplay({
   setVideoEnded,
 }) {
   const [delayedImage, setDelayedImage] = useState(false);
-  const [isWatched, setIsWatched] = useState(false);
-  console.log(isWatched);
   let videoRef = useRef(null);
-  // useEffect ini buat video index di tonton dulu jika first time visit
-  useEffect(() => {
-    if (localStorage.getItem("watched") === "true") {
-      setIsWatched(true);
-    }
-  }, []);
   useEffect(() => {
     // event jika video masi blom loaded index ga bakal muncul
     // this event for if video not loaded yet index.jsx will not show up
@@ -34,7 +26,6 @@ function ImageDisplay({
           })
           .catch((error) => {
             setIsError(String(error));
-            console.log(error);
           });
         // fetch(video)
         // .then(

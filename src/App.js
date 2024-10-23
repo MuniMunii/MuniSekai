@@ -10,6 +10,7 @@ import Navbar from "./component/navbar";
 import Loading from "./component/loading";
 import UnitComp from "./pages/Unit";
 import Index from "./pages/index";
+import LoadingComp from "./component/loading";
 const IndexComp=React.lazy(()=>import('./pages/index'))
 function App() {
   const [isLandscapes, setIsLandscapes] = useState(null);
@@ -20,9 +21,9 @@ function App() {
   }, []);
   const conditionalRender = isLandscapes ? (
     <>
-      <Suspense fallback={<Loading/>}>
+      <Suspense fallback={<LoadingComp/>}>
       <Navbar />
-      <div className="App z-0 bg-gradient-to-tl from-white to-themeGreen overflow-auto min-h-fit ">
+      <div className="App z-0 bg-gradient-to-tl from-white to-themeGreen overflow-auto min-h-screen">
         <Routes>
           <Route path={"/"} element={<Index/>} />
           <Route path={"/unit/:unitId"} element={<UnitComp/>}/>

@@ -116,9 +116,9 @@ function Index() {
               {/* i remove this because ugly */}
               {/* <GameplayInfo /> */}
               {/* footer */}
-              {/* <SwiperSlide className="slide-content h-auto" key={'Footer'}>
-                <div className=" overflow-y-auto scrollbar-hidden">
-                  <FooterComp />
+              {/* <SwiperSlide  key={'Footer'}>
+                <div className="bg-black desktop:h-screen h-full w-full flex flex-col-reverse">
+                <FooterComp />
                 </div>
               </SwiperSlide> */}
             </>

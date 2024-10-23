@@ -4,7 +4,7 @@ import { Turn as Hamburger } from "hamburger-react";
 import { AccordionContent, Accordion, AccordionTitle } from "flowbite-react";
 import { HashLink } from "react-router-hash-link";
 import { DATA_SEKAI } from "../utils/data";
-import { NavLink, useLocation,useNavigate,Link } from "react-router-dom";
+import { NavLink, useLocation, useNavigate, Link } from "react-router-dom";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [animation, setIsAnimation] = useState(false);
@@ -158,10 +158,38 @@ function Navbar() {
           </div>
           <div
             className={`${
-              animation ? "translate-x-0" : "translate-x-full"
-            } md:w-[35%] w-fit h-full z-[999] overflow-auto bg-white text-wrap px-8 flex flex-col justify-between py-6 transition-all duration-300 font-Poppins pointer-events-auto scrollbar-hidden`}
+              animation
+                ? "translate-x-0 rotate-0"
+                : "translate-x-full rotate-12"
+            } md:w-[40%] w-[50%] h-full z-[999] overflow-auto bg-transparent text-wrap px-4 flex justify-center items-center py-6 transition-all duration-300 font-Poppins pointer-events-auto `}
           >
-            <div className="flex justify-start items-start flex-col mt-14 max-md:mx-auto z-50 w-fit mr-auto">
+            <div
+              className={`bg-slate-800 relative pt-2 rounded-xl flex flex-col justify-center items-center  w-[90%] h-full transition-all duration-300`}
+            >
+              <div className="bg-black absolute top-0 w-14 h-3 rounded-xl flex justify-evenly items-center">
+                <div className="bg-slate-400 size-1 rounded full"></div>
+                <div className="bg-slate-400 size-1 rounded full"></div>
+                <div className="bg-slate-400 size-1 rounded full"></div>
+              </div>
+              <div className="flex flex-col absolute -left-1 bottom-[67%]">
+                <div className="bg-slate-800 mb-3 h-9 w-2 rounded-lg"></div>
+                <div className="bg-slate-800  h-9 w-2 rounded-lg"></div>
+              </div>
+              <div className="bg-slate-800 absolute -right-1 h-16 w-2 bottom-[70%] rounded-lg"></div>
+              <div className="bg-white h-[95%] w-[90%] rounded-md relative">
+                <div className="absolute top-0 w-full h-6 rounded-t-md bg-black/70"></div>
+                <div className="h-full w-full overflow-auto scrollbar-hidden flex flex-col">
+                  {/* content */}
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* <div
+            className={`${
+              animation ? "translate-x-0 rotate-0" : "translate-x-full rotate-12"
+            } md:w-[35%] w-fit h-[95%] z-[999] overflow-auto rounded-md bg-black text-wrap px-8 flex flex-col justify-between py-6 transition-all duration-300 font-Poppins pointer-events-auto scrollbar-hidden`}
+          >
+            <div className="flex bg-white justify-start items-start flex-col mt-14 max-md:mx-auto z-50 w-fit mr-auto">
               <HashLink
               smooth
                 to={"/#Sekai"}
@@ -203,7 +231,7 @@ function Navbar() {
                 className="w-32 m-2  relative filter-none cursor-pointer"
               />
             </div>
-          </div>
+          </div> */}
         </div>
       )}
       {<NavbarSide />}

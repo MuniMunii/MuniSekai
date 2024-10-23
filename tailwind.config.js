@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       screens:{
         desktop: {'raw': '(min-height: 640px) and (min-width: 1240px)'},
+        'max-sm': {'raw': '(max-width: 500px)'},
       },
       keyframes:{
         bounceLoad:{
