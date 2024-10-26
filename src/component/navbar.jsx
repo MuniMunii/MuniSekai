@@ -5,11 +5,27 @@ import { AccordionContent, Accordion, AccordionTitle } from "flowbite-react";
 import { HashLink } from "react-router-hash-link";
 import { DATA_SEKAI } from "../utils/data";
 import { NavLink, useLocation, useNavigate, Link } from "react-router-dom";
+import { FaRegNewspaper } from "react-icons/fa6";
+import { MdOutlinePeopleAlt, MdPeopleAlt } from "react-icons/md";
+import { TbWorldStar } from "react-icons/tb";
+import { FaWifi } from "react-icons/fa6";
+import { GiNetworkBars } from "react-icons/gi";
+import { IoBatteryFullSharp } from "react-icons/io5";
+import { IoIosMail } from "react-icons/io";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [animation, setIsAnimation] = useState(false);
   const [render, setRender] = useState(false);
   const Location = useLocation();
+  const Dates = new Date();
+  const Hours = Dates.getHours();
+  const Minutes = Dates.getMinutes();
+  function addZero(i) {
+    if (i < 10) {
+      i = "0" + i;
+    }
+    return i;
+  }
   useEffect(() => {
     if (Location.hash) {
       const elementID = Location.hash.substring(1);
@@ -161,7 +177,7 @@ function Navbar() {
               animation
                 ? "translate-x-0 rotate-0"
                 : "translate-x-full rotate-12"
-            } md:w-[40%] w-[50%] h-full z-[999] overflow-auto bg-transparent text-wrap px-4 flex justify-center items-center py-6 transition-all duration-300 font-Poppins pointer-events-auto `}
+            } md:w-[40%] w-[50%] h-full z-[999] overflow-auto bg-transparent text-wrap px-4 flex justify-center items-center py-6 transition-all ease-in-out duration-300 font-Poppins pointer-events-auto `}
           >
             <div
               className={`bg-slate-800 relative pt-2 rounded-xl flex flex-col justify-center items-center  w-[90%] h-full transition-all duration-300`}
@@ -177,9 +193,85 @@ function Navbar() {
               </div>
               <div className="bg-slate-800 absolute -right-1 h-16 w-2 bottom-[70%] rounded-lg"></div>
               <div className="bg-white h-[95%] w-[90%] rounded-md relative">
-                <div className="absolute top-0 w-full h-6 rounded-t-md bg-black/70"></div>
-                <div className="h-full w-full overflow-auto scrollbar-hidden flex flex-col">
-                  {/* content */}
+                <div className="absolute top-0 w-full h-6 rounded-t-md bg-black/80 z-20 text-white/70 flex flex-row-reverse justify-between items-center px-4">
+                  <div className="flex flex-row-reverse justify-evenly items-center select-none pointer-events-none">
+                    <IoBatteryFullSharp className="size-5 " />
+                    <FaWifi className="size-5  mx-3" />
+                    <GiNetworkBars className="size-5 " />
+                  </div>
+                  <p>{`${Hours}:${addZero(Minutes)}`}</p>
+                  <IoIosMail className="size-5 " />
+                </div>
+                <div className="h-full w-full overflow-auto scrollbar-hidden flex flex-col items-center flex-grow pt-8 px-3">
+                  <HashLink
+                    smooth
+                    to={"/#Sekai"}
+                    onClick={() => {
+                      setIsOpen(false);
+                    }}
+                    className="bg-pink-400 w-full h-[125px] py-2 flex flex-col justify-center items-center overflow-clip relative cursor-pointer mb-4 rounded-sm"
+                  >
+                    <div className="absolute -top-7 -left-7 rotate-45 size-14 bg-pink-500 overflow-clip"></div>
+                    <img
+                      src={`${require("../assets/other/" + "sekai_text.png")}`}
+                      alt=""
+                      className={`z-0 size-full absolute pointer-events-none select-none opacity-45 `}
+                    />
+                    <TbWorldStar className="z-10 size-12" />
+                    <h1 className="z-10 text-black font-bold text-4xl select-none">
+                      Sekai
+                    </h1>
+                  </HashLink>
+                  <HashLink
+                    smooth
+                    to={"/#Sekai"}
+                    onClick={() => {
+                      setIsOpen(false);
+                    }}
+                    className="bg-orange-400 w-full h-[125px] py-2 flex flex-col justify-center overflow-clip items-center relative cursor-pointer mb-4 rounded-sm"
+                  >
+                    <div className="absolute -top-7 -left-7 rotate-45 size-14 bg-orange-500 overflow-clip"></div>
+                    <img
+                      src={`${require("../assets/other/" + "unit_text.png")}`}
+                      alt=""
+                      className={`z-0 size-full absolute pointer-events-none select-none opacity-45 `}
+                    />
+                    <MdPeopleAlt className="z-10 size-12" />
+                    <h1 className="z-10 text-black font-bold text-4xl select-none">
+                      Unit
+                    </h1>
+                  </HashLink>
+                  <HashLink
+                    smooth
+                    to={"/#Sekai"}
+                    onClick={() => {
+                      setIsOpen(false);
+                    }}
+                    className="bg-green-400 w-full h-[125px] py-2 flex flex-col justify-center overflow-clip items-center relative cursor-pointer mb-4 rounded-sm"
+                  >
+                    <div className="absolute -top-7 -left-7 rotate-45 size-14 bg-green-500 overflow-clip"></div>
+                    <img
+                      src={`${require("../assets/other/" + "news_text.png")}`}
+                      alt=""
+                      className={`z-0 size-full absolute pointer-events-none select-none opacity-45 `}
+                    />
+                    <FaRegNewspaper className="z-10 size-12" />
+                    <h1 className="z-10 text-black font-bold text-4xl select-none">
+                      News
+                    </h1>
+                  </HashLink>
+                  <div className="mx-auto flex flex-wrap justify-center max-w-fit">
+                    <img
+                      src={`${require("../assets/other/" + "appicon.png")}`}
+                      alt="logo-pjsk"
+                      className="w-32 m-2  relative filter-none cursor-pointer"
+                    />
+                    <img
+                      src={`${require("../assets/other/" + "playicon.png")}`}
+                      alt="logo-pjsk"
+                      className="w-32 m-2  relative filter-none cursor-pointer"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
