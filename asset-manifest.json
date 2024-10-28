@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/MuniSekai/static/css/main.d6f76d3c.css",
-    "main.js": "/MuniSekai/static/js/main.18984e8d.js",
+    "main.css": "/MuniSekai/static/css/main.3dfe3cef.css",
+    "main.js": "/MuniSekai/static/js/main.8b93a510.js",
     "static/js/453.4bc8fe86.chunk.js": "/MuniSekai/static/js/453.4bc8fe86.chunk.js",
     "static/media/wxs_group.png": "/MuniSekai/static/media/wxs_group.31210df5ae9ee890b0e9.png",
     "static/media/vbs_group.png": "/MuniSekai/static/media/vbs_group.74cb7aa875a7952ad33e.png",
@@ -31,10 +31,20 @@
     "static/media/25jiPark.jpg": "/MuniSekai/static/media/25jiPark.f4fdedd636cb786bd008.jpg",
     "static/media/Logo.png": "/MuniSekai/static/media/Logo.2c2196d5e848edb6cec6.png",
     "static/media/text_logo.webp": "/MuniSekai/static/media/text_logo.e549a2f87493a1695206.webp",
+    "static/media/Linetext-wxs.png": "/MuniSekai/static/media/Linetext-wxs.aa1db2b6ed0a0ee4a1ca.png",
+    "static/media/Linetext-vbs.png": "/MuniSekai/static/media/Linetext-vbs.321725cc2dab45320430.png",
+    "static/media/news_text.png": "/MuniSekai/static/media/news_text.6d4269d3b5b1cc50a863.png",
+    "static/media/Linetext-n25.png": "/MuniSekai/static/media/Linetext-n25.12e72234cade03046de3.png",
+    "static/media/Linetext-mmj.png": "/MuniSekai/static/media/Linetext-mmj.5c82e934819dc33cd070.png",
+    "static/media/Linetext-ln.png": "/MuniSekai/static/media/Linetext-ln.afb8e85026db45cedfc8.png",
     "static/media/chibi_miku.png": "/MuniSekai/static/media/chibi_miku.1d3b7b0a8a3b77eb5f73.png",
+    "static/media/sekai_text.png": "/MuniSekai/static/media/sekai_text.23b5660d2c338b387d67.png",
     "static/media/LeoneedlogoText.png": "/MuniSekai/static/media/LeoneedlogoText.a5efbba153439c0437e0.png",
     "static/media/chibi_mizuki.png": "/MuniSekai/static/media/chibi_mizuki.e5c8b3a8310ccd2c558b.png",
+    "static/media/crypton_logo.png": "/MuniSekai/static/media/crypton_logo.e34e46d219cb7471b85c.png",
+    "static/media/unit_text.png": "/MuniSekai/static/media/unit_text.ba802aef2ab2e90279d2.png",
     "static/media/chibi_ichika.png": "/MuniSekai/static/media/chibi_ichika.521a29bd9fc19d25020f.png",
+    "static/media/sega_logo.png": "/MuniSekai/static/media/sega_logo.1a17928ffdd752ea3d37.png",
     "static/media/playicon.png": "/MuniSekai/static/media/playicon.30b2de7629fee4e0b3ed.png",
     "static/media/25jiLogoText.png": "/MuniSekai/static/media/25jiLogoText.8546f4ca8327c954c296.png",
     "static/media/wxsLogoText.png": "/MuniSekai/static/media/wxsLogoText.8fb6166e35af0abe2820.png",
@@ -48,12 +58,12 @@
     "static/media/vbsLogoText.png": "/MuniSekai/static/media/vbsLogoText.253a6c65ee153c0d48ce.png",
     "static/media/TestMMJ.svg": "/MuniSekai/static/media/TestMMJ.aa340e7731359a69f73b.svg",
     "index.html": "/MuniSekai/index.html",
-    "main.d6f76d3c.css.map": "/MuniSekai/static/css/main.d6f76d3c.css.map",
-    "main.18984e8d.js.map": "/MuniSekai/static/js/main.18984e8d.js.map",
+    "main.3dfe3cef.css.map": "/MuniSekai/static/css/main.3dfe3cef.css.map",
+    "main.8b93a510.js.map": "/MuniSekai/static/js/main.8b93a510.js.map",
     "453.4bc8fe86.chunk.js.map": "/MuniSekai/static/js/453.4bc8fe86.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d6f76d3c.css",
-    "static/js/main.18984e8d.js"
+    "static/css/main.3dfe3cef.css",
+    "static/js/main.8b93a510.js"
   ]
 }
