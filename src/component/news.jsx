@@ -14,7 +14,7 @@ function NewsComp() {
   const [isNewsOpen, setIsNewsOpen] = useState(false);
   const [animationDelay, setAnimationDelay] = useState(false);
   // use Effect news card transition
-  console.log(isNewsOpen)
+  // console.log(isNewsOpen)
   useEffect(() => {
     let timer;
     if (isNewsOpen) {
