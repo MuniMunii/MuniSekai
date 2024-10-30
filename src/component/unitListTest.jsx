@@ -21,7 +21,7 @@ function UnitListTest() {
           >
             <img
               src={require("../assets/char/" + value.GroupIMG)}
-              alt={value.Char}
+              alt={`Group Image ${value.groupName}`}
               className="absolute top-[23%] w-[74%] h-[68%] pointer-events-none"
             />
             <div
@@ -38,12 +38,12 @@ function UnitListTest() {
         </div>
         <img
           src={require("../assets/Unit/" + value.LogoText)}
-          alt={value.Char}
+          alt={value.LogoText}
           className="filter-none relative w-auto h-[15%] pointer-events-none translate-y-[250%] transition-transform group-hover:translate-y-0"
         />
         <img
           src={require("../assets/Unit/" + value.Logo)}
-          alt={value.Char}
+          alt={value.Logo}
           className="filter-none relative pointer-events-none"
         />
       </NavLink>

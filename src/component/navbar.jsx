@@ -14,6 +14,7 @@ import { IoBatteryFullSharp } from "react-icons/io5";
 import { IoIosMail } from "react-icons/io";
 import { GoHome } from "react-icons/go";
 import { hexToRGBA } from "../utils/utils";
+import '../styles/pseudo.css'
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [animation, setIsAnimation] = useState(false);
@@ -165,7 +166,7 @@ function Navbar() {
         state={{ dataUnit: value }}
         onClick={() => setIsOpen(false)}
         key={value.id}
-        className=" w-full h-[125px] py-2 flex flex-col justify-center items-center overflow-clip relative cursor-pointer mb-6 rounded-sm shadow-[6px_7px_20px_0px_#1a202c] hover:shadow-[6px_7px_20px_0px_white] transition-shadow"
+        className="fold-shadow w-full h-[125px] py-2 flex flex-col justify-center items-center overflow-clip relative cursor-pointer mb-6 rounded-sm shadow-[6px_7px_20px_0px_#1a202c] hover:shadow-[6px_7px_20px_0px_white] transition-shadow"
         style={{ backgroundColor: value.Theme }}
       >
         <div className="absolute -top-7 -left-7 rotate-45 size-14 bg-gradient-to-br from-themeGreen to-white"></div>

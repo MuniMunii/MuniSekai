@@ -40,6 +40,7 @@ module.exports = {
       transitionDuration: {},
       backgroundSize: {
         fullMiddle: "100% auto",
+        full:'100% 100%'
       },
     },
   },
