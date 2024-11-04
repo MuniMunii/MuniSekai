@@ -16,11 +16,11 @@ export const DATA_SEKAI = [
         {
           ichika: [
             {
-              id: "ichi",
+              id: "Ichika",
               fullName: "Hoshino Ichika",
               Color: "#33AAEE",
-              image: "bnw_ichika.png",
-              bgRoom:"Background_Ichika's_Room_.jpg",
+              image: "3rd_ichika.png",
+              bgRoom:"bg_Ichika_room.jpg",
               birthday: "August 11",
               hobbies: ["Listening to Miku songs", "Admiring her cacti"],
               specialty: ["Peeling apples"],
@@ -30,11 +30,11 @@ export const DATA_SEKAI = [
           ],
           saki: [
             {
-              id: "saki",
+              id: "Saki",
               fullName: "Tenma Saki",
               Color: "#FFDD45",
-              image: "",
-              bgRoom:"Background_Saki's_Room_.jpg",
+              image: "3rd_saki.png",
+              bgRoom:"bg_Saki_room.jpg",
               birthday: "May 9",
               hobbies: ["Fashion & make-up videos", "Beading"],
               specialty: ["Hairstyling", "Juggling"],
@@ -44,11 +44,11 @@ export const DATA_SEKAI = [
           ],
           Honami: [
             {
-              id: "honami",
+              id: "Honami",
               fullName: "Mochizuki Honami",
               Color: "#EE6666",
-              image: "",
-              bgRoom:"Background_Honami's_Room_.jpg",
+              image: "3rd_honami.png",
+              bgRoom:"bg_Honami_room.jpg",
               birthday: "October 27",
               hobbies: ["Walking her dog", "Gardening"],
               specialty: ["Housekeeping", "Swimming"],
@@ -58,11 +58,11 @@ export const DATA_SEKAI = [
           ],
           shiho: [
             {
-              id: "shii",
+              id: "Shiho",
               fullName: "Hinomori Shiho",
               Color: "#BBDE22",
-              image: "",
-              bgRoom:"Background_Shiho's_SEKAI.jpg",
+              image: "3rd_shiho.png",
+              bgRoom:"bg_Shiho_room.png",
               birthday: "January 8",
               hobbies: ["Going to girl band gigs", "Playing bass guitar"],
               specialty: ["Calligraphy"],
@@ -89,11 +89,11 @@ export const DATA_SEKAI = [
           {
             minori: [
               {
-                id: "minori",
+                id: "Minori",
                 fullName: "Hanasato Minori",
                 Color: "#FFCDAC",
-                image: "",
-                bgRoom:"Background_Minori's_Room_.jpg",
+                image: "3rd_minori.png",
+                bgRoom:"bg_Minori_room.jpg",
                 birthday: "April 14",
                 hobbies: ["Dance covers", "Writing in her diary","Looking after animals"],
                 specialty: ["Coming up with catchphrases"],
@@ -103,11 +103,11 @@ export const DATA_SEKAI = [
             ],
             haruka: [
               {
-                id: "haruka",
+                id: "Haruka",
                 fullName: "Kiritani Haruka",
                 Color: "#99CDFF",
-                image: "",
-                bgRoom:"Background_Haruka's_Room_.jpg",
+                image: "3rd_haruka.png",
+                bgRoom:"bg_Haruka_room.jpg",
                 birthday: "October 5",
                 hobbies: ["Collecting penguin-themed merch"],
                 specialty: ["Basketball"],
@@ -117,11 +117,11 @@ export const DATA_SEKAI = [
             ],
             airi: [
               {
-                id: "airi",
+                id: "Airi",
                 fullName: "Momoi Airi",
                 Color: "#FFA9CC",
-                image: "",
-                bgRoom:"Background_Airi's_Room_.jpg",
+                image: "3rd_airi.png",
+                bgRoom:"bg_airi_room.png",
                 birthday: "March 19",
                 hobbies: ["Researching idols", "Shopping"],
                 specialty: ["Cooking", "Looking after kids"],
@@ -131,11 +131,11 @@ export const DATA_SEKAI = [
             ],
             shizuku: [
               {
-                id: "shiizuki",
+                id: "Shizuku",
                 fullName: "Hinomori Shizuku",
                 Color: "#9AEEDE",
-                image: "",
-                bgRoom:"Background_Shizuku's_Room_.jpg",
+                image: "3rd_shizuku.png",
+                bgRoom:"bg_hinomori_room.jpg",
                 birthday: "December 6",
                 hobbies: ["Reading", "Taking walks"],
                 specialty: ["Archery","Embroidery"],
@@ -162,11 +162,11 @@ export const DATA_SEKAI = [
           {
             kohami: [
               {
-                id: "kohami",
+                id: "Kohane",
                 fullName: "Azusawa Kohane",
                 Color: "#FF679A",
-                image: "",
-                bgRoom:"Background_Kohane's_Room_.jpg",
+                image: "3rd_kohane.png",
+                bgRoom:"bg_Kohane_room.jpg",
                 birthday: "March 2",
                 hobbies: ["Looking after her dad's pet snake"],
                 specialty: ["Photography"],
@@ -176,11 +176,11 @@ export const DATA_SEKAI = [
             ],
             an: [
               {
-                id: "an",
+                id: "An",
                 fullName: "Shiraishi An",
                 Color: "#00BBDC",
-                image: "",
-                bgRoom:"Background_An's_SEKAI.jpg",
+                image: "3rd_an.png",
+                bgRoom:"bg_An_room.png",
                 birthday: "July 26",
                 hobbies: ["Growing mint"],
                 specialty: ["Making coffee and tea"],
@@ -190,11 +190,11 @@ export const DATA_SEKAI = [
             ],
             akito: [
               {
-                id: "akito",
+                id: "Akito",
                 fullName: "Shinonome Akito",
                 Color: "#FF7721",
-                image: "",
-                bgRoom:"Background_Akito's_SEKAI.jpg",
+                image: "3rd_akito.png",
+                bgRoom:"bg_Akito_room.png",
                 birthday: "November 12",
                 hobbies: ["Fashion Styling"],
                 specialty: ["Beatboxing"],
@@ -204,11 +204,11 @@ export const DATA_SEKAI = [
             ],
             toya: [
               {
-                id: "toya",
+                id: "Toya",
                 fullName: "Aoyagi Toya",
                 Color: "#0077DD",
-                image: "",
-                bgRoom:"Background_Toya's_Room_.jpg",
+                image: "3rd_toya.png",
+                bgRoom:"bg_Toya_room.jpg",
                 birthday: "May 25",
                 hobbies: ["Reading"],
                 specialty: ["Piano","Violin"],
@@ -235,11 +235,11 @@ export const DATA_SEKAI = [
           {
             emu: [
               {
-                id: "emu",
+                id: "Emu",
                 fullName: "Ootori Emu",
                 Color: "#FF66BC",
-                image: "",
-                bgRoom:"Background_Emu's_Room_.jpg",
+                image: "3rd_emu.png",
+                bgRoom:"bg_Emu_room.jpg",
                 birthday: "September 9",
                 hobbies: ["Exploring the neighborhood"],
                 specialty: ["Acrobatics","Foodie"],
@@ -249,11 +249,11 @@ export const DATA_SEKAI = [
             ],
             tsukasa: [
               {
-                id: "tsukasa",
+                id: "Tsukasa",
                 fullName: "Tenma Tsukasa",
                 Color: "#FFBB00",
-                image: "",
-                bgRoom:"Background_Tsukasa's_Room_.jpg",
+                image: "3rd_tsukasa.png",
+                bgRoom:"bg_Tsukasa_room.jpg",
                 birthday: "May 17",
                 hobbies: ["Musicals","Making costumes"],
                 specialty: ["Striking cool poses","Piano"],
@@ -263,11 +263,11 @@ export const DATA_SEKAI = [
             ],
             nene: [
               {
-                id: "nene",
+                id: "Nene",
                 fullName: "Kusanagi Nene",
                 Color: "#34DD9A",
-                image: "",
-                bgRoom:"Background_Nene's_Room_.jpg",
+                image: "3rd_nene.png",
+                bgRoom:"bg_Nene_room.jpg",
                 birthday: "July 20",
                 hobbies: ["Fighting games","Musicals","Movies"],
                 specialty: ["Singing","Technology"],
@@ -277,11 +277,11 @@ export const DATA_SEKAI = [
             ],
             rui: [
               {
-                id: "rui",
+                id: "Rui",
                 fullName: "Kamishiro Rui",
                 Color: "#BB88ED",
-                image: "",
-                bgRoom:"Background_Rui's_Room_.jpg",
+                image: "3rd_rui.png",
+                bgRoom:"bg_Rui_room.jpg",
                 birthday: "June 24",
                 hobbies: ["Planning shows","Balloon art"],
                 specialty: ["Inventing"],
@@ -308,11 +308,11 @@ export const DATA_SEKAI = [
           {
             kanade: [
               {
-                id: "k",
+                id: "Kanade",
                 fullName: "Yoisaki Kanade",
                 Color: "#BB6588",
-                image: "",
-                bgRoom:"Background_Kanade's_Room_.jpg",
+                image: "3rd_kanade.png",
+                bgRoom:"bg_Kanade_room.jpg",
                 birthday: "February 10",
                 hobbies: ["Finding new music to listen to","Movies","Manga","Anime","Art"],
                 specialty: ["An innate ability to accurately track time"],
@@ -322,11 +322,11 @@ export const DATA_SEKAI = [
             ],
             mayufu: [
               {
-                id: "yuki",
+                id: "Mafuyu",
                 fullName: "Asahina Mafuyu",
                 Color: "#8889CC",
-                image: "",
-                bgRoom:"Background_Mafuyu's_Room_.jpg",
+                image: "3rd_mafuyu.png",
+                bgRoom:"bg_Mafuyu_room.jpg",
                 birthday: "January 27",
                 hobbies: ["Aquarium"],
                 specialty: ["Speaking English"],
@@ -336,11 +336,11 @@ export const DATA_SEKAI = [
             ],
             ena: [
               {
-                id: "enanan",
+                id: "Ena",
                 fullName: "Shinonome Ena",
                 Color: "#CCAA87",
-                image: "",
-                bgRoom:"Background_Ena's_Room_.jpg",
+                image: "3rd_ena.png",
+                bgRoom:"bg_Ena_room.jpg",
                 birthday: "April 30",
                 hobbies: ["Drawing","Taking selfies","Social media","Egosurfing"],
                 specialty: ["Researching fashion accessories","Picking out the best cooking ingredients"],
@@ -350,11 +350,11 @@ export const DATA_SEKAI = [
             ],
             mizuki: [
               {
-                id: "amiya",
+                id: "Mizuki",
                 fullName: "Akiyama Mizuki",
                 Color: "#E4A8CA",
-                image: "",
-                bgRoom:"Background_Mizuki's_Room_.jpg",
+                image: "3rd_mizuki.png",
+                bgRoom:"bg_Mizuki_room.jpg",
                 birthday: "August 27",
                 hobbies: ["Making Videos","Collages"],
                 specialty: ["Redesigning clothes"],

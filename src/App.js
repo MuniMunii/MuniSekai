@@ -25,7 +25,7 @@ function App() {
       <Navbar />
       <div className="App z-0 bg-gradient-to-tl from-white to-themeGreen overflow-auto min-h-screen">
         <Routes>
-          <Route path={"/"} element={<Index/>} />
+          <Route path={"/"} element={<IndexComp/>} />
           <Route path={"/unit/:unitId"} element={<UnitComp/>}/>
         </Routes>
       </div>

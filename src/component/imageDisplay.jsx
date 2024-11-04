@@ -66,7 +66,7 @@ function ImageDisplay({
         } transition-all duration-500`}
         style={{
           backgroundImage: `url(${require("../assets/other/" + "mv_pc.jpg")})`,
-          backgroundSize: "cover", // Ensures the image covers the whole area
+          backgroundSize: "cover", 
           backgroundPosition: "center",
         }}
       >

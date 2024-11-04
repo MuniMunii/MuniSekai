@@ -8,6 +8,7 @@ module.exports = {
       screens:{
         desktop: {'raw': '(min-height: 640px) and (min-width: 1240px)'},
         'max-sm': {'raw': '(max-width: 500px)'},
+        'max-md': {'raw': '(max-width: 750px)'},
       },
       keyframes:{
         bounceLoad:{
@@ -34,7 +35,6 @@ module.exports = {
         MMJTheme: "#6CCB20",
         VBSTheme: "#EE1166",
         WSTheme: "#FF9900",
-        CordTheme: "#884499",
       },
       transitionProperty: {},
       transitionDuration: {},

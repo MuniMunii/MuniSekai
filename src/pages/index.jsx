@@ -1,9 +1,7 @@
 import React from "react";
-import UnitListIntroduction from "../component/UnitListIntroduction";
 import { useEffect, useState, useRef } from "react";
 import NewsComp from "../component/news";
 import "../styles/animation.css";
-import FooterComp from "../component/footer";
 import ImageDisplay from "../component/imageDisplay";
 import LoadingComp from "../component/loading";
 import UnitListTest from "../component/unitListTest";
@@ -75,8 +73,8 @@ function Index() {
   });
   return (
     <Swiper
-      className="mySwiper"
-      modules={[Mousewheel, Pagination, HashNavigation]}
+      className="mySwiper mySwiper-index"
+      modules={[Mousewheel, HashNavigation]}
       autoHeight={true}
       onSlideChange={handleSlideChange}
       onReachEnd={handleReachEnd}
