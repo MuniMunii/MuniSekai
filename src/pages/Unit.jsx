@@ -72,44 +72,81 @@ function UnitComp() {
                 }}
               >
                 <div
-                  className="w-[70vw] h-[350px] max-md:h-[250px] rounded-md relative overflow-hidden p-3 flex justify-start items-start"
+                  className="w-[70vw] max-w-[700px] h-[350px] max-md:h-[250px] rounded-md flex flex-col relative overflow-hidden p-3 justify-start items-start font-Poppins"
                   style={{
-                    background: `linear-gradient(120deg, rgba(255, 255, 255, 0.3), ${char.Color})`,
+                    background: `linear-gradient(120deg, rgba(255, 255, 255, 0.4), ${char.Color})`,
                   }}
                 >
-                  <div className="p-2 flex flex-col justify-start z-20">
-                    <div className=" bg-white w-72 text-left text-wrap text-sm flex justify-start items-center">
-                      <p className="pl-1 pr-3 border-r w-16 text-wrap border-r-slate-500">
-                        Hobbies
-                      </p>
-                      <p className="px-1">{char.hobbies.join(", ")}</p>
+                  <div className="w-full flex justify-around items-center h-[75px]">
+                    <img
+                      loading="lazy"
+                      src={`${require("../assets/char/linetextchar/" +
+                        char.lineText)}`}
+                      alt={`line-${char.id}`}
+                      className={`size-full`}
+                    />
+                    <img
+                      loading="lazy"
+                      src={`${require("../assets/Unit/" + dataUnit.LogoText)}`}
+                      alt={`logo-unit`}
+                      className={`h-14 w-28`}
+                    />
+                  </div>
+                  <div className="size-full flex flex-row-reverse">
+                    {/* image */}
+                    <div className="absolute bottom-0 left-10 z-0">
+                      <img
+                        loading="lazy"
+                        src={`${require("../assets/char/new/" + char.image)}`}
+                        alt={`img-char-${char.id}`}
+                        className={`h-72 w-full max-md:h-52`}
+                      />
                     </div>
-                    <div className=" bg-white w-72 text-left text-wrap text-sm flex justify-start items-center">
-                      <p className="pl-1 pr-3 border-r w-16 text-wrap border-r-slate-500">
-                        Specialty
-                      </p>
-                      <p className="px-1">{char.specialty.join(", ")}</p>
+                    {/* description each characters */}
+                    <div className="grid gap-[1px] flex-col justify-start items-center text-xs lg:text-sm z-20 text-slate-800">
+                      <div className="flex py-1 items-center justify-start bg-opacity-70 bg-slate-100 w-72 lg:w-full rounded-md">
+                        <p className="px-1 flex items-center justify-center w-24 border-r-2 font-semibold  border-r-slate-500">
+                          Hobbies
+                        </p>
+                        <p className="px-2 flex w-60 lg:w-72 justify-start text-left items-center">
+                          {char.hobbies.join(", ")}
+                        </p>
+                      </div>
+                      <div className="flex py-1 items-center justify-start bg-opacity-70 bg-slate-100 w-72 lg:w-full rounded-md">
+                        <p className="px-1 flex items-center justify-center w-24 border-r-2 font-semibold  border-r-slate-500">
+                          Specialty
+                        </p>
+                        <p className="px-2 flex w-60 lg:w-72 justify-start text-left items-center">
+                          {char.specialty.join(", ")}
+                        </p>
+                      </div>
+                      <div className="flex py-1 items-center justify-start bg-opacity-70 bg-slate-100 w-72 lg:w-full rounded-md">
+                        <p className="px-1 flex items-center justify-center w-24 border-r-2 font-semibold  border-r-slate-500">
+                          Dislikes
+                        </p>
+                        <p className="px-2 flex w-60 lg:w-72 justify-start text-left items-center">
+                          {char.dislikes.join(", ")}
+                        </p>
+                      </div>
+                      <div className="flex py-1 items-center justify-start bg-opacity-70 bg-slate-100 w-72 lg:w-full rounded-md">
+                        <p className="px-1 flex items-center justify-center w-24 border-r-2 font-semibold  border-r-slate-500">
+                          Liked Food
+                        </p>
+                        <p className="px-2 flex w-60 lg:w-72 justify-start text-left items-center">
+                          {char.likedFood.join(", ")}
+                        </p>
+                      </div>
                     </div>
-                    <div className=" bg-white w-72 text-left text-wrap text-sm flex justify-start items-center">
-                      <p className="pl-1 pr-3 border-r w-16 text-wrap border-r-slate-500">
-                        Liked Food
-                      </p>
-                      <p className="px-1">{char.likedFood.join(", ")}</p>
-                    </div>
-                    <div className=" bg-white w-72 text-left text-wrap text-sm flex justify-start items-center">
-                      <p className="pl-1 pr-3 border-r w-16 text-wrap border-r-slate-500">
-                        Dislikes
-                      </p>
-                      <p className="px-1">{char.dislikes.join(", ")}</p>
+                    <div className="w-full h-full relative z-10">
+                      <div className="absolute bottom-6 left-3 uppercase">
+                        <h1 className="bg-indigo-950 px-1 text-white text-2xl font-kanit font-bold tracking-wider">{char.id}</h1>
+                        <h1 className="text-white shadow-name text-sm">{char.fullName}</h1>
+                      </div>
                     </div>
                   </div>
-                  <img
-                    loading="lazy"
-                    className="absolute -left-20 -bottom-7 h-full w-72 scale-75 z-10"
-                    src={`${require("../assets/char/" + char.image)}`}
-                  />
+                  {/* footer card */}
                   <div
-                    className="absolute bottom-0 left-0 w-full text-xs flex justify-end px-2 z-[70]"
+                    className={`w-full flex justify-end px-3 absolute bottom-0 left-0 text-white text-opacity-70 text-xs`}
                     style={{ backgroundColor: dataUnit.Theme }}
                   >
                     {dataUnit.groupName}

@@ -25,6 +25,7 @@ module.exports = {
           "1px 1px 0 #000,-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000",
       },
       fontFamily: {
+        kanit:['Kanit',"sans-serif"],
         test: ['"Shrikhand"', "serif"],
         testDesc: ['"Share"', "sans-serif"],
         Poppins: ["Poppins", "sans-serif"],
