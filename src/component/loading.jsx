@@ -18,7 +18,7 @@ function LoadingComp ({isVideoLoading,isError}){
                 <img loading="lazy" className="animate-bounceLoadAnimation animation-delay-100 mx-1 size-9" src={`${require('../assets/other/'+'Cute.png')}`}/>
                 <img loading="lazy" className="animate-bounceLoadAnimation animation-delay-150 mx-1 size-9" src={`${require('../assets/other/'+'Pure.png')}`}/>
                 <img loading="lazy" className="animate-bounceLoadAnimation animation-delay-200 mx-1 size-9" src={`${require('../assets/other/'+'Happy.png')}`}/>
-                <img loading="lazy" className="animate-bounceLoadAnimation animation-delay-250 size-9" src={`${require('../assets/other/'+'Mysterious.png')}`}/>
+                <img loading="lazy" className="animate-bounceLoadAnimation animation-delay-[250ms] size-9" src={`${require('../assets/other/'+'Mysterious.png')}`}/>
             </div>
             {isError&&<h2>{isError}... Pls reload</h2>}
         </div>
