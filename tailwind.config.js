@@ -36,6 +36,7 @@ module.exports = {
         MMJTheme: "#6CCB20",
         VBSTheme: "#EE1166",
         WSTheme: "#FF9900",
+        NigoTheme:'#884499'
       },
       transitionProperty: {},
       transitionDuration: {},

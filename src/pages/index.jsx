@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState, useRef } from "react";
-import NewsComp from "../component/news";
+// import NewsComp from "../component/news";
 import "../styles/animation.css";
 // import ImageDisplay from "../component/imageDisplay";
 import LoadingComp from "../component/loading";
@@ -8,6 +8,7 @@ import UnitListTest from "../component/unitListTest";
 import { useLocation } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Pagination, HashNavigation,Scrollbar } from "swiper/modules";
+import NewNews from "../component/newNews";
 import "swiper/css";
 import "swiper/css/pagination";
 function Index() {
@@ -197,7 +198,7 @@ function Index() {
               {/* news */}
               <SwiperSlide id="News"  key={'News'} className="slide-content">
                 <div className=" overflow-y-auto scrollbar-hidden">
-                  <NewsComp />
+                  <NewNews />
                 </div>
               </SwiperSlide>
               {/* i remove this because ugly */}

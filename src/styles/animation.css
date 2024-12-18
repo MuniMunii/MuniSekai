@@ -22,3 +22,9 @@
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
+.news-title{
+    transform: translateX(-100%);
+}
+.news-title.active{
+    transform: translateX(0);
+}

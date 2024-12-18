@@ -1,4 +1,4 @@
-// use targrt class as parameter and class animation for second parameter
+// use target class as parameter and class animation for second parameter
 // menggunakan class untuk parameter target dan param class animation
 export function entryAnimation(Target, animation) {
   const observer = new IntersectionObserver((entries) => {
@@ -11,6 +11,7 @@ export function entryAnimation(Target, animation) {
   });
   const getTargetClass = document.querySelectorAll(Target);
   getTargetClass.forEach((el) => observer.observe(el));
+  return ()=> observer.disconnect()
 }
 export function matchWindowLandscapes(setIsLandscapes) {
   const WINDOW_LANDSCAPES = window.matchMedia("(min-width:500px)");
