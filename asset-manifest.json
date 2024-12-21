@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/MuniSekai/static/css/main.b8c4b19d.css",
-    "main.js": "/MuniSekai/static/js/main.8639ccca.js",
+    "main.css": "/MuniSekai/static/css/main.f0ad3253.css",
+    "main.js": "/MuniSekai/static/js/main.3b93fc85.js",
     "static/js/453.4bc8fe86.chunk.js": "/MuniSekai/static/js/453.4bc8fe86.chunk.js",
     "static/media/Background_An's_SEKAI.jpg": "/MuniSekai/static/media/Background_An's_SEKAI.335fbc32178ff422741c.jpg",
     "static/media/wxs_group.png": "/MuniSekai/static/media/wxs_group.31210df5ae9ee890b0e9.png",
@@ -27,8 +27,10 @@
     "static/media/bg_Rui_room.jpg": "/MuniSekai/static/media/bg_Rui_room.5ce3419a26e5a36bdffc.jpg",
     "static/media/hb_mizuki.png": "/MuniSekai/static/media/hb_mizuki.ecd0d494acff0e6b0236.png",
     "static/media/mv_pc.jpg": "/MuniSekai/static/media/mv_pc.607a87974269890937f7.jpg",
+    "static/media/minori_part.png": "/MuniSekai/static/media/minori_part.a01a7209532d0c60c932.png",
     "static/media/bg_hinomori_room.jpg": "/MuniSekai/static/media/bg_hinomori_room.34465cd63ff3b48580e7.jpg",
     "static/media/miya_rooftop.png": "/MuniSekai/static/media/miya_rooftop.671fdd2020bbfc13e487.png",
+    "static/media/shiho_part.png": "/MuniSekai/static/media/shiho_part.706bdc3d795cab1c5f2f.png",
     "static/media/bg_Honami_room.jpg": "/MuniSekai/static/media/bg_Honami_room.46c0638b4fc69f2193d2.jpg",
     "static/media/bg_Nene_room.jpg": "/MuniSekai/static/media/bg_Nene_room.22da9ebdf4343492de75.jpg",
     "static/media/Outfits.png": "/MuniSekai/static/media/Outfits.9a012f221b40b21a6f46.png",
@@ -121,12 +123,12 @@
     "static/media/vbsLogoText.png": "/MuniSekai/static/media/vbsLogoText.253a6c65ee153c0d48ce.png",
     "static/media/TestMMJ.svg": "/MuniSekai/static/media/TestMMJ.aa340e7731359a69f73b.svg",
     "index.html": "/MuniSekai/index.html",
-    "main.b8c4b19d.css.map": "/MuniSekai/static/css/main.b8c4b19d.css.map",
-    "main.8639ccca.js.map": "/MuniSekai/static/js/main.8639ccca.js.map",
+    "main.f0ad3253.css.map": "/MuniSekai/static/css/main.f0ad3253.css.map",
+    "main.3b93fc85.js.map": "/MuniSekai/static/js/main.3b93fc85.js.map",
     "453.4bc8fe86.chunk.js.map": "/MuniSekai/static/js/453.4bc8fe86.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b8c4b19d.css",
-    "static/js/main.8639ccca.js"
+    "static/css/main.f0ad3253.css",
+    "static/js/main.3b93fc85.js"
   ]
 }
