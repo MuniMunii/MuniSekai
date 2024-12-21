@@ -9,7 +9,7 @@ function UnitListTest() {
         state={{ dataUnit: value }}
         key={value.id}
         to={`unit/${value.id}`}
-        className={`bg-black/90 w-[20%] hover:w-1/2 desktop:h-screen h-full group cursor-pointer py-4 px-2 flex flex-col items-center transition-all relative duration-250 text-wrap`}
+        className={`bg-black/90 w-[20%] hover:w-1/2 desktop:min-h-screen h-full group cursor-pointer py-4 px-2 flex flex-col items-center transition-all relative duration-250 text-wrap`}
       >
         <div className="absolute left-0 top-0 w-full h-full blur-md group-hover:filter-none group-hover:bg-transparent transition-colors">
           <div
