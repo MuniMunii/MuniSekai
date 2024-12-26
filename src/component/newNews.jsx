@@ -104,8 +104,8 @@ function NewNews() {
           </div>
           <div className="bg-slate-300 bg-opacity-50 backdrop-blur-sm flex flex-row justify-between items-start h-96 pr-4 max-md:flex-col-reverse max-md:w-full">
             <div className="text-left w-[80%] px-3 pb-3 h-full overflow-hidden">
-              <h1 className="news-title transition-transform duration-[50ms] text-8xl uppercase p-2 font-kanit">{newsType}</h1>
-              <div className="h-60 overflow-auto">
+              <h1 className="news-title transition-transform duration-[50ms] text-8xl uppercase p-2 font-Poppins font-semibold text-slate-800">{newsType}</h1>
+              <div className="h-60 overflow-auto font-kanit">
               {newsFilter}
               </div>
             </div>
@@ -117,7 +117,7 @@ function NewNews() {
                   alt={"Animal-Banner24"}
                   className="h-full hover:scale-105"
                 />
-                <div className="bg-gradient-to-r from-themeGreen to-WSTheme relative h-full w-full p-2 rounded-lg">
+                <div className="bg-gradient-to-tr from-themeGreen to-WSTheme relative h-full w-full p-2 rounded-lg">
                 <img
                 loading="lazy"
                   src={require("../assets/char/" + "minori_part.png")}
@@ -125,7 +125,7 @@ function NewNews() {
                   className="w-full h-full cursor-pointer border-inherit rounded-md"
                 />
                 </div>
-                <div className="bg-gradient-to-r from-themeGreen to-WSTheme relative h-full w-full p-2 rounded-lg">
+                <div className="bg-gradient-to-tr from-themeGreen to-WSTheme relative h-full w-full p-2 rounded-lg">
                 <img
                 loading="lazy"
                   src={require("../assets/char/" + "shiho_part.png")}
@@ -136,7 +136,7 @@ function NewNews() {
               </Carousel>
             </div>
           </div>
-          <div className="w-full h-[20px] border-t-2 border-t-black flex justify-start items-center">
+          <div className="w-full h-[20px] border-t-2 border-t-black flex justify-between items-center">
             <p className="uppercase font-bold cursor-pointer transition-colors hover:text-VBSTheme">
               More +
             </p>

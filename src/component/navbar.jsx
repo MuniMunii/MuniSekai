@@ -14,7 +14,6 @@ import { IoBatteryFullSharp } from "react-icons/io5";
 import { IoIosMail } from "react-icons/io";
 import { GoHome } from "react-icons/go";
 import { hexToRGBA } from "../utils/utils";
-import '../styles/pseudo.css'
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [animation, setIsAnimation] = useState(false);
@@ -166,7 +165,7 @@ function Navbar() {
         state={{ dataUnit: value }}
         onClick={() => setIsOpen(false)}
         key={value.id}
-        className="fold-shadow w-full h-[125px] py-2 flex flex-col justify-center items-center overflow-clip relative cursor-pointer mb-6 rounded-sm shadow-[6px_7px_20px_0px_#1a202c] hover:shadow-[6px_7px_20px_0px_white] transition-shadow"
+        className="fold-shadow w-full h-32 py-2 flex flex-col justify-center items-center overflow-clip relative cursor-pointer mb-6 rounded-sm shadow-[6px_7px_20px_0px_#1a202c] hover:shadow-[6px_7px_20px_0px_white] transition-shadow"
         style={{ backgroundColor: value.Theme }}
       >
         <div className="absolute -top-7 -left-7 rotate-45 size-14 bg-gradient-to-br from-themeGreen to-white"></div>
@@ -211,7 +210,7 @@ function Navbar() {
             } md:w-[40%] w-[50%] h-full z-[999] overflow-auto bg-transparent text-wrap px-4 flex justify-center items-center py-6 transition-all ease-in-out duration-300 font-Poppins pointer-events-auto `}
           >
             <div
-              className={`bg-slate-800 relative pt-2 rounded-xl flex flex-col justify-center items-center  w-[90%] h-full transition-all duration-300`}
+              className={`bg-slate-800 relative pt-2 rounded-xl flex flex-col justify-center items-center overflow-hidden w-[90%] h-[30em] desktop:h-full transition-all duration-300`}
             >
               {/* speaker phone accesories */}
               <div className="bg-black absolute top-0 w-14 h-3 rounded-xl flex justify-evenly items-center">
@@ -227,32 +226,23 @@ function Navbar() {
               {/* button phone accesories */}
               <div className="bg-slate-800 absolute -right-1 h-16 w-2 bottom-[70%] rounded-lg"></div>
               {/* Main Interface */}
-              <div className="bg-white h-[95%] w-[90%] rounded-md relative overflow-hidden">
+              <div className={`${!phoneUnitRender?'bg-white':''} h-[95%] w-[90%] rounded-md relative overflow-hidden`}>
                 <div className="absolute top-0 w-full h-6 rounded-t-md bg-black/80 z-20 text-white/70 flex flex-row-reverse justify-between items-center px-4">
-                  <div className="flex flex-row-reverse justify-evenly items-center select-none pointer-events-none grow">
-                    <IoBatteryFullSharp className="size-5 " />
-                    <FaWifi className="size-5  mx-3" />
-                    <GiNetworkBars className="size-5 " />
-                  </div>
                   <p className="grow flex justify-center">{`${addZero(
                     Hours
                   )}:${addZero(Minutes)}`}</p>
-                  <IoIosMail className="size-5 grow" />
                 </div>
                 {/* Back Button */}
                 <div className="absolute bottom-0 w-full py-1 px-4 rounded-b-md bg-black/80 z-20 text-white/70 flex justify-center items-center ">
-                  <GoHome
-                    onClick={() => setIsOpenUnitPhone(false)}
-                    className="size-6 cursor-pointer hover:text-white"
-                  />
+                  <p onClick={() => setIsOpenUnitPhone(false)} className="text-sm cursor-pointer hover:text-white">Home</p>
                 </div>
                 {/* unit interface */}
                 {phoneUnitRender ? (
                   <>
                     <div
                       className={`${
-                        phoneAnimation ? "translate-x-0" : "translate-x-full"
-                      } bg-slate-500 h-full w-full overflow-auto scrollbar-hidden flex flex-col items-center flex-grow pt-8 px-3 pb-6 duration-200 transition-transform scroll-smooth`}
+                        phoneAnimation ? "translate-x-[1px]" : "translate-x-full"
+                      } bg-slate-500 h-full w-full overflow-auto scrollbar-hidden flex flex-col items-center pt-8 px-3 pb-6 duration-200 transition-transform scroll-smooth`}
                     >
                       {unitList}
                     </div>

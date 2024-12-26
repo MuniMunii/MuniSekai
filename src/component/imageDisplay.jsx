@@ -9,42 +9,6 @@ function ImageDisplay({
   // note: nanti ubah video display makai method onLoad untuk mengubah state loading jadi ga perlu memakai async
   const [delayedImage, setDelayedImage] = useState(false);
   let videoRef = useRef(null);
-  // useEffect(() => {
-  //   // event jika video masi blom loaded index ga bakal muncul
-  //   // this event for if video not loaded yet index.jsx will not show up
-  //   const handleVideoAsync = async () => {
-  //     let video = videoRef.current;
-  //     if (video) {
-  //       setIsVideoLoading(true);
-  //       await new Promise((resolve) => {
-  //         video.onloadeddata = () => {
-  //           resolve();
-  //         };
-  //       });
-  //       setIsVideoLoading(false)
-  //         .then(() => {
-  //           video.play();
-  //         })
-  //         .catch((error) => {
-  //           setIsError(String(error));
-  //         });
-  //       // fetch(video)
-  //       // .then(
-  //       //   video.onloadeddata()
-  //       // ).then(video.play())
-  //       // .finally(setIsVideoLoading(false))
-  //       //   await new Promise((res)=>{
-  //       //     video.onloadeddata=()=>{
-  //       //       res()
-  //       //     }
-  //       //   }
-  //       // );
-  //       // setIsVideoLoading(false)
-  //       // video.play()
-  //     }
-  //     handleVideoAsync();
-  //   };
-  // }, [setIsVideoLoading]);
   const handleVideo = () => {
     let video = videoRef.current;
     if (video) {
@@ -85,7 +49,22 @@ function ImageDisplay({
     setIsVideoLoading(true)
   }
   function handleVideoLoaded(){
-    setIsVideoLoading(false)
+    const alreadyWatched=localStorage.getItem("watched")
+    if(alreadyWatched){
+      setIsVideoLoading(false)
+    }else{
+      setTimeout(()=>{setIsVideoLoading(false)},2000)
+    }
+  }
+  const handleVideoError=()=>{
+    setIsError("Error")
+  }
+  const handleVideoEnd=()=>{
+    setVideoEnded(true)
+    localStorage.setItem("watched",'true')
+    setTimeout(() => {
+      setDelayedImage(true);
+    }, 100);
   }
   const VideoIndex = () => {
     return (
@@ -93,8 +72,11 @@ function ImageDisplay({
         <video
           ref={videoRef}
           onPause={handleVideo}
-          onLoad={handleVideoLoad}
+          onEnded={handleVideoEnd}
+          onWaiting={handleVideoLoad}
+          onError={handleVideoError}
           onLoadedData={handleVideoLoaded}
+          d
           src={`${require("../assets/other/" + "mv_pc.mp4")}`}
           autoPlay={true}
           muted={true}
