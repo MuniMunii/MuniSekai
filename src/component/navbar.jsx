@@ -1,19 +1,12 @@
 import React, { useRef } from "react";
 import { useState, useEffect } from "react";
 import { Turn as Hamburger } from "hamburger-react";
-import { AccordionContent, Accordion, AccordionTitle } from "flowbite-react";
 import { HashLink } from "react-router-hash-link";
 import { DATA_SEKAI } from "../utils/data";
 import { NavLink, useLocation, useNavigate, Link } from "react-router-dom";
 import { FaRegNewspaper } from "react-icons/fa6";
 import { MdOutlinePeopleAlt, MdPeopleAlt } from "react-icons/md";
 import { TbWorldStar } from "react-icons/tb";
-import { FaWifi } from "react-icons/fa6";
-import { GiNetworkBars } from "react-icons/gi";
-import { IoBatteryFullSharp } from "react-icons/io5";
-import { IoIosMail } from "react-icons/io";
-import { GoHome } from "react-icons/go";
-import { hexToRGBA } from "../utils/utils";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [animation, setIsAnimation] = useState(false);
@@ -162,7 +155,7 @@ function Navbar() {
     return (
       <Link
         to={`unit/${value.id}`}
-        state={{ dataUnit: value }}
+        // state={{ dataUnit: value }}
         onClick={() => setIsOpen(false)}
         key={value.id}
         className="fold-shadow w-full h-32 py-2 flex flex-col justify-center items-center overflow-clip relative cursor-pointer mb-6 rounded-sm shadow-[6px_7px_20px_0px_#1a202c] hover:shadow-[6px_7px_20px_0px_white] transition-shadow"

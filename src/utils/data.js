@@ -6,6 +6,7 @@ export const DATA_SEKAI = [
       Theme: "#33AAEE",
       Logo: "leoLogo.png",
       ThemeBg:"LeonidRooftop.jpg",
+      ThemeBgAlt:"rooftop_leonid.png",
       LogoText: "LeoneedlogoText.png",
       LineText:"Linetext-ln.png",
       LeadIMG:"bnw_ichika.png",
@@ -17,6 +18,7 @@ export const DATA_SEKAI = [
           ichika: [
             {
               id: "Ichika",
+              icon:"Ichika_(icon).png",
               fullName: "Hoshino Ichika",
               Color: "#33AAEE",
               image: "3rd_ichika.png",
@@ -32,6 +34,7 @@ export const DATA_SEKAI = [
           saki: [
             {
               id: "Saki",
+              icon:"Saki_(icon).png",
               fullName: "Tenma Saki",
               Color: "#FFDD45",
               image: "3rd_saki.png",
@@ -47,6 +50,7 @@ export const DATA_SEKAI = [
           Honami: [
             {
               id: "Honami",
+              icon:"Honami_(icon).png",
               fullName: "Mochizuki Honami",
               Color: "#EE6666",
               image: "3rd_honami.png",
@@ -62,6 +66,7 @@ export const DATA_SEKAI = [
           shiho: [
             {
               id: "Shiho",
+              icon:"Shiho_(icon).png",
               fullName: "Hinomori Shiho",
               Color: "#BBDE22",
               image: "3rd_shiho.png",
@@ -85,6 +90,7 @@ export const DATA_SEKAI = [
         LogoText: "mmjLogoText.png",
         LineText:"Linetext-mmj.png",
         ThemeBg:"mmjpark.jpg",
+        ThemeBgAlt:"stage_mmj.png",
         LeadIMG:"bnw_minori.png",
         Profile:"A unique idol group formed by one girl with a dream, and three other girls who had given up on theirs.",
         Desc:"A girl who wants to become an idol and three girls who faced the harsh reality of being an idol. Will the optimism overcome the obstacles? Will they reach this dream together?",
@@ -94,6 +100,7 @@ export const DATA_SEKAI = [
             minori: [
               {
                 id: "Minori",
+                icon:"Minori_(icon).png",
                 fullName: "Hanasato Minori",
                 Color: "#FFCDAC",
                 image: "3rd_minori.png",
@@ -109,6 +116,7 @@ export const DATA_SEKAI = [
             haruka: [
               {
                 id: "Haruka",
+                icon:"Haruka_(icon).png",
                 fullName: "Kiritani Haruka",
                 Color: "#99CDFF",
                 image: "3rd_haruka.png",
@@ -124,6 +132,7 @@ export const DATA_SEKAI = [
             airi: [
               {
                 id: "Airi",
+                icon:"Airi_(icon).png",
                 fullName: "Momoi Airi",
                 Color: "#FFA9CC",
                 image: "3rd_airi.png",
@@ -139,6 +148,7 @@ export const DATA_SEKAI = [
             shizuku: [
               {
                 id: "Shizuku",
+                icon:"Shizuku_(icon).png",
                 fullName: "Hinomori Shizuku",
                 Color: "#9AEEDE",
                 image: "3rd_shizuku.png",
@@ -162,6 +172,7 @@ export const DATA_SEKAI = [
         LogoText: "vbsLogoText.png",
         LineText:"Linetext-vbs.png",
         ThemeBg:"vbspark.jpg",
+        ThemeBgAlt:"vbs_cafe.png",
         LeadIMG:"bnw_kohami.png",
         Profile:"A talented group of street artists who teamed up to surpass a legend.",
         Desc:"Three young talented musicians from different backgrounds and a meek girl. Their ultimate goal is to surpass the “Legend”. Watch them as they rise to the top of the concrete jungle!",
@@ -171,6 +182,7 @@ export const DATA_SEKAI = [
             kohami: [
               {
                 id: "Kohane",
+                icon:"Kohane_(icon).png",
                 fullName: "Azusawa Kohane",
                 Color: "#FF679A",
                 image: "3rd_kohane.png",
@@ -186,6 +198,7 @@ export const DATA_SEKAI = [
             an: [
               {
                 id: "An",
+                icon:"An_(icon).png",
                 fullName: "Shiraishi An",
                 Color: "#00BBDC",
                 image: "3rd_an.png",
@@ -201,6 +214,7 @@ export const DATA_SEKAI = [
             akito: [
               {
                 id: "Akito",
+                icon:"Akito_(icon).png",
                 fullName: "Shinonome Akito",
                 Color: "#FF7721",
                 image: "3rd_akito.png",
@@ -216,6 +230,7 @@ export const DATA_SEKAI = [
             toya: [
               {
                 id: "Toya",
+                icon:"Toya_(icon).png",
                 fullName: "Aoyagi Toya",
                 Color: "#0077DD",
                 image: "3rd_toya.png",
@@ -239,6 +254,7 @@ export const DATA_SEKAI = [
         LogoText: "wxsLogoText.png",
         LineText:"Linetext-wxs.png",
         ThemeBg:"wxsPark.jpg",
+        ThemeBgAlt:"wonderland_wxs.png",
         LeadIMG:"bnw_tsukasa.png",
         Profile:"An eccentric musical show unit, proclaiming each day wonderful and rushing out to meet it head on.",
         Desc:"At a popular theme park, a stage stands deserted. These members come together as one for the revival of the stage. Can they bring back the cheer and laughter to the stage?",
@@ -248,6 +264,7 @@ export const DATA_SEKAI = [
             emu: [
               {
                 id: "Emu",
+                icon:"Emu_(icon).png",
                 fullName: "Ootori Emu",
                 Color: "#FF66BC",
                 image: "3rd_emu.png",
@@ -263,6 +280,7 @@ export const DATA_SEKAI = [
             tsukasa: [
               {
                 id: "Tsukasa",
+                icon:"Tsukasa_(icon).png",
                 fullName: "Tenma Tsukasa",
                 Color: "#FFBB00",
                 image: "3rd_tsukasa.png",
@@ -278,6 +296,7 @@ export const DATA_SEKAI = [
             nene: [
               {
                 id: "Nene",
+                icon:"Nene_(icon).png",
                 fullName: "Kusanagi Nene",
                 Color: "#34DD9A",
                 image: "3rd_nene.png",
@@ -293,6 +312,7 @@ export const DATA_SEKAI = [
             rui: [
               {
                 id: "Rui",
+                icon:"Rui_(icon).png",
                 fullName: "Kamishiro Rui",
                 Color: "#BB88ED",
                 image: "3rd_rui.png",
@@ -316,6 +336,7 @@ export const DATA_SEKAI = [
         LogoText: "25jiLogoText.png",
         LineText:"Linetext-n25.png",
         ThemeBg:"25jiPark.jpg",
+        ThemeBgAlt:"empty_niji.png",
         LeadIMG:"bnw_kanade.png",
         Profile:"A mysterious music circle that operates at 1:00 AM (25:00), and whose identities are shrouded in mystery.",
         Desc:'Unaware of what each other looks like or their own names, a circle of friends meet online using the chat tool "Nightcord" to make songs together.',
@@ -325,6 +346,7 @@ export const DATA_SEKAI = [
             kanade: [
               {
                 id: "Kanade",
+                icon:"Kanade_(icon).png",
                 fullName: "Yoisaki Kanade",
                 Color: "#BB6588",
                 image: "3rd_kanade.png",
@@ -340,6 +362,7 @@ export const DATA_SEKAI = [
             mayufu: [
               {
                 id: "Mafuyu",
+                icon:"Mafuyu_(icon).png",
                 fullName: "Asahina Mafuyu",
                 Color: "#8889CC",
                 image: "3rd_mafuyu.png",
@@ -355,6 +378,7 @@ export const DATA_SEKAI = [
             ena: [
               {
                 id: "Ena",
+                icon:"Ena_(icon).png",
                 fullName: "Shinonome Ena",
                 Color: "#CCAA87",
                 image: "3rd_ena.png",
@@ -370,6 +394,7 @@ export const DATA_SEKAI = [
             mizuki: [
               {
                 id: "Mizuki",
+                icon:"Mizuki_(icon).png",
                 fullName: "Akiyama Mizuki",
                 Color: "#E4A8CA",
                 image: "3rd_mizuki.png",
