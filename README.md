@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-Note:I am trying to make SSR (Server Side Website) Because GH-pages doesnt support ssr so my website need time to render the resources first that make first impression a bit lame.
+Note:I am trying to make SSR (Server Side Rendering) Because GH-pages doesnt support ssr so my website need time to render the resources first that make first impression a bit lame.
 
 
 ### `npm start`
