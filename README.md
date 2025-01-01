@@ -1,10 +1,7 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Note:I am trying to make SSR (Server Side Website) Because GH-pages doesnt support ssr so my website need time to render the resources first that make first impression a bit lame.
 
-## Available Scripts
-
-In the project directory, you can run:
 
 ### `npm start`
 
