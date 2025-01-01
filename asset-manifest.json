@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/MuniSekai/static/css/main.d024438f.css",
-    "main.js": "/MuniSekai/static/js/main.8d20ebda.js",
+    "main.css": "/MuniSekai/static/css/main.d9c1ee32.css",
+    "main.js": "/MuniSekai/static/js/main.0a352342.js",
     "static/js/453.4bc8fe86.chunk.js": "/MuniSekai/static/js/453.4bc8fe86.chunk.js",
     "static/media/wxs_group.png": "/MuniSekai/static/media/wxs_group.31210df5ae9ee890b0e9.png",
     "static/media/vbs_group.png": "/MuniSekai/static/media/vbs_group.74cb7aa875a7952ad33e.png",
@@ -11,6 +11,7 @@
     "static/media/test1.png": "/MuniSekai/static/media/test1.268215406dcdb0f05df5.png",
     "static/media/vbspark.jpg": "/MuniSekai/static/media/vbspark.44d465843b7b9b7b7061.jpg",
     "static/media/mmjpark.jpg": "/MuniSekai/static/media/mmjpark.aa97b6d9bb6f67a508a2.jpg",
+    "static/media/bg2.png": "/MuniSekai/static/media/bg2.2cf4d173cd246e2ea4b4.png",
     "static/media/hb_miku.png": "/MuniSekai/static/media/hb_miku.0a6aad5457e04169a364.png",
     "static/media/nigo_group.png": "/MuniSekai/static/media/nigo_group.092a7f13d476bf886243.png",
     "static/media/LeonidRooftop.jpg": "/MuniSekai/static/media/LeonidRooftop.1c13771de3643ed96c3a.jpg",
@@ -34,15 +35,21 @@
     "static/media/3rd_haruka.png": "/MuniSekai/static/media/3rd_haruka.3e64de6bbbf1f61101db.png",
     "static/media/3rd_rui.png": "/MuniSekai/static/media/3rd_rui.f4952e96130b326d4588.png",
     "static/media/3rd_saki.png": "/MuniSekai/static/media/3rd_saki.667a320cdacac752128f.png",
+    "static/media/saki_test.png": "/MuniSekai/static/media/saki_test.8bdfa9a02410e88caccb.png",
     "static/media/3rd_mizuki.png": "/MuniSekai/static/media/3rd_mizuki.5f03211c4f47db9187de.png",
     "static/media/3rd_honami.png": "/MuniSekai/static/media/3rd_honami.cdc94f947127a269e728.png",
     "static/media/3rd_ichika.png": "/MuniSekai/static/media/3rd_ichika.b0ed8faea2444adee9e1.png",
+    "static/media/ichika_test.png": "/MuniSekai/static/media/ichika_test.a939b1e6a51712afd1e7.png",
     "static/media/3rd_mafuyu.png": "/MuniSekai/static/media/3rd_mafuyu.d1b1f539a07b166ef046.png",
     "static/media/3rd_kohane.png": "/MuniSekai/static/media/3rd_kohane.f6197466bb2e0f071f3e.png",
     "static/media/3rd_shiho.png": "/MuniSekai/static/media/3rd_shiho.17c5cabfbb68b023fe02.png",
+    "static/media/shiho_test.png": "/MuniSekai/static/media/shiho_test.80e6180990e25151270f.png",
     "static/media/3rd_kanade.png": "/MuniSekai/static/media/3rd_kanade.9774c0007a74f3d66994.png",
     "static/media/animal_banner.png": "/MuniSekai/static/media/animal_banner.463d29954eaebe1905cf.png",
     "static/media/3rd_toya.png": "/MuniSekai/static/media/3rd_toya.c6fa2c2e612204d27c2e.png",
+    "static/media/kohane_test.png": "/MuniSekai/static/media/kohane_test.578bb47f10796d0d5e7e.png",
+    "static/media/kanade-test.png": "/MuniSekai/static/media/kanade-test.0db62e5ffadb1c46d9fe.png",
+    "static/media/tsukasa_test.png": "/MuniSekai/static/media/tsukasa_test.a19f9f72e536a265ea9a.png",
     "static/media/3rd_ena.png": "/MuniSekai/static/media/3rd_ena.be05d9f15f811ff581bc.png",
     "static/media/text_logo.webp": "/MuniSekai/static/media/text_logo.e549a2f87493a1695206.webp",
     "static/media/3rd_tsukasa.png": "/MuniSekai/static/media/3rd_tsukasa.0717c56f5938a3b6197a.png",
@@ -114,12 +121,12 @@
     "static/media/vbsLogoText.png": "/MuniSekai/static/media/vbsLogoText.253a6c65ee153c0d48ce.png",
     "static/media/TestMMJ.svg": "/MuniSekai/static/media/TestMMJ.aa340e7731359a69f73b.svg",
     "index.html": "/MuniSekai/index.html",
-    "main.d024438f.css.map": "/MuniSekai/static/css/main.d024438f.css.map",
-    "main.8d20ebda.js.map": "/MuniSekai/static/js/main.8d20ebda.js.map",
+    "main.d9c1ee32.css.map": "/MuniSekai/static/css/main.d9c1ee32.css.map",
+    "main.0a352342.js.map": "/MuniSekai/static/js/main.0a352342.js.map",
     "453.4bc8fe86.chunk.js.map": "/MuniSekai/static/js/453.4bc8fe86.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d024438f.css",
-    "static/js/main.8d20ebda.js"
+    "static/css/main.d9c1ee32.css",
+    "static/js/main.0a352342.js"
   ]
 }
