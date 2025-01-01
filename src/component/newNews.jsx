@@ -115,7 +115,7 @@ function NewNews() {
                 loading="lazy"
                   src={require("../assets/other/" + "animal_banner.png")}
                   alt={"Animal-Banner24"}
-                  className="h-full hover:scale-105"
+                  className="h-full transition duration-200 hover:scale-105"
                 />
                 <div className="bg-gradient-to-tr from-themeGreen to-WSTheme relative h-full w-full p-2 rounded-lg">
                 <img
